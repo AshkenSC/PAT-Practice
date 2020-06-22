@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Programming-Practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/0001. Two Sum.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/0026. Remove Duplicates from Sorted Array.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/0027. Remove Elements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/20190310-1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/20190310-2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1001.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1002.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1005.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1006.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1008.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1009.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1011.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1012.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1016.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1019.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1025.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1027.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1028.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1031.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1035.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1036.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1042.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1046.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1049.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1058.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1061.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1062.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1065.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1073.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1077.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_A1082.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1001.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1001.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1002.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1002.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1003.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1004.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1004.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1005.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1006.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1006.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1007.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1008.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1009.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1009_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1010.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1011.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1012.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1012_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1013.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1013_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1014.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1014_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1015.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1015_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1016.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1017.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1017_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1018.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1018_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1019.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1019_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1020.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1021.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1022.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1022_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1023.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1023_2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1024.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1025.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1026.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1027.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1028.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1029.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1030.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1031.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1032.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1033.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1034.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1035.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1036.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1037.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1038.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1039.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1040.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1041.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1042.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1043.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1044.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1045.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1046.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1047.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1048.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1049.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1050.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1051.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1052.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1053.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1054.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1055.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1056.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1057.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1058.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1059.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1060.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1061.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1062.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1063.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1064.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1065.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1066.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1067.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1068.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1069.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1070.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1071.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1072.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1073.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1074.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1075.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1076.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1077.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1078.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1079.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1080.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1081.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1082.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1083.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1084.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1085.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1086.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1087.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1088.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1089.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1090.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1091.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1092.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1093.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1094.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/PAT_B1095.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAT/longestPublicWord.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1dgIfd4F1BcOXQ08DaCEshPQiQs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="" />
+      <created>1592840413670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592840413670</updated>
+      <workItem from="1592840418433" duration="379000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="557" y="170" key="FileChooserDialogImpl" timestamp="1592840458843">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
+    <state x="284" y="60" key="SettingsEditor" timestamp="1592840464802">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840464802" />
+  </component>
+</project>
