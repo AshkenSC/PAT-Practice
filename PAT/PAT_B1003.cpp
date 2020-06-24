@@ -1,17 +1,17 @@
 // PAT B1003
 
 /*
-1. ¹Ø¼üÊÇÀí½âÌõ¼þ3£¬Æäº¬ÒåÊÇ£º¼ÙÉèPÖ®Ç°ÓÐa¸öA£¬
-ÔòPTÖ®¼äÃ¿¶àÒ»¸öA£¬ÔòTºóÃæ¾ÍÒª¶àa¸öA¡£
-±¾ÖÊÊÇ£ºPÇ°AÊýÁ¿*PTÖ®¼äAÊýÁ¿==TºóAÊýÁ¿
+1. å…³é”®æ˜¯ç†è§£æ¡ä»¶3ï¼Œå…¶å«ä¹‰æ˜¯ï¼šå‡è®¾Pä¹‹å‰æœ‰aä¸ªAï¼Œ
+åˆ™PTä¹‹é—´æ¯å¤šä¸€ä¸ªAï¼Œåˆ™TåŽé¢å°±è¦å¤šaä¸ªAã€‚
+æœ¬è´¨æ˜¯ï¼šPå‰Aæ•°é‡*PTä¹‹é—´Aæ•°é‡==TåŽAæ•°é‡
 
-2. Ê¹ÓÃmap´æ´¢³öÏÖ¹ýµÄ×ÖÄ¸¼°Æä³öÏÖ´ÎÊý¡£
+2. ä½¿ç”¨mapå­˜å‚¨å‡ºçŽ°è¿‡çš„å­—æ¯åŠå…¶å‡ºçŽ°æ¬¡æ•°ã€‚
 
-3. ×¢Òâ×Ö·û´®¸÷ÏîÏ¸½ÚÒªÇó£º
-ÓÐÇÒ½öÓÐPATÈýÖÖ×ÖÄ¸£»
-PTÓÐÇÒ½öÓÐÒ»¸ö£»
-PTÖ®¼ä²»¿ÉÎÞA×ÖÄ¸£»
-Âú×ãÌâÉèÌõ¼þ3
+3. æ³¨æ„å­—ç¬¦ä¸²å„é¡¹ç»†èŠ‚è¦æ±‚ï¼š
+æœ‰ä¸”ä»…æœ‰PATä¸‰ç§å­—æ¯ï¼›
+PTæœ‰ä¸”ä»…æœ‰ä¸€ä¸ªï¼›
+PTä¹‹é—´ä¸å¯æ— Aå­—æ¯ï¼›
+æ»¡è¶³é¢˜è®¾æ¡ä»¶3
 */
 
 #include <iostream>
@@ -28,24 +28,24 @@ int main()
     for(int i = 0; i < num; i++)
     {
         cin >> s;
-        //map charCountÍ³¼Æ¸÷×ÖÄ¸³öÏÖ×ÖÊý
+        //map charCountç»Ÿè®¡å„å­—æ¯å‡ºçŽ°å­—æ•°
         map<char, int> charCount;
-        // ±éÀú×Ö·û´®£¬Í³¼Æ×Ö·ûÊýÁ¿ÓëÎ»ÖÃ
+        // éåŽ†å­—ç¬¦ä¸²ï¼Œç»Ÿè®¡å­—ç¬¦æ•°é‡ä¸Žä½ç½®
         for(int j = 0; j < s.length(); j++)
         {
             charCount[s[j]]++;
-            // ¼ÇÂ¼PºÍT Î»ÖÃ
+            // è®°å½•På’ŒT ä½ç½®
             if(s[j] == 'P')
                 pPos = j;
             if(s[j] == 'T')
                 tPos = j;
         }
-        // ¼ì²é×Ö·û´®ÊÇ·ñ·ûºÏÒªÇó
+        // æ£€æŸ¥å­—ç¬¦ä¸²æ˜¯å¦ç¬¦åˆè¦æ±‚
         if(charCount['P']==1 && charCount['T']==1 &&
                 charCount['A'] != 0 &&
                 charCount.size() == 3 &&
                 tPos - pPos != 1 &&
-                // P×ó*PTÖ®¼ä == TÓÒ£¿
+                // På·¦*PTä¹‹é—´ == Tå³ï¼Ÿ
                 pPos*(tPos - pPos - 1) == s.length() - tPos - 1)
             cout << "YES" << endl;
         else

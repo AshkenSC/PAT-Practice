@@ -1,14 +1,14 @@
 // PAT B1004
 
 /*
-ÓÃÑ­»·ÖðÌõ¼ì²éÑ§ÉúÐÅÏ¢
-ÓÃmaxGrade maxName maxId¼ÇÂ¼¼ì²é¹ýµÄÐÅÏ¢ÖÐµÄ×î¸ß·ÖµÄ·ÖÊý ÐÕÃû Ñ§ºÅ
-ÓÃminGrade minName minId¼ÇÂ¼¼ì²é¹ýµÄÐÅÏ¢ÖÐµÄ×îµÍ·ÖµÄ·ÖÊý ÐÕÃû Ñ§ºÅ
-Èôµ±Ç°ÌõÄ¿·ÖÊý¸ßÓÚmaxGrade£¬Ôò¸üÐÂ×î¸ß·ÖÈý¸ö±äÁ¿ÐÅÏ¢
-Èôµ±Ç°ÌõÄ¿·ÖÊýµÍÓÚminGrade£¬Ôò¸üÐÂ×îµÍ·ÖÈý¸ö±äÁ¿ÐÅÏ¢
+ç”¨å¾ªçŽ¯é€æ¡æ£€æŸ¥å­¦ç”Ÿä¿¡æ¯
+ç”¨maxGrade maxName maxIdè®°å½•æ£€æŸ¥è¿‡çš„ä¿¡æ¯ä¸­çš„æœ€é«˜åˆ†çš„åˆ†æ•° å§“å å­¦å·
+ç”¨minGrade minName minIdè®°å½•æ£€æŸ¥è¿‡çš„ä¿¡æ¯ä¸­çš„æœ€ä½Žåˆ†çš„åˆ†æ•° å§“å å­¦å·
+è‹¥å½“å‰æ¡ç›®åˆ†æ•°é«˜äºŽmaxGradeï¼Œåˆ™æ›´æ–°æœ€é«˜åˆ†ä¸‰ä¸ªå˜é‡ä¿¡æ¯
+è‹¥å½“å‰æ¡ç›®åˆ†æ•°ä½ŽäºŽminGradeï¼Œåˆ™æ›´æ–°æœ€ä½Žåˆ†ä¸‰ä¸ªå˜é‡ä¿¡æ¯
 
-×¢Òâ£ºmaxGrade³õÊ¼»¯Îª-1£¬minGrade³õÊ¼»¯Îª101
-·ñÔò£¬µ±³öÏÖÄ³Ð©¼«¶ËÇé¿öÊ±£¬ÐÅÏ¢½«ÎÞ·¨Õý³£¼ÇÂ¼£¨ÀýÈç£¬ËùÓÐÈË¶¼ÊÇ0·Ö£¬»òËùÓÐÈË¶¼ÊÇ100·Ö£©
+æ³¨æ„ï¼šmaxGradeåˆå§‹åŒ–ä¸º-1ï¼ŒminGradeåˆå§‹åŒ–ä¸º101
+å¦åˆ™ï¼Œå½“å‡ºçŽ°æŸäº›æžç«¯æƒ…å†µæ—¶ï¼Œä¿¡æ¯å°†æ— æ³•æ­£å¸¸è®°å½•ï¼ˆä¾‹å¦‚ï¼Œæ‰€æœ‰äººéƒ½æ˜¯0åˆ†ï¼Œæˆ–æ‰€æœ‰äººéƒ½æ˜¯100åˆ†ï¼‰
 */
 
 #include <iostream>
