@@ -4,9 +4,9 @@ case_num = int(input())
 for i in range(0, case_num):
     entry = input()
     numbers = entry.split(' ')
-    a = numbers[0]
-    b = numbers[1]
-    c = numbers[2]
+    a = int(numbers[0])
+    b = int(numbers[1])
+    c = int(numbers[2])
     print('Case #' + str(i + 1) + ': ', end='')
     if a + b > c:
         print('false')
