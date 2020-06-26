@@ -9,6 +9,6 @@ for i in range(0, case_num):
     c = int(numbers[2])
     print('Case #' + str(i + 1) + ': ', end='')
     if a + b > c:
-        print('false')
-    else:
         print('true')
+    else:
+        print('false')
