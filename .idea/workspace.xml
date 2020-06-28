@@ -10,8 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="PAT B1011: 0/20&#10;&#10;使用Python编写B1011。补充了数据类型转换，但测试点仍然均未能通过">
-      <change beforePath="$PROJECT_DIR$/PAT/PAT_B1011.py" beforeDir="false" afterPath="$PROJECT_DIR$/PAT/PAT_B1011.py" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="PAT B1011: 15/15&#10;&#10;使用Python编写B1011，通过所有测试点。（true和false写反了……）">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PAT/PAT_B1005.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PAT/PAT_B1005.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PAT/PAT_B1006.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PAT/PAT_B1006.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PAT/PAT_B1007.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PAT/PAT_B1007.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +135,7 @@
       <workItem from="1593185147950" duration="1063000" />
       <workItem from="1593351688475" duration="462000" />
       <workItem from="1593359494180" duration="481000" />
-      <workItem from="1593361386821" duration="1716000" />
+      <workItem from="1593361386821" duration="2620000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -169,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593190769499</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="PAT B1011: 15/15&#10;&#10;使用Python编写B1011，通过所有测试点。（true和false写反了……）">
+      <created>1593190992128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593190992128</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +203,8 @@
     <MESSAGE value="PAT B1007: 18/20&#10;&#10;使用Python完成编写，但最后一个测试点运行超时。" />
     <MESSAGE value="PAT B1011: 0/20&#10;&#10;使用Python编写B1011，测试点均未能通过" />
     <MESSAGE value="PAT B1011: 0/20&#10;&#10;使用Python编写B1011。补充了数据类型转换，但测试点仍然均未能通过" />
-    <option name="LAST_COMMIT_MESSAGE" value="PAT B1011: 0/20&#10;&#10;使用Python编写B1011。补充了数据类型转换，但测试点仍然均未能通过" />
+    <MESSAGE value="PAT B1011: 15/15&#10;&#10;使用Python编写B1011，通过所有测试点。（true和false写反了……）" />
+    <option name="LAST_COMMIT_MESSAGE" value="PAT B1011: 15/15&#10;&#10;使用Python编写B1011，通过所有测试点。（true和false写反了……）" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -236,6 +247,10 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
+    <state x="-1483" y="152" width="672" height="678" key="search.everywhere.popup" timestamp="1593190990022">
+      <screen x="-1920" y="0" width="1549" height="831" />
+    </state>
+    <state x="-1483" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190990022" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1011.coverage" NAME="PAT_B1011 Coverage Results" MODIFIED="1593190874418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />

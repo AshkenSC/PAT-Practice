@@ -1,8 +1,8 @@
 /*
-£¨1£©¶ÔÊäÈëµÄÃ¿Ò»¸öÊý×Ö£¬½øÐÐ3n+1²ÂÏëÑéÖ¤¡£ÓÃÊý×éisVerified¼ÇÂ¼ÑéÖ¤¹ýµÄÊý£¬ÑéÖ¤¹ýµÄÊýÔÚÊý×éÖÐ¶ÔÓ¦Î»ÉèÎª1¡£ÀýÈçÈô3±»ÑéÖ¤¹ý£¬ÔòisVerified[3] == 1£»
-£¨2£©Ëæºó¶ÔÊäÈëµÄÊý×Ö£¬Ê¹ÓÃsort()º¯Êý´Ó´óµ½Ð¡ÅÅÐò£»
-£¨×¢ÒâÕÆÎÕsort()º¯ÊýµÄÊ¹ÓÃ·½·¨£¬ÓÈÆäÊÇÆäµÚÈý¸ö²ÎÊý£¬cmp()º¯ÊýµÄÊ¹ÓÃ·½·¨£©
-£¨3£©Êä³öËùÓÐisVerified[]¶ÔÓ¦Î»Îª0µÄÊý£¬¼´ÎªÎ´ÑéÖ¤¹ýµÄÊý×Ö£¬¼´´ýÇóµÄ¹Ø¼üÊý×Ö¡£
+ï¼ˆ1ï¼‰å¯¹è¾“å…¥çš„æ¯ä¸€ä¸ªæ•°å­—ï¼Œè¿›è¡Œ3n+1çŒœæƒ³éªŒè¯ã€‚ç”¨æ•°ç»„isVerifiedè®°å½•éªŒè¯è¿‡çš„æ•°ï¼ŒéªŒè¯è¿‡çš„æ•°åœ¨æ•°ç»„ä¸­å¯¹åº”ä½è®¾ä¸º1ã€‚ä¾‹å¦‚è‹¥3è¢«éªŒè¯è¿‡ï¼Œåˆ™isVerified[3] == 1ï¼›
+ï¼ˆ2ï¼‰éšåŽå¯¹è¾“å…¥çš„æ•°å­—ï¼Œä½¿ç”¨sort()å‡½æ•°ä»Žå¤§åˆ°å°æŽ’åºï¼›
+ï¼ˆæ³¨æ„æŽŒæ¡sort()å‡½æ•°çš„ä½¿ç”¨æ–¹æ³•ï¼Œå°¤å…¶æ˜¯å…¶ç¬¬ä¸‰ä¸ªå‚æ•°ï¼Œcmp()å‡½æ•°çš„ä½¿ç”¨æ–¹æ³•ï¼‰
+ï¼ˆ3ï¼‰è¾“å‡ºæ‰€æœ‰isVerified[]å¯¹åº”ä½ä¸º0çš„æ•°ï¼Œå³ä¸ºæœªéªŒè¯è¿‡çš„æ•°å­—ï¼Œå³å¾…æ±‚çš„å…³é”®æ•°å­—ã€‚
 */
 
 #include <iostream>
@@ -41,7 +41,7 @@ int main()
 
     for(int i = 0; i < data.size(); i++) {
         if(isVerified[data[i]] == 0) {
-        // Î´±»ÑéÖ¤¹ý£¬ÊÇ¹Ø¼üÊý×Ö
+        // æœªè¢«éªŒè¯è¿‡ï¼Œæ˜¯å…³é”®æ•°å­—
             if(spaceFlag == true) {
                 cout << " ";
             }

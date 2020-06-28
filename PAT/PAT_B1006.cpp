@@ -1,4 +1,4 @@
-// PAT B1006 ½â·¨Ò»
+// PAT B1006 è§£æ³•ä¸€
 
 #include <cstdio>
 #include <cstring>
@@ -44,11 +44,11 @@ int main()
 }
 
 /*
-// PAT B1006 ½â·¨¶þ
+// PAT B1006 è§£æ³•äºŒ
 
 /*
-ÓÉÌâÉèÖª£¬²âÊÔÑùÀý²»³¬¹ýÈýÎ»Êý£¬Òò´Ë¿É¸ù¾ÝÒ»Î»Êý¡¢Á½Î»Êý¡¢ÈýÎ»Êý·ÖÈýÖÖÇé¿öÌÖÂÛ
-½«ÊäÈëµÄÊýÖµ×÷Îª×Ö·û´®´æ´¢ ¸ù¾Ý×Ö·û´®³¤¶ÈÅÐ¶ÏÎ»Êý
+ç”±é¢˜è®¾çŸ¥ï¼Œæµ‹è¯•æ ·ä¾‹ä¸è¶…è¿‡ä¸‰ä½æ•°ï¼Œå› æ­¤å¯æ ¹æ®ä¸€ä½æ•°ã€ä¸¤ä½æ•°ã€ä¸‰ä½æ•°åˆ†ä¸‰ç§æƒ…å†µè®¨è®º
+å°†è¾“å…¥çš„æ•°å€¼ä½œä¸ºå­—ç¬¦ä¸²å­˜å‚¨ æ ¹æ®å­—ç¬¦ä¸²é•¿åº¦åˆ¤æ–­ä½æ•°
 */
 
 #include <iostream>
@@ -90,12 +90,12 @@ int main()
 */
 
 /*
-// PAT B1006 ½â·¨Èý
+// PAT B1006 è§£æ³•ä¸‰
 
 /*
-½«ÊäÈëÊý¾Ý×÷ÎªÕûÊý´æ´¢£¬²¢ÓÃÇóÓàÊý·¨µÃµ½¸÷Î»ÊýÖµ£¬½«¸÷Î»ÊýÖµ´æÓÚÊý×édigit[3]ÖÐ
-×¢Òâ£ºdigit[3]Ó¦³õÊ¼»¯ÎªÈ«0£¬ÒÔÈ·±£ÊäÈëÊý¾ÝÎªÁ½Î»ÊýºÍÒ»Î»ÊýÊ±£¬digit[3]¶àÓà¿Õ³öµÄÎ»Îª0£¬Ê¹Êä³ö½á¹ûÕýÈ·
-¸ù¾Ýdigit[3]¸÷Î»Êý£¬°´ÌâÄ¿ÒªÇóÊä³ö¼´¿É
+å°†è¾“å…¥æ•°æ®ä½œä¸ºæ•´æ•°å­˜å‚¨ï¼Œå¹¶ç”¨æ±‚ä½™æ•°æ³•å¾—åˆ°å„ä½æ•°å€¼ï¼Œå°†å„ä½æ•°å€¼å­˜äºŽæ•°ç»„digit[3]ä¸­
+æ³¨æ„ï¼šdigit[3]åº”åˆå§‹åŒ–ä¸ºå…¨0ï¼Œä»¥ç¡®ä¿è¾“å…¥æ•°æ®ä¸ºä¸¤ä½æ•°å’Œä¸€ä½æ•°æ—¶ï¼Œdigit[3]å¤šä½™ç©ºå‡ºçš„ä½ä¸º0ï¼Œä½¿è¾“å‡ºç»“æžœæ­£ç¡®
+æ ¹æ®digit[3]å„ä½æ•°ï¼ŒæŒ‰é¢˜ç›®è¦æ±‚è¾“å‡ºå³å¯
 */
 
 #include <iostream>
@@ -104,7 +104,7 @@ using namespace std;
 int main()
 {
     int input;
-    int digit[3] = {0};     // ÒÀ´Î´æ·Å¸ö¡¢Ê®¡¢°ÙÎ»
+    int digit[3] = {0};     // ä¾æ¬¡å­˜æ”¾ä¸ªã€åã€ç™¾ä½
 
     cin >> input;
     for(int i = 0; input > 0; input = input / 10) {
