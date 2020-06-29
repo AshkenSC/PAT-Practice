@@ -17,6 +17,9 @@ class Solution:
         else:
             result_str = x_str
         result = int(result_str) * sign
+        # 超出范围[−2^31,  2^31 − 1]时，返回0
+        if result > 2**31 -1 or result < -2 ** 31:
+            return 0
         return result
 
 
