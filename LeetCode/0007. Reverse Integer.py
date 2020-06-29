@@ -10,11 +10,17 @@ class Solution:
         # 所以不要写x_str_list = list(x_str).reverse()
         x_str_list = list(x_str)
         x_str_list.reverse()
-        result_str = ''.join(x_str_list).lstrip('0')
+        x_str = ''.join(x_str_list)
+        # 删除左边多余的0，但要排除恰好为0的情形
+        if x_str != '0':
+            result_str = x_str.lstrip('0')
+        else:
+            result_str = x_str
         result = int(result_str) * sign
         return result
 
-#
+
+# # 测试
 # while True:
 #     x = int(input())
 #     solution = Solution()

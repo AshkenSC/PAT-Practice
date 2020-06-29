@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="将PAT B1005-B1007的编码转为UTF-8格式。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0007. Reverse Integer.py" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0007&#10;通过测试点 3/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/0007. Reverse Integer.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0007. Reverse Integer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +157,7 @@
       <workItem from="1593351688475" duration="462000" />
       <workItem from="1593359494180" duration="481000" />
       <workItem from="1593361386821" duration="2714000" />
-      <workItem from="1593438900384" duration="1089000" />
+      <workItem from="1593438900384" duration="2438000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -208,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593314357224</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="LeetCode 0007&#10;通过测试点 3/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()">
+      <created>1593440092553</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593440092553</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +241,8 @@
     <MESSAGE value="PAT B1011: 0/20&#10;&#10;使用Python编写B1011。补充了数据类型转换，但测试点仍然均未能通过" />
     <MESSAGE value="PAT B1011: 15/15&#10;&#10;使用Python编写B1011，通过所有测试点。（true和false写反了……）" />
     <MESSAGE value="将PAT B1005-B1007的编码转为UTF-8格式。" />
-    <option name="LAST_COMMIT_MESSAGE" value="将PAT B1005-B1007的编码转为UTF-8格式。" />
+    <MESSAGE value="LeetCode 0007&#10;通过测试点 3/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0007&#10;通过测试点 3/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -251,28 +259,28 @@
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
-    <state width="1333" height="180" key="GridCell.Tab.0.bottom" timestamp="1593439902800">
+    <state width="1333" height="180" key="GridCell.Tab.0.bottom" timestamp="1593440636007">
       <screen x="-1920" y="0" width="1376" height="733" />
     </state>
-    <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439902800" />
+    <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593440636007" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1333" height="180" key="GridCell.Tab.0.center" timestamp="1593439902800">
+    <state width="1333" height="180" key="GridCell.Tab.0.center" timestamp="1593440636007">
       <screen x="-1920" y="0" width="1376" height="733" />
     </state>
-    <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439902800" />
+    <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593440636007" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1333" height="180" key="GridCell.Tab.0.left" timestamp="1593439902800">
+    <state width="1333" height="180" key="GridCell.Tab.0.left" timestamp="1593440636007">
       <screen x="-1920" y="0" width="1376" height="733" />
     </state>
-    <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439902800" />
+    <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593440636007" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1333" height="180" key="GridCell.Tab.0.right" timestamp="1593439902800">
+    <state width="1333" height="180" key="GridCell.Tab.0.right" timestamp="1593440636007">
       <screen x="-1920" y="0" width="1376" height="733" />
     </state>
-    <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439902800" />
+    <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593440636007" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
     <state width="1333" height="262" key="GridCell.Tab.1.bottom" timestamp="1593439781602">
@@ -321,7 +329,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Programming_Practice$0007__Reverse_Integer.coverage" NAME="0007. Reverse Integer Coverage Results" MODIFIED="1593439902790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$0007__Reverse_Integer.coverage" NAME="0007. Reverse Integer Coverage Results" MODIFIED="1593440636000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1011.coverage" NAME="PAT_B1011 Coverage Results" MODIFIED="1593190874418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1007.coverage" NAME="PAT_B1007 Coverage Results" MODIFIED="1593100044436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1006.coverage" NAME="PAT_B1006 Coverage Results" MODIFIED="1593100009868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
