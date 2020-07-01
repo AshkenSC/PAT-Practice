@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。">
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1431&#10;&#10;修正了输出格式错误。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LeetCode/1431. Kids With the Greatest Number of Candies.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/1431. Kids With the Greatest Number of Candies.py" afterDir="false" />
     </list>
@@ -182,7 +182,7 @@
       <workItem from="1593361386821" duration="2714000" />
       <workItem from="1593438900384" duration="3547000" />
       <workItem from="1593533776816" duration="606000" />
-      <workItem from="1593609318686" duration="5616000" />
+      <workItem from="1593609318686" duration="5879000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -275,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593618982635</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="LeetCode 1431&#10;&#10;修正了输出格式错误。">
+      <created>1593619106964</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1593619106964</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +314,8 @@
     <MESSAGE value="LeetCode 1480&#10;&#10;思路：新建一个空list，每次循环添加一个元素：对nums[0:i]的求和。" />
     <MESSAGE value="LeetCode 1470&#10;&#10;思路：设置两个指针，指向x1, y1, 逐个添加xi, yi。" />
     <MESSAGE value="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。" />
+    <MESSAGE value="LeetCode 1431&#10;&#10;修正了输出格式错误。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1431&#10;&#10;修正了输出格式错误。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -324,50 +332,54 @@
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
-    <state width="1374" height="132" key="GridCell.Tab.0.bottom" timestamp="1593618932072">
+    <state width="1374" height="273" key="GridCell.Tab.0.bottom" timestamp="1593619201653">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="132" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593618932072" />
+    <state width="1374" height="273" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619201653" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="132" key="GridCell.Tab.0.center" timestamp="1593618932072">
+    <state width="1374" height="273" key="GridCell.Tab.0.center" timestamp="1593619201653">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="132" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593618932072" />
+    <state width="1374" height="273" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619201653" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="132" key="GridCell.Tab.0.left" timestamp="1593618932072">
+    <state width="1374" height="273" key="GridCell.Tab.0.left" timestamp="1593619201653">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="132" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593618932072" />
+    <state width="1374" height="273" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619201653" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="132" key="GridCell.Tab.0.right" timestamp="1593618932072">
+    <state width="1374" height="273" key="GridCell.Tab.0.right" timestamp="1593619201653">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="132" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593618932072" />
+    <state width="1374" height="273" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619201653" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1333" height="262" key="GridCell.Tab.1.bottom" timestamp="1593439781602">
-      <screen x="-1920" y="0" width="1376" height="733" />
+    <state width="1374" height="273" key="GridCell.Tab.1.bottom" timestamp="1593619203176">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781602" />
-    <state width="1333" height="262" key="GridCell.Tab.1.center" timestamp="1593439781601">
-      <screen x="-1920" y="0" width="1376" height="733" />
+    <state width="1374" height="273" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619203176" />
+    <state width="1374" height="273" key="GridCell.Tab.1.center" timestamp="1593619203176">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1333" height="262" key="GridCell.Tab.1.left" timestamp="1593439781601">
-      <screen x="-1920" y="0" width="1376" height="733" />
+    <state width="1374" height="273" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619203176" />
+    <state width="1374" height="273" key="GridCell.Tab.1.left" timestamp="1593619203176">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1333" height="262" key="GridCell.Tab.1.right" timestamp="1593439781601">
-      <screen x="-1920" y="0" width="1376" height="733" />
+    <state width="1374" height="273" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619203176" />
+    <state width="1374" height="273" key="GridCell.Tab.1.right" timestamp="1593619203176">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
+    <state width="1374" height="273" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1593619203176" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1593613309534">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
@@ -389,12 +401,18 @@
           <line>2</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/1431. Kids With the Greatest Number of Candies.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="list(x_str)" language="Python" />
         <watch expression="list(x_str).reverse()" language="Python" />
+        <watch expression="max(temp)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -404,7 +422,7 @@
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1011.coverage" NAME="PAT_B1011 Coverage Results" MODIFIED="1593190874418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1007.coverage" NAME="PAT_B1007 Coverage Results" MODIFIED="1593100044436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1470__Shuffle_the_Array.coverage" NAME="1470. Shuffle the Array Coverage Results" MODIFIED="1593612846523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
-    <SUITE FILE_PATH="coverage/Programming_Practice$1431__Kids_With_the_Greatest_Number_of_Candies.coverage" NAME="1431. Kids With the Greatest Number of Candies Coverage Results" MODIFIED="1593618932066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$1431__Kids_With_the_Greatest_Number_of_Candies.coverage" NAME="1431. Kids With the Greatest Number of Candies Coverage Results" MODIFIED="1593619201376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1006.coverage" NAME="PAT_B1006 Coverage Results" MODIFIED="1593100009868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
   </component>
 </project>
