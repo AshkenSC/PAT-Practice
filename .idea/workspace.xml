@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1470&#10;&#10;思路：设置两个指针，指向x1, y1, 逐个添加xi, yi。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/1431. Kids With the Greatest Number of Candies.py" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/1431. Kids With the Greatest Number of Candies.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/1431. Kids With the Greatest Number of Candies.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +182,7 @@
       <workItem from="1593361386821" duration="2714000" />
       <workItem from="1593438900384" duration="3547000" />
       <workItem from="1593533776816" duration="606000" />
-      <workItem from="1593609318686" duration="5483000" />
+      <workItem from="1593609318686" duration="5616000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -268,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593613063943</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。">
+      <created>1593618982635</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1593618982635</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +306,8 @@
     <MESSAGE value="LeetCode 0007&#10;通过测试点 0/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：&#10;&#10;(1) list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()&#10;&#10;(2) lstrip去除左边多余的0时，要排除恰好为0的情形&#10;&#10;(3) 考虑超出范围[−2^31,  2^31 − 1]的情形" />
     <MESSAGE value="LeetCode 1480&#10;&#10;思路：新建一个空list，每次循环添加一个元素：对nums[0:i]的求和。" />
     <MESSAGE value="LeetCode 1470&#10;&#10;思路：设置两个指针，指向x1, y1, 逐个添加xi, yi。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1470&#10;&#10;思路：设置两个指针，指向x1, y1, 逐个添加xi, yi。" />
+    <MESSAGE value="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
