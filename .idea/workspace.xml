@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1486&#10;&#10;（1）第一版代码未注意n和start从参数传入，还使用了input();&#10;&#10;（2）Python中的XOR运算符是^。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/1365. How Many Numbers Are Smaller Than the Current Number.py" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/1365. How Many Numbers Are Smaller Than the Current Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/1365. How Many Numbers Are Smaller Than the Current Number.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +183,7 @@
       <workItem from="1593438900384" duration="3547000" />
       <workItem from="1593533776816" duration="606000" />
       <workItem from="1593609318686" duration="6618000" />
-      <workItem from="1594056008172" duration="5607000" />
+      <workItem from="1594056008172" duration="6123000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -297,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594127121338</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。">
+      <created>1594217900720</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1594217900720</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +339,8 @@
     <MESSAGE value="LeetCode 1431&#10;&#10;修正了输出格式错误。" />
     <MESSAGE value="LeetCode 1431&#10;&#10;在每轮循环重新给临时列表temp赋值为candies时，使用切片进行值传递，否则将进行地址传递，修改了candies的值" />
     <MESSAGE value="LeetCode 1486&#10;&#10;（1）第一版代码未注意n和start从参数传入，还使用了input();&#10;&#10;（2）Python中的XOR运算符是^。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1486&#10;&#10;（1）第一版代码未注意n和start从参数传入，还使用了input();&#10;&#10;（2）Python中的XOR运算符是^。" />
+    <MESSAGE value="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">

@@ -1,5 +1,8 @@
 # 1365. How Many Numbers Are Smaller Than the Current Number
 
+# 思路：遍历数组num，对每个元素，检查其他所有元素是否小于它。
+# （显然，有更好的解法，一个idea是先排好序，再根据序列判断一个数比多少数字大。
+# 但要处理一些问题，比如排序后的数和排序前的如何对应；有相同数字如何处理等。）
 
 from typing import List
 
