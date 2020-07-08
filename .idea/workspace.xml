@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。">
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1365&#10;&#10;补充注释。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/1313. Decompress Run-Length Encoded List.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/1365. How Many Numbers Are Smaller Than the Current Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/1365. How Many Numbers Are Smaller Than the Current Number.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +41,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.1486. XOR Operation in an Array">
-    <configuration name="0007. Reverse Integer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.1313. Decompress Run-Length Encoded List">
+    <configuration name="1313. Decompress Run-Length Encoded List" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -55,7 +55,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/0007. Reverse Integer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1313. Decompress Run-Length Encoded List.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1313. Decompress Run-Length Encoded List" />
         <item itemvalue="Python.1486. XOR Operation in an Array" />
         <item itemvalue="Python.1431. Kids With the Greatest Number of Candies" />
         <item itemvalue="Python.1470. Shuffle the Array" />
         <item itemvalue="Python.1480. Running Sum of 1d Array" />
-        <item itemvalue="Python.0007. Reverse Integer" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +183,7 @@
       <workItem from="1593438900384" duration="3547000" />
       <workItem from="1593533776816" duration="606000" />
       <workItem from="1593609318686" duration="6618000" />
-      <workItem from="1594056008172" duration="6123000" />
+      <workItem from="1594056008172" duration="6665000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -304,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594217900720</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="LeetCode 1365&#10;&#10;补充注释。">
+      <created>1594218389591</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1594218389591</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +347,8 @@
     <MESSAGE value="LeetCode 1431&#10;&#10;在每轮循环重新给临时列表temp赋值为candies时，使用切片进行值传递，否则将进行地址传递，修改了candies的值" />
     <MESSAGE value="LeetCode 1486&#10;&#10;（1）第一版代码未注意n和start从参数传入，还使用了input();&#10;&#10;（2）Python中的XOR运算符是^。" />
     <MESSAGE value="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。" />
+    <MESSAGE value="LeetCode 1365&#10;&#10;补充注释。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1365&#10;&#10;补充注释。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -357,32 +365,32 @@
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
-    <state width="1374" height="126" key="GridCell.Tab.0.bottom" timestamp="1594127003860">
+    <state width="1374" height="126" key="GridCell.Tab.0.bottom" timestamp="1594218915529">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="126" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594127003860" />
+    <state width="1374" height="126" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594218915529" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="126" key="GridCell.Tab.0.center" timestamp="1594127003860">
+    <state width="1374" height="126" key="GridCell.Tab.0.center" timestamp="1594218915529">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="126" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594127003860" />
+    <state width="1374" height="126" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594218915529" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="126" key="GridCell.Tab.0.left" timestamp="1594127003860">
+    <state width="1374" height="126" key="GridCell.Tab.0.left" timestamp="1594218915529">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="126" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594127003860" />
+    <state width="1374" height="126" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594218915529" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="126" key="GridCell.Tab.0.right" timestamp="1594127003860">
+    <state width="1374" height="126" key="GridCell.Tab.0.right" timestamp="1594218915529">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="126" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594127003860" />
+    <state width="1374" height="126" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594218915529" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
     <state width="1374" height="273" key="GridCell.Tab.1.bottom" timestamp="1593620078379">
@@ -446,6 +454,7 @@
     <SUITE FILE_PATH="coverage/Programming_Practice$1480__Running_Sum_of_1d_Array.coverage" NAME="1480. Running Sum of 1d Array Coverage Results" MODIFIED="1593524641412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1486__XOR_Operation_in_an_Array.coverage" NAME="1486. XOR Operation in an Array Coverage Results" MODIFIED="1594127003854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1011.coverage" NAME="PAT_B1011 Coverage Results" MODIFIED="1593190874418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$1313__Decompress_Run_Length_Encoded_List.coverage" NAME="1313. Decompress Run-Length Encoded List Coverage Results" MODIFIED="1594219135989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1007.coverage" NAME="PAT_B1007 Coverage Results" MODIFIED="1593100044436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1470__Shuffle_the_Array.coverage" NAME="1470. Shuffle the Array Coverage Results" MODIFIED="1593612846523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1431__Kids_With_the_Greatest_Number_of_Candies.coverage" NAME="1431. Kids With the Greatest Number of Candies Coverage Results" MODIFIED="1594126902064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
