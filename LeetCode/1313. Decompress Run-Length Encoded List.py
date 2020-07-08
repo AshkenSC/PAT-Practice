@@ -1,22 +1,26 @@
 # 1313. Decompress Run-Length Encoded List
 
+'''
+每次读取两个数，并实时更新解压缩数组
+运行速度较慢，有很大提升空间
+第一版采用了将输入数据存为字典，再根据字典生成解压缩数组。
+但是不能全通过，发现后面可能会出现重复的数字，这就导致覆盖了前面的键值对。
+'''
+
+
 from typing import List
 
 
 class Solution:
     def decompressRLElist(self, nums: List[int]) -> List[int]:
-        # 将输入数据整理为字典
+        decompressed = list()
         arrange = dict()
         i = 0
         while i < len(nums):
             freq = nums[i]
             val = nums[i + 1]
             i += 2
-            arrange[val] = freq
-        # 输出结果
-        decompressed = list()
-        for val in arrange.keys():
-            for i in range(arrange[val]):
+            for j in range(freq):
                 decompressed.append(val)
 
         return decompressed
@@ -24,4 +28,4 @@ class Solution:
 
 # test
 sol = Solution()
-print(sol.decompressRLElist([73,95,5,68,6,14,98,3,98,39,100,69,76,77,93,46,91,69,26,13,30,53,15,53,34,17]))
+print(sol.decompressRLElist([1,2,3,4]))
