@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1389&#10;&#10;Runtime: 9.60%&#10;Memory Usage: 35.52%&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/1295. Find Numbers with Even Number of Digits.py" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/1295. Find Numbers with Even Number of Digits.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/1295. Find Numbers with Even Number of Digits.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +184,7 @@
       <workItem from="1593533776816" duration="606000" />
       <workItem from="1593609318686" duration="6618000" />
       <workItem from="1594056008172" duration="9645000" />
-      <workItem from="1594362625792" duration="6957000" />
+      <workItem from="1594362625792" duration="7060000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -340,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594396709317</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。">
+      <created>1594397635482</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1594397635482</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +388,8 @@
     <MESSAGE value="LeetCode 1313&#10;&#10;每次读取两个数，并实时更新解压缩数组。不能使用字典，因为后面可能会重复出现某数，导致覆盖之前的键值对。暴力解法，速度较慢。" />
     <MESSAGE value="LeetCode 1389&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。" />
     <MESSAGE value="LeetCode 1389&#10;&#10;Runtime: 9.60%&#10;Memory Usage: 35.52%&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1389&#10;&#10;Runtime: 9.60%&#10;Memory Usage: 35.52%&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。" />
+    <MESSAGE value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">

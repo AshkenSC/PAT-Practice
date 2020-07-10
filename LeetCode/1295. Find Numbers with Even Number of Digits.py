@@ -1,4 +1,7 @@
 # 1295. Find Numbers with Even Number of Digits
+'''
+每次读取一个数，转为字符串，然后根据字符串的长度，判断长度的奇偶性
+'''
 
 from typing import List
 
