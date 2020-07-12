@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1266&#10;&#10;通过了3/122个测试点。&#10;&#10;调整了坐标修改逻辑，便于调试时观察坐标值变化">
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1266&#10;&#10;Runtime: 10.78%&#10;Memory Usage: 5.06%&#10;&#10;简化思路：对相邻两个点，他们的最短距离就是横坐标差/纵坐标差里面较大的那一个。遍历points数组，累加得到最终结果。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/1252. Cells with Odd Values in a Matrix.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/1266. Minimum Time Visiting All Points.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/1266. Minimum Time Visiting All Points.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,29 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.1266. Minimum Time Visiting All Points">
+  <component name="RunManager" selected="Python.1252. Cells with Odd Values in a Matrix">
+    <configuration name="1252. Cells with Odd Values in a Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Programming-Practice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1252. Cells with Odd Values in a Matrix.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="1266. Minimum Time Visiting All Points" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,35 +152,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="1486. XOR Operation in an Array" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Programming-Practice" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1486. XOR Operation in an Array.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1252. Cells with Odd Values in a Matrix" />
         <item itemvalue="Python.1266. Minimum Time Visiting All Points" />
         <item itemvalue="Python.1295. Find Numbers with Even Number of Digits" />
         <item itemvalue="Python.1389. Create Target Array in the Given Order" />
         <item itemvalue="Python.1313. Decompress Run-Length Encoded List" />
-        <item itemvalue="Python.1486. XOR Operation in an Array" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +185,9 @@
       <workItem from="1593609318686" duration="6618000" />
       <workItem from="1594056008172" duration="9645000" />
       <workItem from="1594362625792" duration="9141000" />
-      <workItem from="1594432606839" duration="2651000" />
+      <workItem from="1594432606839" duration="3315000" />
+      <workItem from="1594437487887" duration="1000" />
+      <workItem from="1594541728726" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -362,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594433462253</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="LeetCode 1266&#10;&#10;Runtime: 10.78%&#10;Memory Usage: 5.06%&#10;&#10;简化思路：对相邻两个点，他们的最短距离就是横坐标差/纵坐标差里面较大的那一个。遍历points数组，累加得到最终结果。">
+      <created>1594435518887</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1594435518887</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +390,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006" />
     <MESSAGE value="将PAT B1002-B1004的编码转为UTF-8格式。" />
     <MESSAGE value="PAT B1007: 18/20&#10;&#10;使用Python完成编写，但最后一个测试点运行超时。" />
     <MESSAGE value="PAT B1011: 0/20&#10;&#10;使用Python编写B1011，测试点均未能通过" />
@@ -406,7 +414,8 @@
     <MESSAGE value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。" />
     <MESSAGE value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;补充解题思路注释。" />
     <MESSAGE value="LeetCode 1266&#10;&#10;通过了3/122个测试点。&#10;&#10;调整了坐标修改逻辑，便于调试时观察坐标值变化" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1266&#10;&#10;通过了3/122个测试点。&#10;&#10;调整了坐标修改逻辑，便于调试时观察坐标值变化" />
+    <MESSAGE value="LeetCode 1266&#10;&#10;Runtime: 10.78%&#10;Memory Usage: 5.06%&#10;&#10;简化思路：对相邻两个点，他们的最短距离就是横坐标差/纵坐标差里面较大的那一个。遍历points数组，累加得到最终结果。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1266&#10;&#10;Runtime: 10.78%&#10;Memory Usage: 5.06%&#10;&#10;简化思路：对相邻两个点，他们的最短距离就是横坐标差/纵坐标差里面较大的那一个。遍历points数组，累加得到最终结果。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -423,61 +432,61 @@
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
-    <state width="1374" height="180" key="GridCell.Tab.0.bottom" timestamp="1594435446698">
+    <state width="1374" height="233" key="GridCell.Tab.0.bottom" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435446698" />
+    <state width="1374" height="233" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="180" key="GridCell.Tab.0.center" timestamp="1594435446698">
+    <state width="1374" height="233" key="GridCell.Tab.0.center" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435446698" />
+    <state width="1374" height="233" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="180" key="GridCell.Tab.0.left" timestamp="1594435446698">
+    <state width="1374" height="233" key="GridCell.Tab.0.left" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435446698" />
+    <state width="1374" height="233" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="180" key="GridCell.Tab.0.right" timestamp="1594435446698">
+    <state width="1374" height="233" key="GridCell.Tab.0.right" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435446698" />
+    <state width="1374" height="233" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="233" key="GridCell.Tab.1.bottom" timestamp="1594435439599">
+    <state width="1374" height="233" key="GridCell.Tab.1.bottom" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781602" />
-    <state width="1374" height="233" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435439599" />
+    <state width="1374" height="233" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
-    <state width="1374" height="233" key="GridCell.Tab.1.center" timestamp="1594435439599">
+    <state width="1374" height="233" key="GridCell.Tab.1.center" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1374" height="233" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435439599" />
+    <state width="1374" height="233" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
-    <state width="1374" height="233" key="GridCell.Tab.1.left" timestamp="1594435439599">
+    <state width="1374" height="233" key="GridCell.Tab.1.left" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1374" height="233" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435439599" />
+    <state width="1374" height="233" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
-    <state width="1374" height="233" key="GridCell.Tab.1.right" timestamp="1594435439599">
+    <state width="1374" height="233" key="GridCell.Tab.1.right" timestamp="1594544079460">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1333" height="262" key="GridCell.Tab.1.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1374" height="233" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594435439599" />
+    <state width="1374" height="233" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594544079460" />
     <state width="1374" height="81" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1593613309534">
       <screen x="0" y="0" width="1418" height="759" />
@@ -515,6 +524,16 @@
           <line>12</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/1252. Cells with Odd Values in a Matrix.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/1252. Cells with Odd Values in a Matrix.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -522,21 +541,23 @@
         <watch expression="points[i]" language="Python" />
         <watch expression="points[i+1]" language="Python" />
         <watch expression="zip(points[i], points[i + 1])" language="Python" />
+        <watch expression="matrix[row][i]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Programming_Practice$1313__Decompress_Run_Length_Encoded_List.coverage" NAME="1313. Decompress Run-Length Encoded List Coverage Results" MODIFIED="1594220238279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$1470__Shuffle_the_Array.coverage" NAME="1470. Shuffle the Array Coverage Results" MODIFIED="1593612846523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$1295__Find_Numbers_with_Even_Number_of_Digits.coverage" NAME="1295. Find Numbers with Even Number of Digits Coverage Results" MODIFIED="1594397203205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$1266__Minimum_Time_Visiting_All_Points.coverage" NAME="1266. Minimum Time Visiting All Points Coverage Results" MODIFIED="1594435446690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1006.coverage" NAME="PAT_B1006 Coverage Results" MODIFIED="1593100009868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$1252__Cells_with_Odd_Values_in_a_Matrix.coverage" NAME="1252. Cells with Odd Values in a Matrix Coverage Results" MODIFIED="1594544079450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$0007__Reverse_Integer.coverage" NAME="0007. Reverse Integer Coverage Results" MODIFIED="1593441749266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1480__Running_Sum_of_1d_Array.coverage" NAME="1480. Running Sum of 1d Array Coverage Results" MODIFIED="1593524641412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1486__XOR_Operation_in_an_Array.coverage" NAME="1486. XOR Operation in an Array Coverage Results" MODIFIED="1594127003854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1011.coverage" NAME="PAT_B1011 Coverage Results" MODIFIED="1593190874418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
-    <SUITE FILE_PATH="coverage/Programming_Practice$1313__Decompress_Run_Length_Encoded_List.coverage" NAME="1313. Decompress Run-Length Encoded List Coverage Results" MODIFIED="1594220238279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1007.coverage" NAME="PAT_B1007 Coverage Results" MODIFIED="1593100044436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
-    <SUITE FILE_PATH="coverage/Programming_Practice$1470__Shuffle_the_Array.coverage" NAME="1470. Shuffle the Array Coverage Results" MODIFIED="1593612846523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
-    <SUITE FILE_PATH="coverage/Programming_Practice$1295__Find_Numbers_with_Even_Number_of_Digits.coverage" NAME="1295. Find Numbers with Even Number of Digits Coverage Results" MODIFIED="1594397203205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1431__Kids_With_the_Greatest_Number_of_Candies.coverage" NAME="1431. Kids With the Greatest Number of Candies Coverage Results" MODIFIED="1594126902064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
-    <SUITE FILE_PATH="coverage/Programming_Practice$1266__Minimum_Time_Visiting_All_Points.coverage" NAME="1266. Minimum Time Visiting All Points Coverage Results" MODIFIED="1594435446690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
-    <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1006.coverage" NAME="PAT_B1006 Coverage Results" MODIFIED="1593100009868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1389__Create_Target_Array_in_the_Given_Order.coverage" NAME="1389. Create Target Array in the Given Order Coverage Results" MODIFIED="1594309982394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
   </component>
 </project>
