@@ -1,6 +1,7 @@
 # 21. Merge Two Sorted Lists
 '''
-用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上
+用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。
+需要考虑l1,l2为空的情况。
 '''
 
 
@@ -13,6 +14,11 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        # 如果l1, l2有一个是空链表，直接输出结果
+        if l1 is None:
+            return l2
+        elif l2 is None:
+            return l1
 
         # 确定合并链表的头结点
         if l1.val < l2.val:

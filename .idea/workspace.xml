@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0136&#10;&#10;Runtime: 28.68%&#10;Memory Usage: 77.35%&#10;&#10;遍历数组，用字典存储元素出现过的次数。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0021. Merge Two Sorted Lists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0021&#10;&#10;通过了0/122个测试点。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。">
+      <change beforePath="$PROJECT_DIR$/LeetCode/0021. Merge Two Sorted Lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0021. Merge Two Sorted Lists.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +188,7 @@
       <workItem from="1594437487887" duration="1000" />
       <workItem from="1594541728726" duration="4902000" />
       <workItem from="1594651244412" duration="7023000" />
-      <workItem from="1594734949782" duration="2638000" />
+      <workItem from="1594734949782" duration="2939000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -401,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594653928216</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="LeetCode 0021&#10;&#10;通过了0/122个测试点。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。">
+      <created>1594738054404</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1594738054404</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +426,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PAT B1011: 15/15&#10;&#10;使用Python编写B1011，通过所有测试点。（true和false写反了……）" />
     <MESSAGE value="将PAT B1005-B1007的编码转为UTF-8格式。" />
     <MESSAGE value="LeetCode 0007&#10;通过测试点 3/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()" />
     <MESSAGE value="LeetCode 0007&#10;通过测试点 0/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：&#10;&#10;(1) list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()&#10;&#10;(2) lstrip去除左边多余的0时，要排除恰好为0的情形" />
@@ -445,7 +450,8 @@
     <MESSAGE value="LeetCode 1450&#10;&#10;Runtime: 19.78%&#10;Memory Usage: 21.32%&#10;&#10;简单遍历startTime和endTime即可。" />
     <MESSAGE value="LeetCode 1512&#10;&#10;Runtime: 33.33%&#10;Memory Usage: 100.00%&#10;&#10;首先用一个字典，统计所有nums中出现过的数字他们的出现次数。&#10;然后遍历这个字典，对于出现次数&gt;=2的数字，如果出现了n次，那么就共有(n-1) + (n-2) + ... + 1对。" />
     <MESSAGE value="LeetCode 0136&#10;&#10;Runtime: 28.68%&#10;Memory Usage: 77.35%&#10;&#10;遍历数组，用字典存储元素出现过的次数。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0136&#10;&#10;Runtime: 28.68%&#10;Memory Usage: 77.35%&#10;&#10;遍历数组，用字典存储元素出现过的次数。" />
+    <MESSAGE value="LeetCode 0021&#10;&#10;通过了0/122个测试点。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0021&#10;&#10;通过了0/122个测试点。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
