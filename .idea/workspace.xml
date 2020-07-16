@@ -10,10 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0021&#10;&#10;Runtime: 17.78%&#10;Memory Usage: 87.37%&#10;&#10;需要考虑l1,l2为空的情况。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/1290. Convert Binary Number in a Linked List to Integer.cpp" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1290&#10;&#10;Runtime: 54.32%&#10;Memory Usage: 90.70%&#10;&#10;依次读取链表中的数值，每读一次前将结果乘以2，再加上当前位置。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0028. Implement strStr().py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0021. Merge Two Sorted Lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0021. Merge Two Sorted Lists.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,29 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.0136. Single Number">
+  <component name="RunManager" selected="Python.0028. Implement strStr()">
+    <configuration name="0028. Implement strStr()" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Programming-Practice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/0028. Implement strStr().py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="0136. Single Number" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,28 +100,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1252. Cells with Odd Values in a Matrix.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="1266. Minimum Time Visiting All Points" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Programming-Practice" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1266. Minimum Time Visiting All Points.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.0028. Implement strStr()" />
         <item itemvalue="Python.0136. Single Number" />
         <item itemvalue="Python.1512. Number of Good Pairs" />
         <item itemvalue="Python.1450. Number of Students Doing Homework at a Given Time" />
         <item itemvalue="Python.1252. Cells with Odd Values in a Matrix" />
-        <item itemvalue="Python.1266. Minimum Time Visiting All Points" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +191,7 @@
       <workItem from="1594651244412" duration="7023000" />
       <workItem from="1594734949782" duration="3613000" />
       <workItem from="1594796365728" duration="35000" />
-      <workItem from="1594823286571" duration="745000" />
+      <workItem from="1594823286571" duration="6246000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -418,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594738300794</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="LeetCode 1290&#10;&#10;Runtime: 54.32%&#10;Memory Usage: 90.70%&#10;&#10;依次读取链表中的数值，每读一次前将结果乘以2，再加上当前位置。">
+      <created>1594826532045</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1594826532045</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +443,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0007&#10;通过测试点 3/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()" />
     <MESSAGE value="LeetCode 0007&#10;通过测试点 0/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：&#10;&#10;(1) list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()&#10;&#10;(2) lstrip去除左边多余的0时，要排除恰好为0的情形" />
     <MESSAGE value="LeetCode 0007&#10;通过测试点 0/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：&#10;&#10;(1) list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()&#10;&#10;(2) lstrip去除左边多余的0时，要排除恰好为0的情形&#10;&#10;(3) 考虑超出范围[−2^31,  2^31 − 1]的情形" />
     <MESSAGE value="LeetCode 1480&#10;&#10;思路：新建一个空list，每次循环添加一个元素：对nums[0:i]的求和。" />
@@ -462,7 +467,8 @@
     <MESSAGE value="LeetCode 0136&#10;&#10;Runtime: 28.68%&#10;Memory Usage: 77.35%&#10;&#10;遍历数组，用字典存储元素出现过的次数。" />
     <MESSAGE value="LeetCode 0021&#10;&#10;通过了0/122个测试点。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
     <MESSAGE value="LeetCode 0021&#10;&#10;Runtime: 17.78%&#10;Memory Usage: 87.37%&#10;&#10;需要考虑l1,l2为空的情况。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0021&#10;&#10;Runtime: 17.78%&#10;Memory Usage: 87.37%&#10;&#10;需要考虑l1,l2为空的情况。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
+    <MESSAGE value="LeetCode 1290&#10;&#10;Runtime: 54.32%&#10;Memory Usage: 90.70%&#10;&#10;依次读取链表中的数值，每读一次前将结果乘以2，再加上当前位置。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1290&#10;&#10;Runtime: 54.32%&#10;Memory Usage: 90.70%&#10;&#10;依次读取链表中的数值，每读一次前将结果乘以2，再加上当前位置。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -479,69 +485,69 @@
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
-    <state width="1374" height="230" key="GridCell.Tab.0.bottom" timestamp="1594696293377">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.0.bottom" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653861641" />
+    <state width="1374" height="264" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="230" key="GridCell.Tab.0.center" timestamp="1594696293376">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.0.center" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653861641" />
+    <state width="1374" height="264" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="230" key="GridCell.Tab.0.left" timestamp="1594696293376">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.0.left" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653861641" />
+    <state width="1374" height="264" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="230" key="GridCell.Tab.0.right" timestamp="1594696293377">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.0.right" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
-    <state width="1374" height="180" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653861641" />
+    <state width="1374" height="264" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="230" key="GridCell.Tab.1.bottom" timestamp="1594696293377">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.1.bottom" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781602" />
-    <state width="1374" height="230" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653098070" />
+    <state width="1374" height="264" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
-    <state width="1374" height="230" key="GridCell.Tab.1.center" timestamp="1594696293377">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.1.center" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1374" height="230" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653098070" />
+    <state width="1374" height="264" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
-    <state width="1374" height="230" key="GridCell.Tab.1.left" timestamp="1594696293377">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.1.left" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1374" height="230" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653098070" />
+    <state width="1374" height="264" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
-    <state width="1374" height="230" key="GridCell.Tab.1.right" timestamp="1594696293377">
-      <screen x="0" y="0" width="1418" height="759" />
+    <state width="1374" height="264" key="GridCell.Tab.1.right" timestamp="1594921110080">
+      <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
-    <state width="1374" height="230" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653098070" />
+    <state width="1374" height="264" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594921110080" />
     <state width="1374" height="81" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1594257086717" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1593613309534">
       <screen x="0" y="0" width="1418" height="759" />
@@ -555,10 +561,11 @@
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653941417" />
-    <state x="-1520" y="139" width="672" height="620" key="search.everywhere.popup" timestamp="1594738083863">
+    <state x="-1520" y="139" width="672" height="620" key="search.everywhere.popup" timestamp="1594918792661">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1520" y="139" width="672" height="620" key="search.everywhere.popup/-1920.0.1418.759/0.0.1418.759@-1920.0.1418.759" timestamp="1594738083863" />
+    <state x="-1520" y="139" width="672" height="620" key="search.everywhere.popup/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594918792661" />
     <state x="-1483" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190990022" />
   </component>
   <component name="XDebuggerManager">
@@ -598,10 +605,8 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="points[i]" language="Python" />
-        <watch expression="points[i+1]" language="Python" />
-        <watch expression="zip(points[i], points[i + 1])" language="Python" />
-        <watch expression="matrix[row][i]" language="Python" />
+        <watch expression="haystack[current_pos:current_pos+len(needle)]" language="Python" />
+        <watch expression="haystack[current_pos + len(needle)]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -612,6 +617,7 @@
     <SUITE FILE_PATH="coverage/Programming_Practice$1295__Find_Numbers_with_Even_Number_of_Digits.coverage" NAME="1295. Find Numbers with Even Number of Digits Coverage Results" MODIFIED="1594397203205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1266__Minimum_Time_Visiting_All_Points.coverage" NAME="1266. Minimum Time Visiting All Points Coverage Results" MODIFIED="1594435446690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1006.coverage" NAME="PAT_B1006 Coverage Results" MODIFIED="1593100009868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$0028__Implement_strStr__.coverage" NAME="0028. Implement strStr() Coverage Results" MODIFIED="1594921110070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1252__Cells_with_Odd_Values_in_a_Matrix.coverage" NAME="1252. Cells with Odd Values in a Matrix Coverage Results" MODIFIED="1594544079450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$0007__Reverse_Integer.coverage" NAME="0007. Reverse Integer Coverage Results" MODIFIED="1593441749266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1480__Running_Sum_of_1d_Array.coverage" NAME="1480. Running Sum of 1d Array Coverage Results" MODIFIED="1593524641412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
