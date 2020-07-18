@@ -10,8 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0028&#10;&#10;Runtime: 21.81%&#10;Memory Usage: 82.88%&#10;&#10;遍历数组元素将其平方，然后排序即可。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/1351. Count Negative Numbers in a Sorted Matrix.py" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1351&#10;&#10;Runtime: 95.80%&#10;Memory Usage: 23.32%&#10;&#10;利用矩阵的有序性，当遇到某行第一个为负数的，则后面都为负数，减少判断次数。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/1464. Maximum Product of Two Elements in an Array.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +41,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.1351. Count Negative Numbers in a Sorted Matrix">
+  <component name="RunManager" selected="Python.1464. Maximum Product of Two Elements in an Array">
     <configuration name="1351. Count Negative Numbers in a Sorted Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,6 +56,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1351. Count Negative Numbers in a Sorted Matrix.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1464. Maximum Product of Two Elements in an Array" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Programming-Practice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1464. Maximum Product of Two Elements in an Array.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,35 +152,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Programming-Practice" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1464. Maximum Product of Two Elements in an Array" />
         <item itemvalue="Python.1351. Count Negative Numbers in a Sorted Matrix" />
         <item itemvalue="Python.CollageCreator" />
         <item itemvalue="Python.collage" />
         <item itemvalue="Python.canny2 (1)" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +194,7 @@
       <workItem from="1594823286571" duration="10300000" />
       <workItem from="1594993772935" duration="14274000" />
       <workItem from="1595044349352" duration="27912000" />
-      <workItem from="1595233594494" duration="1234000" />
+      <workItem from="1595233594494" duration="1667000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -441,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594997976490</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="LeetCode 1351&#10;&#10;Runtime: 95.80%&#10;Memory Usage: 23.32%&#10;&#10;利用矩阵的有序性，当遇到某行第一个为负数的，则后面都为负数，减少判断次数。">
+      <created>1594889510814</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1594889510814</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +467,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1480&#10;&#10;思路：新建一个空list，每次循环添加一个元素：对nums[0:i]的求和。" />
     <MESSAGE value="LeetCode 1470&#10;&#10;思路：设置两个指针，指向x1, y1, 逐个添加xi, yi。" />
     <MESSAGE value="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。" />
     <MESSAGE value="LeetCode 1431&#10;&#10;修正了输出格式错误。" />
@@ -485,7 +491,8 @@
     <MESSAGE value="LeetCode 1290&#10;&#10;Runtime: 54.32%&#10;Memory Usage: 90.70%&#10;&#10;依次读取链表中的数值，每读一次前将结果乘以2，再加上当前位置。" />
     <MESSAGE value="LeetCode 0028&#10;&#10;Runtime: 37.34%&#10;Memory Usage: 76.59%&#10;&#10;采用Sunday算法，注意考虑各种边界条件。" />
     <MESSAGE value="LeetCode 0028&#10;&#10;Runtime: 21.81%&#10;Memory Usage: 82.88%&#10;&#10;遍历数组元素将其平方，然后排序即可。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0028&#10;&#10;Runtime: 21.81%&#10;Memory Usage: 82.88%&#10;&#10;遍历数组元素将其平方，然后排序即可。" />
+    <MESSAGE value="LeetCode 1351&#10;&#10;Runtime: 95.80%&#10;Memory Usage: 23.32%&#10;&#10;利用矩阵的有序性，当遇到某行第一个为负数的，则后面都为负数，减少判断次数。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1351&#10;&#10;Runtime: 95.80%&#10;Memory Usage: 23.32%&#10;&#10;利用矩阵的有序性，当遇到某行第一个为负数的，则后面都为负数，减少判断次数。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -685,6 +692,7 @@
     <SUITE FILE_PATH="coverage/Programming_Practice$0007__Reverse_Integer.coverage" NAME="0007. Reverse Integer Coverage Results" MODIFIED="1593441749266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1480__Running_Sum_of_1d_Array.coverage" NAME="1480. Running Sum of 1d Array Coverage Results" MODIFIED="1593524641412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$PAT_B1011.coverage" NAME="PAT_B1011 Coverage Results" MODIFIED="1593190874418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PAT" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$1464__Maximum_Product_of_Two_Elements_in_an_Array.coverage" NAME="1464. Maximum Product of Two Elements in an Array Coverage Results" MODIFIED="1595062651685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1431__Kids_With_the_Greatest_Number_of_Candies.coverage" NAME="1431. Kids With the Greatest Number of Candies Coverage Results" MODIFIED="1594126902064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1512__Number_of_Good_Pairs.coverage" NAME="1512. Number of Good Pairs Coverage Results" MODIFIED="1594653107825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$0977__Squares_of_a_Sorted_Array.coverage" NAME="0977. Squares of a Sorted Array Coverage Results" MODIFIED="1594997919583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
