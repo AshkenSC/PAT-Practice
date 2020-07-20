@@ -6,18 +6,29 @@
 当count==0的时候，结果增加的是[prev + 1, i)
 '''
 
+
 class Solution(object):
     def removeOuterParentheses(self, S):
-        prev = 0
-        output = ""
+        output = ''
         count = 0
-        for i, s in enumerate(S):
-            if s == '(':
+        prev_part_end = 0
+        for i in range(len(S)):
+            if S[i] == '(':
                 count += 1
             else:
                 count -= 1
             if count == 0:
-                output += S[prev + 1: i]
-                prev = i + 1
+                if i - prev_part_end > 1:
+                    output += S[prev_part_end + 1:i]
+                prev_part_end = i + 1
+                count = 0
+
         return output
+
+
+# sol = Solution()
+# res = sol.removeOuterParentheses("(()())(())(()(()))")
+# print(res)
+
+
 
