@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0771&#10;&#10;Runtime: 34.45% &#10;Memory Usage: 54.65%&#10;&#10;直接遍历S中每个字符，判断是否在J中存在即可。" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/771. Jewels and Stones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/771. Jewels and Stones.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,6 +196,7 @@
       <workItem from="1595044349352" duration="27912000" />
       <workItem from="1595233594494" duration="4726000" />
       <workItem from="1595258408072" duration="3464000" />
+      <workItem from="1595385815109" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -474,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595263982588</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。">
+      <created>1595386040781</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1595386040782</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +504,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1486&#10;&#10;（1）第一版代码未注意n和start从参数传入，还使用了input();&#10;&#10;（2）Python中的XOR运算符是^。" />
     <MESSAGE value="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。" />
     <MESSAGE value="LeetCode 1365&#10;&#10;补充注释。" />
     <MESSAGE value="LeetCode 1313&#10;&#10;将输入数据存为字典，再根据字典生成解压缩数组。&#10;通过了16/53个测试点。" />
@@ -518,7 +528,8 @@
     <MESSAGE value="LeetCode 1021&#10;&#10;Runtime: 12.70%&#10;Memory Usage: 89.13%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)" />
     <MESSAGE value="LeetCode 1021&#10;&#10;Runtime: 37.16%&#10;Memory Usage: 73.85%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)" />
     <MESSAGE value="LeetCode 0771&#10;&#10;Runtime: 34.45% &#10;Memory Usage: 54.65%&#10;&#10;直接遍历S中每个字符，判断是否在J中存在即可。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0771&#10;&#10;Runtime: 34.45% &#10;Memory Usage: 54.65%&#10;&#10;直接遍历S中每个字符，判断是否在J中存在即可。" />
+    <MESSAGE value="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
