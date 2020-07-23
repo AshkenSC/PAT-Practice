@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/771. Jewels and Stones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/771. Jewels and Stones.py" beforeDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0067. Add Binary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,29 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.771. Jewels and Stones">
+  <component name="RunManager" selected="Python.0067. Add Binary">
+    <configuration name="0067. Add Binary" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Programming-Practice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/0067. Add Binary.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="1021. Remove Outermost Parentheses" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,28 +78,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1021. Remove Outermost Parentheses.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="1351. Count Negative Numbers in a Sorted Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Programming-Practice" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1351. Count Negative Numbers in a Sorted Matrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.0067. Add Binary" />
         <item itemvalue="Python.771. Jewels and Stones" />
         <item itemvalue="Python.1021. Remove Outermost Parentheses" />
         <item itemvalue="Python.CollageCreator" />
         <item itemvalue="Python.1464. Maximum Product of Two Elements in an Array" />
-        <item itemvalue="Python.1351. Count Negative Numbers in a Sorted Matrix" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +196,8 @@
       <workItem from="1595044349352" duration="27912000" />
       <workItem from="1595233594494" duration="4726000" />
       <workItem from="1595258408072" duration="3464000" />
-      <workItem from="1595385815109" duration="319000" />
+      <workItem from="1595385815109" duration="1000000" />
+      <workItem from="1595515898075" duration="2030000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -485,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595386040782</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。">
+      <created>1595386215540</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1595386215540</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +512,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。" />
     <MESSAGE value="LeetCode 1365&#10;&#10;补充注释。" />
     <MESSAGE value="LeetCode 1313&#10;&#10;将输入数据存为字典，再根据字典生成解压缩数组。&#10;通过了16/53个测试点。" />
     <MESSAGE value="LeetCode 1313&#10;&#10;每次读取两个数，并实时更新解压缩数组。不能使用字典，因为后面可能会重复出现某数，导致覆盖之前的键值对。暴力解法，速度较慢。" />
@@ -529,7 +536,8 @@
     <MESSAGE value="LeetCode 1021&#10;&#10;Runtime: 37.16%&#10;Memory Usage: 73.85%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)" />
     <MESSAGE value="LeetCode 0771&#10;&#10;Runtime: 34.45% &#10;Memory Usage: 54.65%&#10;&#10;直接遍历S中每个字符，判断是否在J中存在即可。" />
     <MESSAGE value="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。" />
+    <MESSAGE value="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -705,6 +713,11 @@
           <line>11</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/0067. Add Binary.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -724,6 +737,7 @@
     <SUITE FILE_PATH="coverage/Programming_Practice$canny2__1_.coverage" NAME="canny2 (1) Coverage Results" MODIFIED="1595061355144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/zhizhi/task1" />
     <SUITE FILE_PATH="coverage/Programming_Practice$test.coverage" NAME="test Coverage Results" MODIFIED="1595051390096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Programming_Practice$771__Jewels_and_Stones.coverage" NAME="771. Jewels and Stones Coverage Results" MODIFIED="1595263912113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$0067__Add_Binary.coverage" NAME="0067. Add Binary Coverage Results" MODIFIED="1595517861769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1313__Decompress_Run_Length_Encoded_List.coverage" NAME="1313. Decompress Run-Length Encoded List Coverage Results" MODIFIED="1594220238279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1470__Shuffle_the_Array.coverage" NAME="1470. Shuffle the Array Coverage Results" MODIFIED="1593612846523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$1266__Minimum_Time_Visiting_All_Points.coverage" NAME="1266. Minimum Time Visiting All Points Coverage Results" MODIFIED="1594435446690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
