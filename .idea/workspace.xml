@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0961. N-Repeated Element in Size 2N Array.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0961. N-Repeated Element in Size 2N Array.cpp" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/1207. Unique Number of Occurrences.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +197,7 @@
       <workItem from="1595258408072" duration="3464000" />
       <workItem from="1595385815109" duration="1000000" />
       <workItem from="1595515898075" duration="2691000" />
-      <workItem from="1595604307592" duration="1512000" />
+      <workItem from="1595604307592" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -508,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595604440772</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。">
+      <created>1595606285661</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1595606285661</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +533,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1313&#10;&#10;每次读取两个数，并实时更新解压缩数组。不能使用字典，因为后面可能会重复出现某数，导致覆盖之前的键值对。暴力解法，速度较慢。" />
     <MESSAGE value="LeetCode 1389&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。" />
     <MESSAGE value="LeetCode 1389&#10;&#10;Runtime: 9.60%&#10;Memory Usage: 35.52%&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。" />
     <MESSAGE value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。" />
@@ -552,7 +557,8 @@
     <MESSAGE value="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。" />
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:  31.70% &#10;Memory Usage: 8.27% &#10;&#10;1）先把位数少的前面补全0&#10;2）模拟人计算加法，从低位起逐个位相加&#10;当前位=数位1+数位2+进位&#10;如果当前位=0或者1，则：当前位=0或1，进位=0&#10;如果当前位=2或3，则：当前位=0或1，进位=1&#10;3）最高位的处理&#10;如果当前位置是最高位，且进位=1，前面还要补一位" />
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
+    <MESSAGE value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
