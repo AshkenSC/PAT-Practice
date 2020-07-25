@@ -10,8 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/1207. Unique Number of Occurrences.cpp" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +197,7 @@
       <workItem from="1595258408072" duration="3464000" />
       <workItem from="1595385815109" duration="1000000" />
       <workItem from="1595515898075" duration="2691000" />
-      <workItem from="1595604307592" duration="2000000" />
+      <workItem from="1595604307592" duration="3163000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -514,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595606285661</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。">
+      <created>1595606708403</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1595606708403</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +540,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1389&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。" />
     <MESSAGE value="LeetCode 1389&#10;&#10;Runtime: 9.60%&#10;Memory Usage: 35.52%&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。" />
     <MESSAGE value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。" />
     <MESSAGE value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;补充解题思路注释。" />
@@ -558,7 +564,8 @@
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:  31.70% &#10;Memory Usage: 8.27% &#10;&#10;1）先把位数少的前面补全0&#10;2）模拟人计算加法，从低位起逐个位相加&#10;当前位=数位1+数位2+进位&#10;如果当前位=0或者1，则：当前位=0或1，进位=0&#10;如果当前位=2或3，则：当前位=0或1，进位=1&#10;3）最高位的处理&#10;如果当前位置是最高位，且进位=1，前面还要补一位" />
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
     <MESSAGE value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
+    <MESSAGE value="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -655,10 +662,10 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1594653941417">
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1595606717852">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1594653941417" />
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595606717852" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
