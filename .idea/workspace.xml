@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0101. Symmetric Tree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +200,8 @@
       <workItem from="1595515898075" duration="2691000" />
       <workItem from="1595604307592" duration="3163000" />
       <workItem from="1595683034118" duration="1306000" />
-      <workItem from="1595775165983" duration="1257000" />
+      <workItem from="1595775165983" duration="1495000" />
+      <workItem from="1595833062363" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="PAT B1006: 15/15&#10;&#10;成功用Python解答PAT B1006">
       <created>1592842615724</created>
@@ -535,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595776673254</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。">
+      <created>1595783429049</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1595783429049</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +565,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;补充解题思路注释。" />
     <MESSAGE value="LeetCode 1266&#10;&#10;通过了3/122个测试点。&#10;&#10;调整了坐标修改逻辑，便于调试时观察坐标值变化" />
     <MESSAGE value="LeetCode 1266&#10;&#10;Runtime: 10.78%&#10;Memory Usage: 5.06%&#10;&#10;简化思路：对相邻两个点，他们的最短距离就是横坐标差/纵坐标差里面较大的那一个。遍历points数组，累加得到最终结果。" />
     <MESSAGE value="LeetCode 1252&#10;&#10;Runtime: 31.01%&#10;Memory Usage: 96.02%&#10;&#10;遍历indices每个子列表，每次对应的行和列增加1。&#10;注意用列表解析创建二维list的方法" />
@@ -579,7 +589,8 @@
     <MESSAGE value="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。" />
     <MESSAGE value="LeetCode 0876&#10;&#10;Runtime: 100.00% &#10;Memory Usage: 40.19%&#10;&#10;从头遍历一遍链表，一边将其内容放在一个数组中。然后利用数组随机访问的特点，立刻找到链表的中间位置。" />
     <MESSAGE value="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。" />
+    <MESSAGE value="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -590,10 +601,10 @@
       <screen x="-1920" y="0" width="1549" height="831" />
     </state>
     <state x="-1569" y="61" key="#SSH_Configurations/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359783033" />
-    <state x="-1527" y="181" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595683084020">
+    <state x="-1527" y="181" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595783266836">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
-    <state x="-1527" y="181" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595683084020" />
+    <state x="-1527" y="181" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595783266836" />
     <state x="-1363" y="170" key="FileChooserDialogImpl" timestamp="1593359964702">
       <screen x="-1920" y="0" width="1549" height="831" />
     </state>
@@ -680,10 +691,10 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1595606717852">
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1595783438093">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595606717852" />
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595783438093" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
