@@ -40,10 +40,10 @@ while queue is not empty:
 最后还要将result数组逆序。
 
 注意：
-1）清空数组并回收内存：使用swap
+1）清空数组：使用clear()
 subArray.clear();
 
-2）反转vector：使用<algorithm>里的reverse
+2）反转vector：使用<algorithm>里的reverse()
 reverse(subArray.begin(),subArray.end())
 
 3）记得处理空结点输入情形。

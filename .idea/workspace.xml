@@ -10,10 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/!0107. Binary Tree Level Order Traversal II.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0107. Binary Tree Level Order Traversal II.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,14 +198,7 @@
       <workItem from="1595604307592" duration="3163000" />
       <workItem from="1595683034118" duration="1306000" />
       <workItem from="1595775165983" duration="1495000" />
-      <workItem from="1595833062363" duration="7814000" />
-    </task>
-    <task id="LOCAL-00003" summary="PAT B1007: 18/20&#10;&#10;使用Python完成编写，但最后一个测试点运行超时。">
-      <created>1593100236048</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1593100236048</updated>
+      <workItem from="1595833062363" duration="7857000" />
     </task>
     <task id="LOCAL-00004" summary="PAT B1011: 0/20&#10;&#10;使用Python编写B1011，测试点均未能通过">
       <created>1593185754892</created>
@@ -546,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595946579448</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。">
+      <created>1595946944076</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1595946944076</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +562,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1252&#10;&#10;Runtime: 31.01%&#10;Memory Usage: 96.02%&#10;&#10;遍历indices每个子列表，每次对应的行和列增加1。&#10;注意用列表解析创建二维list的方法" />
     <MESSAGE value="LeetCode 1450&#10;&#10;Runtime: 19.78%&#10;Memory Usage: 21.32%&#10;&#10;简单遍历startTime和endTime即可。" />
     <MESSAGE value="LeetCode 1512&#10;&#10;Runtime: 33.33%&#10;Memory Usage: 100.00%&#10;&#10;首先用一个字典，统计所有nums中出现过的数字他们的出现次数。&#10;然后遍历这个字典，对于出现次数&gt;=2的数字，如果出现了n次，那么就共有(n-1) + (n-2) + ... + 1对。" />
     <MESSAGE value="LeetCode 0136&#10;&#10;Runtime: 28.68%&#10;Memory Usage: 77.35%&#10;&#10;遍历数组，用字典存储元素出现过的次数。" />
@@ -590,7 +586,8 @@
     <MESSAGE value="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。" />
     <MESSAGE value="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。" />
+    <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -691,10 +688,10 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1595834041734">
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1595961363993">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595834041734" />
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595961363993" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
