@@ -55,6 +55,7 @@ public:
         vector<vector<int>> result;
         vector<int> subArray;
         queue<TreeNode> q;
+        // 哨兵设了一个古怪的值，作为标志。如果可以修改结点结构，我会增加一个布尔值isSentinal用于判断。
         TreeNode sentinal = TreeNode(-114514);
         TreeNode currentNode;
 
@@ -63,6 +64,7 @@ public:
             return result;
         }
 
+        // 初始化队列，插入根结点和哨兵
         q.push(*root);
         q.push(sentinal);
 
@@ -91,7 +93,7 @@ public:
             result.push_back(subArray);
         }
 
-        // 反转数组
+        // 反转总数组
         reverse(result.begin(), result.end());
 
         return result;

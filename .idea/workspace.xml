@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0107. Binary Tree Level Order Traversal II.cpp" afterDir="false" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/!0107. Binary Tree Level Order Traversal II.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0107. Binary Tree Level Order Traversal II.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,14 +201,7 @@
       <workItem from="1595604307592" duration="3163000" />
       <workItem from="1595683034118" duration="1306000" />
       <workItem from="1595775165983" duration="1495000" />
-      <workItem from="1595833062363" duration="7397000" />
-    </task>
-    <task id="LOCAL-00002" summary="将PAT B1002-B1004的编码转为UTF-8格式。">
-      <created>1593008929455</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1593008929455</updated>
+      <workItem from="1595833062363" duration="7814000" />
     </task>
     <task id="LOCAL-00003" summary="PAT B1007: 18/20&#10;&#10;使用Python完成编写，但最后一个测试点运行超时。">
       <created>1593100236048</created>
@@ -546,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595834034226</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。">
+      <created>1595946579448</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1595946579448</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +565,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1266&#10;&#10;Runtime: 10.78%&#10;Memory Usage: 5.06%&#10;&#10;简化思路：对相邻两个点，他们的最短距离就是横坐标差/纵坐标差里面较大的那一个。遍历points数组，累加得到最终结果。" />
     <MESSAGE value="LeetCode 1252&#10;&#10;Runtime: 31.01%&#10;Memory Usage: 96.02%&#10;&#10;遍历indices每个子列表，每次对应的行和列增加1。&#10;注意用列表解析创建二维list的方法" />
     <MESSAGE value="LeetCode 1450&#10;&#10;Runtime: 19.78%&#10;Memory Usage: 21.32%&#10;&#10;简单遍历startTime和endTime即可。" />
     <MESSAGE value="LeetCode 1512&#10;&#10;Runtime: 33.33%&#10;Memory Usage: 100.00%&#10;&#10;首先用一个字典，统计所有nums中出现过的数字他们的出现次数。&#10;然后遍历这个字典，对于出现次数&gt;=2的数字，如果出现了n次，那么就共有(n-1) + (n-2) + ... + 1对。" />
@@ -590,7 +589,8 @@
     <MESSAGE value="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。" />
     <MESSAGE value="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。" />
     <MESSAGE value="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。" />
+    <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -777,7 +777,7 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LeetCode/0107. Binary Tree Level Order Traversal II.cpp</url>
+          <url>file://$PROJECT_DIR$/LeetCode/!0107. Binary Tree Level Order Traversal II.cpp</url>
           <line>32</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
