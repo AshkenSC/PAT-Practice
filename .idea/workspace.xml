@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
+    <list default="true" id="cc6483ee-f99d-41e8-a3b8-fa4a9121f43a" name="Default Changelist" comment="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正哨兵结点的相关注释。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/771. Jewels and Stones.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0771. Jewels and Stones.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,21 +201,8 @@
       <workItem from="1595604307592" duration="3163000" />
       <workItem from="1595683034118" duration="1306000" />
       <workItem from="1595775165983" duration="1495000" />
-      <workItem from="1595833062363" duration="7857000" />
-    </task>
-    <task id="LOCAL-00004" summary="PAT B1011: 0/20&#10;&#10;使用Python编写B1011，测试点均未能通过">
-      <created>1593185754892</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1593185754892</updated>
-    </task>
-    <task id="LOCAL-00005" summary="PAT B1011: 0/20&#10;&#10;使用Python编写B1011。补充了数据类型转换，但测试点仍然均未能通过">
-      <created>1593190769499</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1593190769499</updated>
+      <workItem from="1595833062363" duration="10597000" />
+      <workItem from="1596072624778" duration="1106000" />
     </task>
     <task id="LOCAL-00006" summary="PAT B1011: 15/15&#10;&#10;使用Python编写B1011，通过所有测试点。（true和false写反了……）">
       <created>1593190992128</created>
@@ -543,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595946944076</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正clear函数的相关注释。">
+      <created>1595961494444</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1595961494444</updated>
+    </task>
+    <task id="LOCAL-00054" summary="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正哨兵结点的相关注释。">
+      <created>1595961598815</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1595961598815</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,8 +566,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1450&#10;&#10;Runtime: 19.78%&#10;Memory Usage: 21.32%&#10;&#10;简单遍历startTime和endTime即可。" />
-    <MESSAGE value="LeetCode 1512&#10;&#10;Runtime: 33.33%&#10;Memory Usage: 100.00%&#10;&#10;首先用一个字典，统计所有nums中出现过的数字他们的出现次数。&#10;然后遍历这个字典，对于出现次数&gt;=2的数字，如果出现了n次，那么就共有(n-1) + (n-2) + ... + 1对。" />
     <MESSAGE value="LeetCode 0136&#10;&#10;Runtime: 28.68%&#10;Memory Usage: 77.35%&#10;&#10;遍历数组，用字典存储元素出现过的次数。" />
     <MESSAGE value="LeetCode 0021&#10;&#10;通过了0/122个测试点。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
     <MESSAGE value="LeetCode 0021&#10;&#10;Runtime: 17.78%&#10;Memory Usage: 87.37%&#10;&#10;需要考虑l1,l2为空的情况。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
@@ -587,7 +589,9 @@
     <MESSAGE value="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
+    <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正clear函数的相关注释。" />
+    <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正哨兵结点的相关注释。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正哨兵结点的相关注释。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
