@@ -1,7 +1,7 @@
 // LeetCode: 1. Two Sum
 
 /*
-神奇的LeetCode判定，必须在函数结尾再加个return才能通过
+绁炲鐨凩eetCode鍒ゅ畾锛屽繀椤诲湪鍑芥暟缁撳熬鍐嶅姞涓猺eturn鎵嶈兘閫氳繃
 */
 
 class Solution {
@@ -17,6 +17,6 @@ public:
                 }
             }
         }
-        return answer;	// 神奇的LeetCode判定，必须这里加个return才能通过
+        return answer;	// 绁炲鐨凩eetCode鍒ゅ畾锛屽繀椤昏繖閲屽姞涓猺eturn鎵嶈兘閫氳繃
     }
 };
