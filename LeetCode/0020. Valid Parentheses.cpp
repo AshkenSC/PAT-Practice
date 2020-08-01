@@ -15,7 +15,6 @@
 
 思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。
 
-
 map插入数据
 1）mapStudent.insert(pair<int, string>(1, "student_one"));
 2）或采用数组方式leftCount['('] = 0;

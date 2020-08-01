@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="">
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0020. Valid Parentheses&#10;&#10;Runtime:  46.99%&#10;Memory Usage: 67.76%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0155. Min Stack.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/!0104. Maximum Depth of Binary Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0104. Maximum Depth of Binary Tree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0001. Two Sum.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0001. Two Sum.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0026. Remove Duplicates from Sorted Array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0026. Remove Duplicates from Sorted Array.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0027. Remove Elements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0027. Remove Elements.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/0020. Valid Parentheses.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0020. Valid Parentheses.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,13 +213,6 @@
       <workItem from="1595775165983" duration="1495000" />
       <workItem from="1595833062363" duration="10597000" />
       <workItem from="1596072624778" duration="2751000" />
-    </task>
-    <task id="LOCAL-00007" summary="将PAT B1005-B1007的编码转为UTF-8格式。">
-      <created>1593314357224</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1593314357224</updated>
     </task>
     <task id="LOCAL-00008" summary="LeetCode 0007&#10;通过测试点 3/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()">
       <created>1593440092553</created>
@@ -559,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596075383078</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="LeetCode 0020. Valid Parentheses&#10;&#10;Runtime:  46.99%&#10;Memory Usage: 67.76%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。">
+      <created>1596204915475</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1596204915475</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +576,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0021&#10;&#10;通过了0/122个测试点。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
     <MESSAGE value="LeetCode 0021&#10;&#10;Runtime: 17.78%&#10;Memory Usage: 87.37%&#10;&#10;需要考虑l1,l2为空的情况。&#10;&#10;用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。" />
     <MESSAGE value="LeetCode 1290&#10;&#10;Runtime: 54.32%&#10;Memory Usage: 90.70%&#10;&#10;依次读取链表中的数值，每读一次前将结果乘以2，再加上当前位置。" />
     <MESSAGE value="LeetCode 0028&#10;&#10;Runtime: 37.34%&#10;Memory Usage: 76.59%&#10;&#10;采用Sunday算法，注意考虑各种边界条件。" />
@@ -603,7 +600,8 @@
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正clear函数的相关注释。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正哨兵结点的相关注释。" />
     <MESSAGE value="LeetCode 0100. Same Tree Level Order Traversal II&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 55.06%&#10;&#10;递归判断。同时判断两者左子树和右子树是否相等，必须左右子树同时相等才返回true。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0100. Same Tree Level Order Traversal II&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 55.06%&#10;&#10;递归判断。同时判断两者左子树和右子树是否相等，必须左右子树同时相等才返回true。" />
+    <MESSAGE value="LeetCode 0020. Valid Parentheses&#10;&#10;Runtime:  46.99%&#10;Memory Usage: 67.76%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0020. Valid Parentheses&#10;&#10;Runtime:  46.99%&#10;Memory Usage: 67.76%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
