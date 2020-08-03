@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;更新了解题思路注释。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0225. Implement Stack using Queues.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0415. Add Strings.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,14 +213,8 @@
       <workItem from="1595833062363" duration="10597000" />
       <workItem from="1596072624778" duration="2751000" />
       <workItem from="1596339423850" duration="1216000" />
-      <workItem from="1596373141725" duration="2753000" />
-    </task>
-    <task id="LOCAL-00010" summary="LeetCode 0007&#10;通过测试点 0/1032&#10;&#10;目前思路：转为字符串处理翻转，再转为int输出结果&#10;&#10;注意：&#10;&#10;(1) list.reverse() 没有返回值，它会直接对list排序, 所以不要写x_str_list = list(x_str).reverse()&#10;&#10;(2) lstrip去除左边多余的0时，要排除恰好为0的情形&#10;&#10;(3) 考虑超出范围[−2^31,  2^31 − 1]的情形">
-      <created>1593441834996</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1593441834996</updated>
+      <workItem from="1596373141725" duration="4393000" />
+      <workItem from="1596446579569" duration="1458000" />
     </task>
     <task id="LOCAL-00011" summary="LeetCode 1480&#10;&#10;思路：新建一个空list，每次循环添加一个元素：对nums[0:i]的求和。">
       <created>1593525559812</created>
@@ -558,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596289803834</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。">
+      <created>1596383482846</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1596383482846</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +578,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0028&#10;&#10;Runtime: 37.34%&#10;Memory Usage: 76.59%&#10;&#10;采用Sunday算法，注意考虑各种边界条件。" />
     <MESSAGE value="LeetCode 0028&#10;&#10;Runtime: 21.81%&#10;Memory Usage: 82.88%&#10;&#10;遍历数组元素将其平方，然后排序即可。" />
     <MESSAGE value="LeetCode 1351&#10;&#10;Runtime: 95.80%&#10;Memory Usage: 23.32%&#10;&#10;利用矩阵的有序性，当遇到某行第一个为负数的，则后面都为负数，减少判断次数。" />
     <MESSAGE value="LeetCode 1464&#10;&#10;Runtime: 91.27%&#10;Memory Usage: 75.36%&#10;&#10;事实上就是找到数组里最大的两个数，将他们分别减1后相乘" />
@@ -602,7 +602,8 @@
     <MESSAGE value="LeetCode 0020. Valid Parentheses&#10;&#10;Runtime:  46.99%&#10;Memory Usage: 67.76%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。" />
     <MESSAGE value="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。" />
     <MESSAGE value="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;更新了解题思路注释。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;更新了解题思路注释。" />
+    <MESSAGE value="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -703,10 +704,10 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1596292299612">
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1596384818736">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596292299612" />
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596384818736" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
