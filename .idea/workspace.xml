@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0415. Add Strings.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0415. Add Strings&#10;&#10;Runtime:  8.88%&#10;Memory Usage: 11.17%&#10;&#10;思路：&#10;1）先把位数少的前面补全0&#10;2）模拟人算加法，从低位起逐位相加&#10;当前位=数位1+数位2+进位，&#10;如果当前位=0-9，则进位=0；&#10;如果当前为=10-18，则当前位=当前位-10，进位=1&#10;3）最高位的处理&#10;如果当前位是最高位，且计算结果进位=1，则前面还要补一位">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0122. Best Time to Buy and Sell Stock II.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,14 +214,8 @@
       <workItem from="1596072624778" duration="2751000" />
       <workItem from="1596339423850" duration="1216000" />
       <workItem from="1596373141725" duration="4393000" />
-      <workItem from="1596446579569" duration="1458000" />
-    </task>
-    <task id="LOCAL-00011" summary="LeetCode 1480&#10;&#10;思路：新建一个空list，每次循环添加一个元素：对nums[0:i]的求和。">
-      <created>1593525559812</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1593525559813</updated>
+      <workItem from="1596446579569" duration="2140000" />
+      <workItem from="1596554466783" duration="664000" />
     </task>
     <task id="LOCAL-00012" summary="LeetCode 1470&#10;&#10;思路：设置两个指针，指向x1, y1, 逐个添加xi, yi。">
       <created>1593613063943</created>
@@ -559,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596383482846</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="LeetCode 0415. Add Strings&#10;&#10;Runtime:  8.88%&#10;Memory Usage: 11.17%&#10;&#10;思路：&#10;1）先把位数少的前面补全0&#10;2）模拟人算加法，从低位起逐位相加&#10;当前位=数位1+数位2+进位，&#10;如果当前位=0-9，则进位=0；&#10;如果当前为=10-18，则当前位=当前位-10，进位=1&#10;3）最高位的处理&#10;如果当前位是最高位，且计算结果进位=1，则前面还要补一位">
+      <created>1596451132003</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1596451132004</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +579,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0028&#10;&#10;Runtime: 21.81%&#10;Memory Usage: 82.88%&#10;&#10;遍历数组元素将其平方，然后排序即可。" />
     <MESSAGE value="LeetCode 1351&#10;&#10;Runtime: 95.80%&#10;Memory Usage: 23.32%&#10;&#10;利用矩阵的有序性，当遇到某行第一个为负数的，则后面都为负数，减少判断次数。" />
     <MESSAGE value="LeetCode 1464&#10;&#10;Runtime: 91.27%&#10;Memory Usage: 75.36%&#10;&#10;事实上就是找到数组里最大的两个数，将他们分别减1后相乘" />
     <MESSAGE value="LeetCode 1021&#10;&#10;Runtime: 12.70%&#10;Memory Usage: 89.13%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)" />
@@ -603,7 +603,8 @@
     <MESSAGE value="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。" />
     <MESSAGE value="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;更新了解题思路注释。" />
     <MESSAGE value="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。" />
+    <MESSAGE value="LeetCode 0415. Add Strings&#10;&#10;Runtime:  8.88%&#10;Memory Usage: 11.17%&#10;&#10;思路：&#10;1）先把位数少的前面补全0&#10;2）模拟人算加法，从低位起逐位相加&#10;当前位=数位1+数位2+进位，&#10;如果当前位=0-9，则进位=0；&#10;如果当前为=10-18，则当前位=当前位-10，进位=1&#10;3）最高位的处理&#10;如果当前位是最高位，且计算结果进位=1，则前面还要补一位" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0415. Add Strings&#10;&#10;Runtime:  8.88%&#10;Memory Usage: 11.17%&#10;&#10;思路：&#10;1）先把位数少的前面补全0&#10;2）模拟人算加法，从低位起逐位相加&#10;当前位=数位1+数位2+进位，&#10;如果当前位=0-9，则进位=0；&#10;如果当前为=10-18，则当前位=当前位-10，进位=1&#10;3）最高位的处理&#10;如果当前位是最高位，且计算结果进位=1，则前面还要补一位" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -704,10 +705,10 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1596384818736">
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1596554470997">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596384818736" />
+    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
