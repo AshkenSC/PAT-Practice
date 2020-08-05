@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0122. Best Time to Buy and Sell Stock II&#10;&#10;Runtime:  94.27%&#10;Memory Usage: 52.64%&#10;&#10;思路：&#10;一天内可以先卖出，再买进，所以问题可以简化为，只要后一天股价比前一天高，就可以先买后卖。&#10;因此，两个两个地遍历数组，如果明天比今天价格高，那么今天就买入；否则就继续看明天和后天的价格。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!121. Best Time to Buy and Sell Stock.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0121. Best Time to Buy and Sell Stock&#10;&#10;Runtime:  40.95%%&#10;Memory Usage: 31.85%&#10;&#10;思路：&#10;一天内可以先卖出，再买进，所以问题可以简化为，只要后一天股价比前一天高，就可以先买后卖。&#10;因此，两个两个地遍历数组，如果明天比今天价格高，那么今天就买入；否则就继续看明天和后天的价格。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0013. Roman to Integer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,14 +216,8 @@
       <workItem from="1596373141725" duration="4393000" />
       <workItem from="1596446579569" duration="2140000" />
       <workItem from="1596554466783" duration="1042000" />
-      <workItem from="1596619638224" duration="71000" />
-    </task>
-    <task id="LOCAL-00013" summary="LeetCode 1431&#10;&#10;思路：将extraCandies逐个加到candies的元素上，看加后是否是candies的最大元素。">
-      <created>1593618982635</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1593618982635</updated>
+      <workItem from="1596619638224" duration="1996000" />
+      <workItem from="1596816484193" duration="697000" />
     </task>
     <task id="LOCAL-00014" summary="LeetCode 1431&#10;&#10;修正了输出格式错误。">
       <created>1593619106964</created>
@@ -561,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596553184942</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="LeetCode 0121. Best Time to Buy and Sell Stock&#10;&#10;Runtime:  40.95%%&#10;Memory Usage: 31.85%&#10;&#10;思路：&#10;一天内可以先卖出，再买进，所以问题可以简化为，只要后一天股价比前一天高，就可以先买后卖。&#10;因此，两个两个地遍历数组，如果明天比今天价格高，那么今天就买入；否则就继续看明天和后天的价格。">
+      <created>1596619738284</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1596619738284</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +581,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 1464&#10;&#10;Runtime: 91.27%&#10;Memory Usage: 75.36%&#10;&#10;事实上就是找到数组里最大的两个数，将他们分别减1后相乘" />
     <MESSAGE value="LeetCode 1021&#10;&#10;Runtime: 12.70%&#10;Memory Usage: 89.13%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)" />
     <MESSAGE value="LeetCode 1021&#10;&#10;Runtime: 37.16%&#10;Memory Usage: 73.85%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)" />
     <MESSAGE value="LeetCode 0771&#10;&#10;Runtime: 34.45% &#10;Memory Usage: 54.65%&#10;&#10;直接遍历S中每个字符，判断是否在J中存在即可。" />
@@ -605,7 +605,8 @@
     <MESSAGE value="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。" />
     <MESSAGE value="LeetCode 0415. Add Strings&#10;&#10;Runtime:  8.88%&#10;Memory Usage: 11.17%&#10;&#10;思路：&#10;1）先把位数少的前面补全0&#10;2）模拟人算加法，从低位起逐位相加&#10;当前位=数位1+数位2+进位，&#10;如果当前位=0-9，则进位=0；&#10;如果当前为=10-18，则当前位=当前位-10，进位=1&#10;3）最高位的处理&#10;如果当前位是最高位，且计算结果进位=1，则前面还要补一位" />
     <MESSAGE value="LeetCode 0122. Best Time to Buy and Sell Stock II&#10;&#10;Runtime:  94.27%&#10;Memory Usage: 52.64%&#10;&#10;思路：&#10;一天内可以先卖出，再买进，所以问题可以简化为，只要后一天股价比前一天高，就可以先买后卖。&#10;因此，两个两个地遍历数组，如果明天比今天价格高，那么今天就买入；否则就继续看明天和后天的价格。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0122. Best Time to Buy and Sell Stock II&#10;&#10;Runtime:  94.27%&#10;Memory Usage: 52.64%&#10;&#10;思路：&#10;一天内可以先卖出，再买进，所以问题可以简化为，只要后一天股价比前一天高，就可以先买后卖。&#10;因此，两个两个地遍历数组，如果明天比今天价格高，那么今天就买入；否则就继续看明天和后天的价格。" />
+    <MESSAGE value="LeetCode 0121. Best Time to Buy and Sell Stock&#10;&#10;Runtime:  40.95%%&#10;Memory Usage: 31.85%&#10;&#10;思路：动态规划。&#10;1）记录第i天之前买入的最小值;&#10;2）计算：如果在第i天之前的最小值买入，并在第i天卖出的利润，得到第i天的最大利润;&#10;3）对比每一天的最大利润，得到结果。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0121. Best Time to Buy and Sell Stock&#10;&#10;Runtime:  40.95%%&#10;Memory Usage: 31.85%&#10;&#10;思路：动态规划。&#10;1）记录第i天之前买入的最小值;&#10;2）计算：如果在第i天之前的最小值买入，并在第i天卖出的利润，得到第i天的最大利润;&#10;3）对比每一天的最大利润，得到结果。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -626,6 +627,10 @@
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
+    <state x="-1672" y="219" key="GitRewordDialog" timestamp="1596619788986">
+      <screen x="-1920" y="0" width="1418" height="759" />
+    </state>
+    <state x="-1672" y="219" key="GitRewordDialog/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596619788986" />
     <state width="1374" height="215" key="GridCell.Tab.0.bottom" timestamp="1595905529781">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
