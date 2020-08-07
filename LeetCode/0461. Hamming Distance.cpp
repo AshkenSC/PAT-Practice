@@ -3,10 +3,15 @@
 
 计算两个数字的汉明距离，也就是转为二进制以后，对应位不相同的个数。
 
-思路：
+思路1：
 将两个数转为二进制，位少的补齐。然后对比对应位置字符。
+
+思路2：
+1）使用bitset进行XOR位运算。通过bitset<32>，可以将参与运算的数统一位32位二进制数。
+2）使用bitset对象的count方法，求出位为1的个数。
 */
 
+// 思路1
 class Solution {
 public:
     int hammingDistance(int x, int y) {
@@ -48,5 +53,14 @@ public:
         // 反转字符串
         reverse(result.begin(), result.end());
         return result;
+    }
+};
+
+// 思路2
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+        bitset<32> result = x ^ y;
+        return result.count();
     }
 };
