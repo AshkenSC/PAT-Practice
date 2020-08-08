@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;思路：&#10;将两个数转为二进制，位少的补齐。然后对比对应位置字符。">
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0461. Hamming Distance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0461. Hamming Distance.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +220,7 @@
       <workItem from="1596856677818" duration="144000" />
       <workItem from="1596903208095" duration="1579000" />
       <workItem from="1596782660666" duration="1985000" />
-      <workItem from="1596818317755" duration="1210000" />
-    </task>
-    <task id="LOCAL-00016" summary="LeetCode 1486&#10;&#10;（1）第一版代码未注意n和start从参数传入，还使用了input();&#10;&#10;（2）Python中的XOR运算符是^。">
-      <created>1594127121338</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1594127121338</updated>
+      <workItem from="1596818317755" duration="2298000" />
     </task>
     <task id="LOCAL-00017" summary="LeetCode 1365&#10;&#10;暴力解法，直接遍历每个元素，对比其他所有元素，得到答案。">
       <created>1594217900720</created>
@@ -566,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596733565987</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。">
+      <created>1596820504514</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1596820504514</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +584,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0771&#10;&#10;Runtime: 34.45% &#10;Memory Usage: 54.65%&#10;&#10;直接遍历S中每个字符，判断是否在J中存在即可。" />
     <MESSAGE value="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。" />
     <MESSAGE value="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。" />
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:  31.70% &#10;Memory Usage: 8.27% &#10;&#10;1）先把位数少的前面补全0&#10;2）模拟人计算加法，从低位起逐个位相加&#10;当前位=数位1+数位2+进位&#10;如果当前位=0或者1，则：当前位=0或1，进位=0&#10;如果当前位=2或3，则：当前位=0或1，进位=1&#10;3）最高位的处理&#10;如果当前位置是最高位，且进位=1，前面还要补一位" />
@@ -610,7 +608,8 @@
     <MESSAGE value="LeetCode 0121. Best Time to Buy and Sell Stock&#10;&#10;Runtime:  40.95%%&#10;Memory Usage: 31.85%&#10;&#10;思路：动态规划。&#10;1）记录第i天之前买入的最小值;&#10;2）计算：如果在第i天之前的最小值买入，并在第i天卖出的利润，得到第i天的最大利润;&#10;3）对比每一天的最大利润，得到结果。" />
     <MESSAGE value="LeetCode 0013. Roman to Integer&#10;&#10;Runtime:  52.10%&#10;Memory Usage: 45.95%&#10;&#10;思路：&#10;不需要分多种情况讨论，可以总结为：从左到右读取字符串，如果当前位置字符对应的值小于等于前一个位置字符对应的值，最终值就加上上一个位置字符对应值，否则就减去上一个位置字符对应值。" />
     <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;思路：&#10;将两个数转为二进制，位少的补齐。然后对比对应位置字符。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;思路：&#10;将两个数转为二进制，位少的补齐。然后对比对应位置字符。" />
+    <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
