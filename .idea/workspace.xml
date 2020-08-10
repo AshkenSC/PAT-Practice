@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  66.29%&#10;Memory Usage: 82.00%&#10;&#10;思路：&#10;递归遍历，同时访问左孩子或同时访问右边孩子。&#10;当前如果有一个结点为空，则立刻将另一个结点作为返回值。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!0226. Invert Binary Tree.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0617. Merge Two Binary Trees.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0617. Merge Two Binary Trees.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,14 +220,8 @@
       <workItem from="1596856677818" duration="144000" />
       <workItem from="1596903208095" duration="1579000" />
       <workItem from="1596782660666" duration="1985000" />
-      <workItem from="1596818317755" duration="3156000" />
-    </task>
-    <task id="LOCAL-00018" summary="LeetCode 1365&#10;&#10;补充注释。">
-      <created>1594218389591</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1594218389591</updated>
+      <workItem from="1596818317755" duration="3251000" />
+      <workItem from="1597165723333" duration="667000" />
     </task>
     <task id="LOCAL-00019" summary="LeetCode 1313&#10;&#10;将输入数据存为字典，再根据字典生成解压缩数组。&#10;通过了16/53个测试点。">
       <created>1594219223965</created>
@@ -567,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596905282841</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。">
+      <created>1596993080952</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1596993080952</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +585,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。" />
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:  31.70% &#10;Memory Usage: 8.27% &#10;&#10;1）先把位数少的前面补全0&#10;2）模拟人计算加法，从低位起逐个位相加&#10;当前位=数位1+数位2+进位&#10;如果当前位=0或者1，则：当前位=0或1，进位=0&#10;如果当前位=2或3，则：当前位=0或1，进位=1&#10;3）最高位的处理&#10;如果当前位置是最高位，且进位=1，前面还要补一位" />
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
     <MESSAGE value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
@@ -611,7 +609,8 @@
     <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;思路：&#10;将两个数转为二进制，位少的补齐。然后对比对应位置字符。" />
     <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  66.29%&#10;Memory Usage: 82.00%&#10;&#10;思路：&#10;递归遍历，同时访问左孩子或同时访问右边孩子。&#10;当前如果有一个结点为空，则立刻将另一个结点作为返回值。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  66.29%&#10;Memory Usage: 82.00%&#10;&#10;思路：&#10;递归遍历，同时访问左孩子或同时访问右边孩子。&#10;当前如果有一个结点为空，则立刻将另一个结点作为返回值。" />
+    <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
