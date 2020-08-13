@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/!0538. Convert BST to Greater Tree.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +222,7 @@
       <workItem from="1596782660666" duration="1985000" />
       <workItem from="1596818317755" duration="3251000" />
       <workItem from="1597165723333" duration="667000" />
+      <workItem from="1597342475947" duration="50000" />
     </task>
     <task id="LOCAL-00019" summary="LeetCode 1313&#10;&#10;将输入数据存为字典，再根据字典生成解压缩数组。&#10;通过了16/53个测试点。">
       <created>1594219223965</created>
