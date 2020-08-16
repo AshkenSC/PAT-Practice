@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!0283. Move Zeroes.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/!0172. Factorial Trailing Zeroes.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,14 +224,7 @@
       <workItem from="1596818317755" duration="3251000" />
       <workItem from="1597165723333" duration="667000" />
       <workItem from="1597342475947" duration="50000" />
-      <workItem from="1597457154415" duration="742000" />
-    </task>
-    <task id="LOCAL-00019" summary="LeetCode 1313&#10;&#10;将输入数据存为字典，再根据字典生成解压缩数组。&#10;通过了16/53个测试点。">
-      <created>1594219223965</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1594219223965</updated>
+      <workItem from="1597457154415" duration="4358000" />
     </task>
     <task id="LOCAL-00020" summary="LeetCode 1313&#10;&#10;每次读取两个数，并实时更新解压缩数组。不能使用字典，因为后面可能会重复出现某数，导致覆盖之前的键值对。暴力解法，速度较慢。">
       <created>1594220471141</created>
@@ -569,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596993080952</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。">
+      <created>1597459994205</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1597459994206</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +588,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:  31.70% &#10;Memory Usage: 8.27% &#10;&#10;1）先把位数少的前面补全0&#10;2）模拟人计算加法，从低位起逐个位相加&#10;当前位=数位1+数位2+进位&#10;如果当前位=0或者1，则：当前位=0或1，进位=0&#10;如果当前位=2或3，则：当前位=0或1，进位=1&#10;3）最高位的处理&#10;如果当前位置是最高位，且进位=1，前面还要补一位" />
     <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
     <MESSAGE value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
     <MESSAGE value="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。" />
@@ -613,7 +612,8 @@
     <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  66.29%&#10;Memory Usage: 82.00%&#10;&#10;思路：&#10;递归遍历，同时访问左孩子或同时访问右边孩子。&#10;当前如果有一个结点为空，则立刻将另一个结点作为返回值。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
+    <MESSAGE value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -743,12 +743,12 @@
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="0" y="48" width="1165" height="566" maximized="true" key="dock-window-4/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595040548003" />
-    <state x="400" y="139" width="672" height="620" key="search.everywhere.popup" timestamp="1595905044803">
+    <state x="400" y="139" width="672" height="620" key="search.everywhere.popup" timestamp="1597603021458">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1520" y="139" width="672" height="620" key="search.everywhere.popup/-1920.0.1418.759/0.0.1418.759@-1920.0.1418.759" timestamp="1594738083863" />
     <state x="-1520" y="139" width="672" height="620" key="search.everywhere.popup/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595051001279" />
-    <state x="400" y="139" width="672" height="620" key="search.everywhere.popup/0.0.1418.759@0.0.1418.759" timestamp="1595905044803" />
+    <state x="400" y="139" width="672" height="620" key="search.everywhere.popup/0.0.1418.759@0.0.1418.759" timestamp="1597603021458" />
     <state x="-1483" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190990022" />
   </component>
   <component name="XDebuggerManager">
