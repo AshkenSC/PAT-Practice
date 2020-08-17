@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!0172. Factorial Trailing Zeroes.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ...">
+      <change afterPath="$PROJECT_DIR$/LeetCode/!0160. Intersection of Two Linked Lists.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,14 +224,7 @@
       <workItem from="1596818317755" duration="3251000" />
       <workItem from="1597165723333" duration="667000" />
       <workItem from="1597342475947" duration="50000" />
-      <workItem from="1597457154415" duration="4358000" />
-    </task>
-    <task id="LOCAL-00020" summary="LeetCode 1313&#10;&#10;每次读取两个数，并实时更新解压缩数组。不能使用字典，因为后面可能会重复出现某数，导致覆盖之前的键值对。暴力解法，速度较慢。">
-      <created>1594220471141</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1594220471141</updated>
+      <workItem from="1597457154415" duration="5240000" />
     </task>
     <task id="LOCAL-00021" summary="LeetCode 1389&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。">
       <created>1594310043952</created>
@@ -569,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597459994206</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ...">
+      <created>1597603320126</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1597603320126</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +588,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
     <MESSAGE value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
     <MESSAGE value="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。" />
     <MESSAGE value="LeetCode 0876&#10;&#10;Runtime: 100.00% &#10;Memory Usage: 40.19%&#10;&#10;从头遍历一遍链表，一边将其内容放在一个数组中。然后利用数组随机访问的特点，立刻找到链表的中间位置。" />
@@ -613,7 +612,8 @@
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  66.29%&#10;Memory Usage: 82.00%&#10;&#10;思路：&#10;递归遍历，同时访问左孩子或同时访问右边孩子。&#10;当前如果有一个结点为空，则立刻将另一个结点作为返回值。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
     <MESSAGE value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
+    <MESSAGE value="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -719,10 +719,11 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="-1619" y="112" key="Vcs.Push.Dialog.v2" timestamp="1596554470997">
-      <screen x="-1920" y="0" width="1418" height="759" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1597603326510">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1597603326510" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
