@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ...">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!0160. Intersection of Two Linked Lists.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0053. Maximum Subarray.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NLP/deepke" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Python.!0107. Binary Tree Level Order Traversal II.cpp">
@@ -224,14 +224,10 @@
       <workItem from="1596818317755" duration="3251000" />
       <workItem from="1597165723333" duration="667000" />
       <workItem from="1597342475947" duration="50000" />
-      <workItem from="1597457154415" duration="5240000" />
-    </task>
-    <task id="LOCAL-00021" summary="LeetCode 1389&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。">
-      <created>1594310043952</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1594310043952</updated>
+      <workItem from="1597457154415" duration="6792000" />
+      <workItem from="1597633411567" duration="238000" />
+      <workItem from="1597678764083" duration="1871000" />
+      <workItem from="1597714006701" duration="2449000" />
     </task>
     <task id="LOCAL-00022" summary="LeetCode 1389&#10;&#10;Runtime: 9.60%&#10;Memory Usage: 35.52%&#10;&#10;如果每次直接修改output数组，用时过长，考虑先研究index数组，将index数组变成最终nums的位置，然后最后一次性插入。">
       <created>1594396709317</created>
@@ -569,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597603320126</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。">
+      <created>1597627759334</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1597627759334</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +591,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。" />
     <MESSAGE value="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。" />
     <MESSAGE value="LeetCode 0876&#10;&#10;Runtime: 100.00% &#10;Memory Usage: 40.19%&#10;&#10;从头遍历一遍链表，一边将其内容放在一个数组中。然后利用数组随机访问的特点，立刻找到链表的中间位置。" />
     <MESSAGE value="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。" />
@@ -613,7 +615,8 @@
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
     <MESSAGE value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
     <MESSAGE value="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ..." />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ..." />
+    <MESSAGE value="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -628,9 +631,10 @@
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1527" y="181" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1595783266836" />
-    <state x="-1363" y="170" key="FileChooserDialogImpl" timestamp="1593359964702">
-      <screen x="-1920" y="0" width="1549" height="831" />
+    <state x="510" y="155" key="FileChooserDialogImpl" timestamp="1597684725799">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
+    <state x="510" y="155" key="FileChooserDialogImpl/0.0.1418.759@0.0.1418.759" timestamp="1597684725799" />
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
@@ -719,11 +723,11 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1597603326510">
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1597627765814">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1597603326510" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1597627765814" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
