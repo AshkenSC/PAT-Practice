@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0053. Maximum Subarray&#10;&#10;Runtime:  59.76%&#10;Memory Usage: 29.34%&#10;&#10;思路:&#10;动态规划&#10;初始状态：a[0] = nums[0]&#10;第 i 个子组合的最大值为：第i-1个子组合的最大值加第 i 个数字，或第i个数字本身">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0070. Climbing Stairs.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 79.50%&#10;&#10;思路:&#10;动态规划&#10;f(n) 表示爬到第n级台阶，则f(n) = f(n-1) + f(n-2)，（因为只能走一步或者两步）&#10;初始条件：f(0)=1, f(1)=1&#10;由于只关心当前f(n)和前两个f(n-1), f(n-2)，所以可以只用三个变量存储之，而不用dp[n]数组。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0053. Maximum Subarray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0053. Maximum Subarray.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,14 +226,7 @@
       <workItem from="1597457154415" duration="6792000" />
       <workItem from="1597633411567" duration="238000" />
       <workItem from="1597678764083" duration="1871000" />
-      <workItem from="1597714006701" duration="3799000" />
-    </task>
-    <task id="LOCAL-00023" summary="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;每次读取一个数，转为字符串，然后看字符串的长度，进行判断。">
-      <created>1594397635482</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1594397635482</updated>
+      <workItem from="1597714006701" duration="4521000" />
     </task>
     <task id="LOCAL-00024" summary="LeetCode 1295&#10;&#10;Runtime: 27.78%&#10;Memory Usage: 95.81%&#10;&#10;补充解题思路注释。">
       <created>1594397690705</created>
@@ -573,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597767512490</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 79.50%&#10;&#10;思路:&#10;动态规划&#10;f(n) 表示爬到第n级台阶，则f(n) = f(n-1) + f(n-2)，（因为只能走一步或者两步）&#10;初始条件：f(0)=1, f(1)=1&#10;由于只关心当前f(n)和前两个f(n-1), f(n-2)，所以可以只用三个变量存储之，而不用dp[n]数组。">
+      <created>1597853751483</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1597853751483</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +590,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0876&#10;&#10;Runtime: 100.00% &#10;Memory Usage: 40.19%&#10;&#10;从头遍历一遍链表，一边将其内容放在一个数组中。然后利用数组随机访问的特点，立刻找到链表的中间位置。" />
     <MESSAGE value="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。" />
     <MESSAGE value="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。" />
     <MESSAGE value="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。" />
@@ -617,7 +614,8 @@
     <MESSAGE value="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ..." />
     <MESSAGE value="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。" />
     <MESSAGE value="LeetCode 0053. Maximum Subarray&#10;&#10;Runtime:  59.76%&#10;Memory Usage: 29.34%&#10;&#10;思路:&#10;动态规划&#10;初始状态：a[0] = nums[0]&#10;第 i 个子组合的最大值为：第i-1个子组合的最大值加第 i 个数字，或第i个数字本身" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0053. Maximum Subarray&#10;&#10;Runtime:  59.76%&#10;Memory Usage: 29.34%&#10;&#10;思路:&#10;动态规划&#10;初始状态：a[0] = nums[0]&#10;第 i 个子组合的最大值为：第i-1个子组合的最大值加第 i 个数字，或第i个数字本身" />
+    <MESSAGE value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 79.50%&#10;&#10;思路:&#10;动态规划&#10;f(n) 表示爬到第n级台阶，则f(n) = f(n-1) + f(n-2)，（因为只能走一步或者两步）&#10;初始条件：f(0)=1, f(1)=1&#10;由于只关心当前f(n)和前两个f(n-1), f(n-2)，所以可以只用三个变量存储之，而不用dp[n]数组。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 79.50%&#10;&#10;思路:&#10;动态规划&#10;f(n) 表示爬到第n级台阶，则f(n) = f(n-1) + f(n-2)，（因为只能走一步或者两步）&#10;初始条件：f(0)=1, f(1)=1&#10;由于只关心当前f(n)和前两个f(n-1), f(n-2)，所以可以只用三个变量存储之，而不用dp[n]数组。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -724,11 +722,12 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1597767518363">
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1597853756603">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1597767518363" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1597853756603" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
