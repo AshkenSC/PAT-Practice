@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0581. Shortest Unsorted Continuous Subarray&#10;&#10;思路：&#10;1）从左往右遍历，记录遍历过的部分的最大值。如果当前遍历到的元素比最大值要小，则该元素需要重排。记录该位置为high&#10;2）从右往左遍历，记录遍历过的部分的最小值。如果当前遍历到的元素比最小值大，则该元素需要重排。记录该位置为low&#10;3）如果high==low（记得之前需要初始化为相同值），则数组整体有序。否则返回high-low+1">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!0078. Subsets.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/1295. Find Numbers with Even Number of Digits.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,14 +230,7 @@
       <workItem from="1597714006701" duration="6374000" />
       <workItem from="1597973528251" duration="1821000" />
       <workItem from="1598406440699" duration="3228000" />
-      <workItem from="1598549885323" duration="4418000" />
-    </task>
-    <task id="LOCAL-00026" summary="LeetCode 1266&#10;&#10;Runtime: 10.78%&#10;Memory Usage: 5.06%&#10;&#10;简化思路：对相邻两个点，他们的最短距离就是横坐标差/纵坐标差里面较大的那一个。遍历points数组，累加得到最终结果。">
-      <created>1594435518887</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1594435518887</updated>
+      <workItem from="1598549885323" duration="6005000" />
     </task>
     <task id="LOCAL-00027" summary="LeetCode 1252&#10;&#10;Runtime: 31.01%&#10;Memory Usage: 96.02%&#10;&#10;遍历indices每个子列表，每次对应的行和列增加1。&#10;注意用列表解析创建二维list的方法">
       <created>1594544311552</created>
@@ -575,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598537306277</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。">
+      <created>1598624058906</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1598624058906</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +594,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正clear函数的相关注释。" />
@@ -619,7 +618,8 @@
     <MESSAGE value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 79.50%&#10;&#10;思路:&#10;动态规划&#10;f(n) 表示爬到第n级台阶，则f(n) = f(n-1) + f(n-2)，（因为只能走一步或者两步）&#10;初始条件：f(0)=1, f(1)=1&#10;由于只关心当前f(n)和前两个f(n-1), f(n-2)，所以可以只用三个变量存储之，而不用dp[n]数组。" />
     <MESSAGE value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  75.56%&#10;Memory Usage: 18.61%&#10;&#10;思路：以下是几个正确解答问题的关键：&#10;1）路径长度为经过的结点数-1（植树问题！3棵树中间有2段路）&#10;2）一个结点的孩子向下遍历经过的最多结点数就是这个孩子的深度。&#10;3）一个树的最大路径结点数 = 左孩子最大路径结点数 + 右孩子最大路径结点数 + 1（它本身）&#10;4）可以用递归，算出这棵树所有结点的最大路径结点数，只保留最大者。然后-1，即得到结果。&#10;这题有很多小细节要注意。" />
     <MESSAGE value="LeetCode 0581. Shortest Unsorted Continuous Subarray&#10;&#10;思路：&#10;1）从左往右遍历，记录遍历过的部分的最大值。如果当前遍历到的元素比最大值要小，则该元素需要重排。记录该位置为high&#10;2）从右往左遍历，记录遍历过的部分的最小值。如果当前遍历到的元素比最小值大，则该元素需要重排。记录该位置为low&#10;3）如果high==low（记得之前需要初始化为相同值），则数组整体有序。否则返回high-low+1" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0581. Shortest Unsorted Continuous Subarray&#10;&#10;思路：&#10;1）从左往右遍历，记录遍历过的部分的最大值。如果当前遍历到的元素比最大值要小，则该元素需要重排。记录该位置为high&#10;2）从右往左遍历，记录遍历过的部分的最小值。如果当前遍历到的元素比最小值大，则该元素需要重排。记录该位置为low&#10;3）如果high==low（记得之前需要初始化为相同值），则数组整体有序。否则返回high-low+1" />
+    <MESSAGE value="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
