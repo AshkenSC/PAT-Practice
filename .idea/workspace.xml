@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/1295. Find Numbers with Even Number of Digits.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 1295. Find Numbers with Even Number of Digits&#10;&#10;思路：转为字符串并检查长度。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/!0046. Permutations.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,14 +230,8 @@
       <workItem from="1597714006701" duration="6374000" />
       <workItem from="1597973528251" duration="1821000" />
       <workItem from="1598406440699" duration="3228000" />
-      <workItem from="1598549885323" duration="6005000" />
-    </task>
-    <task id="LOCAL-00027" summary="LeetCode 1252&#10;&#10;Runtime: 31.01%&#10;Memory Usage: 96.02%&#10;&#10;遍历indices每个子列表，每次对应的行和列增加1。&#10;注意用列表解析创建二维list的方法">
-      <created>1594544311552</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1594544311552</updated>
+      <workItem from="1598549885323" duration="6638000" />
+      <workItem from="1598875812080" duration="1340000" />
     </task>
     <task id="LOCAL-00028" summary="LeetCode 1450&#10;&#10;Runtime: 19.78%&#10;Memory Usage: 21.32%&#10;&#10;简单遍历startTime和endTime即可。">
       <created>1594545647532</created>
@@ -575,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598624058906</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="LeetCode 1295. Find Numbers with Even Number of Digits&#10;&#10;思路：转为字符串并检查长度。">
+      <created>1598715917633</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1598715917634</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +595,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正clear函数的相关注释。" />
     <MESSAGE value="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;更正哨兵结点的相关注释。" />
@@ -619,7 +619,8 @@
     <MESSAGE value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  75.56%&#10;Memory Usage: 18.61%&#10;&#10;思路：以下是几个正确解答问题的关键：&#10;1）路径长度为经过的结点数-1（植树问题！3棵树中间有2段路）&#10;2）一个结点的孩子向下遍历经过的最多结点数就是这个孩子的深度。&#10;3）一个树的最大路径结点数 = 左孩子最大路径结点数 + 右孩子最大路径结点数 + 1（它本身）&#10;4）可以用递归，算出这棵树所有结点的最大路径结点数，只保留最大者。然后-1，即得到结果。&#10;这题有很多小细节要注意。" />
     <MESSAGE value="LeetCode 0581. Shortest Unsorted Continuous Subarray&#10;&#10;思路：&#10;1）从左往右遍历，记录遍历过的部分的最大值。如果当前遍历到的元素比最大值要小，则该元素需要重排。记录该位置为high&#10;2）从右往左遍历，记录遍历过的部分的最小值。如果当前遍历到的元素比最小值大，则该元素需要重排。记录该位置为low&#10;3）如果high==low（记得之前需要初始化为相同值），则数组整体有序。否则返回high-low+1" />
     <MESSAGE value="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。" />
+    <MESSAGE value="LeetCode 1295. Find Numbers with Even Number of Digits&#10;&#10;思路：转为字符串并检查长度。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 1295. Find Numbers with Even Number of Digits&#10;&#10;思路：转为字符串并检查长度。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -726,12 +727,12 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="2221" y="112" key="Vcs.Push.Dialog.v2" timestamp="1597976065777">
-      <screen x="1920" y="0" width="1418" height="759" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1598715924497">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1597767518363" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1597853756603" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1598715924497" />
     <state x="2221" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@1920.0.1418.759" timestamp="1597976065777" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
       <screen x="-1920" y="0" width="1418" height="759" />
