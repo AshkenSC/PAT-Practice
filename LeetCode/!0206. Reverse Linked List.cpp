@@ -17,20 +17,24 @@ struct ListNode {
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        if (head == nullptr) {
-            return nullptr;
+        ListNode* newHead;
+        ListNode* pre;
+        ListNode* current;
+        if (head == nullptr || head->next == nullptr)
+            return head;
+        else {
+            newHead = head;
+            current = head->next;
+            pre = current;
+            // 这一步要在前两步之后进行，否则前两步中的head的next就被这一步所修改了
+            newHead->next = nullptr;
+            while (current != nullptr) {
+                pre = current->next;
+                current->next = newHead;
+                newHead = current;
+                current = pre;
+            }
+            return newHead;
         }
-
-        ListNode* newHead = head;
-        ListNode* currentNode = head->next;
-        ListNode* newNode;
-        newHead->next = nullptr;
-        while (currentNode != nullptr) {
-            newNode = currentNode->next;
-            currentNode->next = newHead;
-            newHead = currentNode;
-            currentNode = newNode;
-        }
-        return newHead;
     }
 };

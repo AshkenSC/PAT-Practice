@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0114. Flatten Binary Tree to Linked List&#10;&#10;给定一个二叉树，原地将它展开为一个单链表。&#10;&#10;思路：&#10;1）先找到root左子树最右侧的叶子节点；&#10;2）将root的右子树，作为1）找到的节点的右孩子；&#10;3）将经过2）修改后的左子树，作为root的右子树；&#10;4）将root左子树设为空；&#10;5）root = root.right，重复循环。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!0238. Product of Array Except Self.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0238. Product of Array Except Self&#10;&#10;思路：参考官方解法1.&#10;先从左向右遍历，获取每个元素左边数值的乘积；&#10;再从右向左遍历，获取每个元素右边数值的乘积；&#10;再将两个乘积相乘，得到每个元素总乘积。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/!0206. Reverse Linked List.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0206. Reverse Linked List.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,14 +239,7 @@
       <workItem from="1599227798504" duration="1623000" />
       <workItem from="1599316891539" duration="3968000" />
       <workItem from="1599418118599" duration="3337000" />
-      <workItem from="1599493024073" duration="837000" />
-    </task>
-    <task id="LOCAL-00033" summary="LeetCode 1290&#10;&#10;Runtime: 54.32%&#10;Memory Usage: 90.70%&#10;&#10;依次读取链表中的数值，每读一次前将结果乘以2，再加上当前位置。">
-      <created>1594826532045</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1594826532045</updated>
+      <workItem from="1599493024073" duration="2909000" />
     </task>
     <task id="LOCAL-00034" summary="LeetCode 0028&#10;&#10;Runtime: 37.34%&#10;Memory Usage: 76.59%&#10;&#10;采用Sunday算法，注意考虑各种边界条件。">
       <created>1594922116928</created>
@@ -584,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599072763061</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="LeetCode 0238. Product of Array Except Self&#10;&#10;思路：参考官方解法1.&#10;先从左向右遍历，获取每个元素左边数值的乘积；&#10;再从右向左遍历，获取每个元素右边数值的乘积；&#10;再将两个乘积相乘，得到每个元素总乘积。">
+      <created>1599153641733</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1599153641733</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +603,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。" />
     <MESSAGE value="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;更新了解题思路注释。" />
     <MESSAGE value="LeetCode 0232. Implement Queue using Stacks&#10;&#10;Runtime:  36.03%&#10;Memory Usage: 51.71%&#10;&#10;用两个栈a, b模拟队列。" />
     <MESSAGE value="LeetCode 0415. Add Strings&#10;&#10;Runtime:  8.88%&#10;Memory Usage: 11.17%&#10;&#10;思路：&#10;1）先把位数少的前面补全0&#10;2）模拟人算加法，从低位起逐位相加&#10;当前位=数位1+数位2+进位，&#10;如果当前位=0-9，则进位=0；&#10;如果当前为=10-18，则当前位=当前位-10，进位=1&#10;3）最高位的处理&#10;如果当前位是最高位，且计算结果进位=1，则前面还要补一位" />
@@ -628,7 +627,8 @@
     <MESSAGE value="LeetCode 0338. Counting Bits&#10;&#10;给定一个非负整数，对每个在 0 ≤ i ≤ num范围内的整数i，计算它们二进制形式下含有1的个数，以数组形式返回。&#10;&#10;思路1：用STL的bitset，其中的count函数进行1个数的计数。" />
     <MESSAGE value="LeetCode 0094. Binary Tree Inorder Traversal&#10;&#10;实现二叉树的中序遍历。" />
     <MESSAGE value="LeetCode 0114. Flatten Binary Tree to Linked List&#10;&#10;给定一个二叉树，原地将它展开为一个单链表。&#10;&#10;思路：&#10;1）先找到root左子树最右侧的叶子节点；&#10;2）将root的右子树，作为1）找到的节点的右孩子；&#10;3）将经过2）修改后的左子树，作为root的右子树；&#10;4）将root左子树设为空；&#10;5）root = root.right，重复循环。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0114. Flatten Binary Tree to Linked List&#10;&#10;给定一个二叉树，原地将它展开为一个单链表。&#10;&#10;思路：&#10;1）先找到root左子树最右侧的叶子节点；&#10;2）将root的右子树，作为1）找到的节点的右孩子；&#10;3）将经过2）修改后的左子树，作为root的右子树；&#10;4）将root左子树设为空；&#10;5）root = root.right，重复循环。" />
+    <MESSAGE value="LeetCode 0238. Product of Array Except Self&#10;&#10;思路：参考官方解法1.&#10;先从左向右遍历，获取每个元素左边数值的乘积；&#10;再从右向左遍历，获取每个元素右边数值的乘积；&#10;再将两个乘积相乘，得到每个元素总乘积。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0238. Product of Array Except Self&#10;&#10;思路：参考官方解法1.&#10;先从左向右遍历，获取每个元素左边数值的乘积；&#10;再从右向左遍历，获取每个元素右边数值的乘积；&#10;再将两个乘积相乘，得到每个元素总乘积。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
