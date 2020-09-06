@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0238. Product of Array Except Self&#10;&#10;思路：参考官方解法1.&#10;先从左向右遍历，获取每个元素左边数值的乘积；&#10;再从右向左遍历，获取每个元素右边数值的乘积；&#10;再将两个乘积相乘，得到每个元素总乘积。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/!0048. Rotate Image.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/!0206. Reverse Linked List.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0206. Reverse Linked List.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="26438aa6-4401-49fc-b796-63759f49626c" />
   <component name="ProjectId" id="1dgIfd4F1BcOXQ08DaCEshPQiQs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -171,6 +172,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -240,6 +242,7 @@
       <workItem from="1599316891539" duration="3968000" />
       <workItem from="1599418118599" duration="3337000" />
       <workItem from="1599493024073" duration="2909000" />
+      <workItem from="1599598917694" duration="1398000" />
     </task>
     <task id="LOCAL-00034" summary="LeetCode 0028&#10;&#10;Runtime: 37.34%&#10;Memory Usage: 76.59%&#10;&#10;采用Sunday算法，注意考虑各种边界条件。">
       <created>1594922116928</created>
@@ -588,7 +591,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
