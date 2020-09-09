@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0208. Implement Trie (Prefix Tree)&#10;&#10;实现一个前缀树，包含insert，search和startsWith三个操作。&#10;&#10;该数据结构较为陌生，还需要熟悉。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路（编译错误）：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,21 +242,7 @@
       <workItem from="1599316891539" duration="3968000" />
       <workItem from="1599418118599" duration="3337000" />
       <workItem from="1599493024073" duration="2909000" />
-      <workItem from="1599598917694" duration="17191000" />
-    </task>
-    <task id="LOCAL-00037" summary="LeetCode 1464&#10;&#10;Runtime: 91.27%&#10;Memory Usage: 75.36%&#10;&#10;事实上就是找到数组里最大的两个数，将他们分别减1后相乘">
-      <created>1595062704742</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1595062704742</updated>
-    </task>
-    <task id="LOCAL-00038" summary="LeetCode 1021&#10;&#10;Runtime: 12.70%&#10;Memory Usage: 89.13%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)">
-      <created>1595171430905</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1595171430905</updated>
+      <workItem from="1599598917694" duration="25772000" />
     </task>
     <task id="LOCAL-00039" summary="LeetCode 1021&#10;&#10;Runtime: 37.16%&#10;Memory Usage: 73.85%&#10;&#10;变量count保存左括号数-右括号数。即遇到左括号则自增1，遇到右括号则自减1。&#10;当count为0的时候，说明在这一段中左括号和右括号相等，是个完美匹配的括号串。&#10;变量prev保存的是上一次括号完全匹配之后，下一个括号匹配开始位置。&#10;当count==0的时候，结果增加的是[prev + 1, i)">
       <created>1595260165646</created>
@@ -587,7 +573,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599490813328</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。">
+      <created>1599502990989</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1599502990989</updated>
+    </task>
+    <task id="LOCAL-00087" summary="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路（编译错误）：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。">
+      <created>1599503017426</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1599503017426</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,8 +606,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0122. Best Time to Buy and Sell Stock II&#10;&#10;Runtime:  94.27%&#10;Memory Usage: 52.64%&#10;&#10;思路：&#10;一天内可以先卖出，再买进，所以问题可以简化为，只要后一天股价比前一天高，就可以先买后卖。&#10;因此，两个两个地遍历数组，如果明天比今天价格高，那么今天就买入；否则就继续看明天和后天的价格。" />
-    <MESSAGE value="LeetCode 0121. Best Time to Buy and Sell Stock&#10;&#10;Runtime:  40.95%%&#10;Memory Usage: 31.85%&#10;&#10;思路：动态规划。&#10;1）记录第i天之前买入的最小值;&#10;2）计算：如果在第i天之前的最小值买入，并在第i天卖出的利润，得到第i天的最大利润;&#10;3）对比每一天的最大利润，得到结果。" />
     <MESSAGE value="LeetCode 0013. Roman to Integer&#10;&#10;Runtime:  52.10%&#10;Memory Usage: 45.95%&#10;&#10;思路：&#10;不需要分多种情况讨论，可以总结为：从左到右读取字符串，如果当前位置字符对应的值小于等于前一个位置字符对应的值，最终值就加上上一个位置字符对应值，否则就减去上一个位置字符对应值。" />
     <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;思路：&#10;将两个数转为二进制，位少的补齐。然后对比对应位置字符。" />
     <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。" />
@@ -631,7 +629,9 @@
     <MESSAGE value="LeetCode 0048. Rotate Image&#10;&#10;给定一个n*n的2D矩阵，代表一张图片。将这个图片顺时针旋转90度。&#10;要求必须就地旋转，也就是不能额外申请一个数组进行旋转。&#10;&#10;思路：观察矩阵可知，可先上下翻转，再左右翻转。" />
     <MESSAGE value="LeetCode 0096. Unique Binary Search Trees&#10;&#10;给定整数n，有多少个不同的储存1-n的二叉搜索树？&#10;二叉搜索树（BST)要求左子树结点都比当前结点小，右子树结点都比当前结点大。&#10;&#10;思路：动态规划。" />
     <MESSAGE value="LeetCode 0208. Implement Trie (Prefix Tree)&#10;&#10;实现一个前缀树，包含insert，search和startsWith三个操作。&#10;&#10;该数据结构较为陌生，还需要熟悉。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0208. Implement Trie (Prefix Tree)&#10;&#10;实现一个前缀树，包含insert，search和startsWith三个操作。&#10;&#10;该数据结构较为陌生，还需要熟悉。" />
+    <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。" />
+    <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路（编译错误）：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路（编译错误）：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
