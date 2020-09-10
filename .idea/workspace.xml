@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;复现了官方递归解答。">
-      <change beforePath="$PROJECT_DIR$/LeetCode/!0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/!0064. Minimum Path Sum.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/!0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!!0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,14 +243,8 @@
       <workItem from="1599316891539" duration="3968000" />
       <workItem from="1599418118599" duration="3337000" />
       <workItem from="1599493024073" duration="2909000" />
-      <workItem from="1599598917694" duration="26127000" />
-    </task>
-    <task id="LOCAL-00040" summary="LeetCode 0771&#10;&#10;Runtime: 34.45% &#10;Memory Usage: 54.65%&#10;&#10;直接遍历S中每个字符，判断是否在J中存在即可。">
-      <created>1595263982588</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1595263982588</updated>
+      <workItem from="1599598917694" duration="26798000" />
+      <workItem from="1599800735954" duration="4455000" />
     </task>
     <task id="LOCAL-00041" summary="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。">
       <created>1595386040781</created>
@@ -586,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599629832039</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。">
+      <created>1599629950732</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1599629950732</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +608,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;思路：&#10;将两个数转为二进制，位少的补齐。然后对比对应位置字符。" />
     <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  66.29%&#10;Memory Usage: 82.00%&#10;&#10;思路：&#10;递归遍历，同时访问左孩子或同时访问右边孩子。&#10;当前如果有一个结点为空，则立刻将另一个结点作为返回值。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
@@ -630,7 +632,8 @@
     <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。" />
     <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路（编译错误）：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。" />
     <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;复现了官方递归解答。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;复现了官方递归解答。" />
+    <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -737,10 +740,11 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1598715924497">
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1599716369075">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1599716369075" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1597767518363" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1598715924497" />
     <state x="2221" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@1920.0.1418.759" timestamp="1597976065777" />
