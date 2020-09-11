@@ -10,7 +10,40 @@
 f(0)=0, f(1)=1
 f(n) = f(n-1) + max{向下走，向右走}
 但是自己写起来太繁琐了。
+
+参考答案思路：
+和个人思路不同的是，递推公式考虑的不是当前格子的下一步是哪个格子，而是考虑从上一个状态走到当前状态，是经过哪个格子。
+设当前格子为(i, j)，要注意分为四种情况：
+1）当前格子只能从右边来，则dp[i][j] = dp[i][j-1] + grid[i][j]
+2）当前格子只能从上方来，则dp[i][j] = dp[i-1][j] + grid[i][j]
+3）当前格子是起始位置，则dp[i][j] = grid[i][j]
+4）当前格子可以从上方或者右边来，则dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+同时，不需要额外建立dp数组，直接在grid上修改，因为经历过的grid位置不会再被访问到。
 */
+
+// 参考
+class Solution {
+public:
+    int minPathSum(vector<vector<int>>& grid) {
+        for (int i = 0; i < grid.size(); i++) {
+            for (int j = 0; j < grid[0].size(); j++) {
+                if (i == 0 && j == 0)
+                // 起始格子
+                    continue;
+                else if (i == 0)
+                // 只能从右边来
+                    grid[i][j] = grid[i][j - 1] + grid[i][j];
+                else if (j == 0)
+                // 只能从上方来
+                    grid[i][j] = grid[i - 1][j] + grid[i][j];
+                else
+                // 其他情况
+                    grid[i][j] = min(grid[i - 1][j], grid[i][j - 1]) + grid[i][j];
+            }
+        }
+        return grid[grid.size() - 1][grid[0].size() - 1];
+    }
+};
 
 // wrong answer
 class Solution {

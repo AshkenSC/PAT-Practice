@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!0064. Minimum Path Sum.cpp" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;思路（错误思路）：&#10;初步想法：是否可以用动态规划，但是本题走的步数是不确定的，所以f(n)的n就不确定。&#10;然后发现，只能向下或者向右移动，所以一定是计算f(4)。&#10;f(0)=0, f(1)=1&#10;f(n) = f(n-1) + max{向下走，向右走}&#10;但是自己写起来太繁琐了。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/!0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!!0105. Construct Binary Tree from Preorder and Inorder Traversal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/!0064. Minimum Path Sum.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/!0064. Minimum Path Sum.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,14 +243,7 @@
       <workItem from="1599418118599" duration="3337000" />
       <workItem from="1599493024073" duration="2909000" />
       <workItem from="1599598917694" duration="26798000" />
-      <workItem from="1599800735954" duration="4455000" />
-    </task>
-    <task id="LOCAL-00041" summary="LeetCode 0832&#10;&#10;Runtime: 86.17% &#10;Memory Usage: 5.03%&#10;&#10;遍历二维vector，每行反向遍历，同时做01翻转。">
-      <created>1595386040781</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1595386040782</updated>
+      <workItem from="1599800735954" duration="5324000" />
     </task>
     <task id="LOCAL-00042" summary="LeetCode 0771&#10;&#10;Runtime:  25.89% &#10;Memory Usage: 59.14% &#10;&#10;检查S中每个字符在J中是否存在即可。">
       <created>1595386215540</created>
@@ -589,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599629950732</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;思路（错误思路）：&#10;初步想法：是否可以用动态规划，但是本题走的步数是不确定的，所以f(n)的n就不确定。&#10;然后发现，只能向下或者向右移动，所以一定是计算f(4)。&#10;f(0)=0, f(1)=1&#10;f(n) = f(n-1) + max{向下走，向右走}&#10;但是自己写起来太繁琐了。">
+      <created>1599721735718</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1599721735719</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +607,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0461. Hamming Distance&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 7.12%&#10;&#10;更新思路2：&#10;1）使用bitset进行XOR位运算。通过bitset&lt;32&gt;，可以将参与运算的数统一位32位二进制数。&#10;2）使用bitset对象的count方法，求出位为1的个数。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  66.29%&#10;Memory Usage: 82.00%&#10;&#10;思路：&#10;递归遍历，同时访问左孩子或同时访问右边孩子。&#10;当前如果有一个结点为空，则立刻将另一个结点作为返回值。" />
     <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
     <MESSAGE value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
@@ -633,7 +631,8 @@
     <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;个人思路（编译错误）：&#10;用buildTree函数作为递归函数。每次当前结点的值是先序遍历的第一个元素。&#10;然后根据该根结点划分先序遍历和中序遍历，各为左右两个子序列。&#10;这样，左右子树又能分别根据上述获得的先序遍历和中序遍历子序列继续构造出来。" />
     <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;复现了官方递归解答。" />
     <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。" />
+    <MESSAGE value="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;思路（错误思路）：&#10;初步想法：是否可以用动态规划，但是本题走的步数是不确定的，所以f(n)的n就不确定。&#10;然后发现，只能向下或者向右移动，所以一定是计算f(4)。&#10;f(0)=0, f(1)=1&#10;f(n) = f(n-1) + max{向下走，向右走}&#10;但是自己写起来太繁琐了。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;思路（错误思路）：&#10;初步想法：是否可以用动态规划，但是本题走的步数是不确定的，所以f(n)的n就不确定。&#10;然后发现，只能向下或者向右移动，所以一定是计算f(4)。&#10;f(0)=0, f(1)=1&#10;f(n) = f(n-1) + max{向下走，向右走}&#10;但是自己写起来太繁琐了。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
