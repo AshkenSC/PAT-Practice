@@ -1,9 +1,9 @@
 // LeetCode 27. Remove Element
 
 /*
-²ÉÓÃË«Ö¸Õë£¬iºÍj³õÊ¼¶¼Ö¸Ïò0£»
-jÃ¿´ÎÑ­»·¶¼ÒÆ¶¯£¬¶ø½öµ±jÖ¸ÏòÓëvalÏàµÈÊ±£¬²Å½»»»iºÍj¡£½»»»Ö®ºói²ÅÒÆ¶¯£»
-×îºó·µ»Øi¡£
+é‡‡ç”¨åŒæŒ‡é’ˆï¼Œiå’Œjåˆå§‹éƒ½æŒ‡å‘0ï¼›
+jæ¯æ¬¡å¾ªçŽ¯éƒ½ç§»åŠ¨ï¼Œè€Œä»…å½“jæŒ‡å‘ä¸Žvalç›¸ç­‰æ—¶ï¼Œæ‰äº¤æ¢iå’Œjã€‚äº¤æ¢ä¹‹åŽiæ‰ç§»åŠ¨ï¼›
+æœ€åŽè¿”å›žiã€‚
 */
 
 class Solution {
