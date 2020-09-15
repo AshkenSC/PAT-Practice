@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;参考答案思路：&#10;和个人思路不同的是，递推公式考虑的不是当前格子的下一步是哪个格子，而是考虑从上一个状态走到当前状态，是经过哪个格子。&#10;设当前格子为(i, j)，要注意分为四种情况：&#10;1）当前格子只能从右边来，则dp[i][j] = dp[i][j-1] + grid[i][j]&#10;2）当前格子只能从上方来，则dp[i][j] = dp[i-1][j] + grid[i][j]&#10;3）当前格子是起始位置，则dp[i][j] = grid[i][j]&#10;4）当前格子可以从上方或者右边来，则dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]&#10;同时，不需要额外建立dp数组，直接在grid上修改，因为经历过的grid位置不会再被访问到。">
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0406. Queue Reconstruction by Height&#10;&#10;将身高先降序排列，在此基础上，相同身高按k升序排列。&#10;循环地从头读取排序后的数组，根据每个元素的k插入list链表。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0027. Remove Elements.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0027. Remove Elements.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0039. Combination Sum.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0039. Combination Sum.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,21 +243,7 @@
       <workItem from="1599493024073" duration="2909000" />
       <workItem from="1599598917694" duration="26798000" />
       <workItem from="1599800735954" duration="6878000" />
-      <workItem from="1599876014609" duration="3692000" />
-    </task>
-    <task id="LOCAL-00043" summary="LeetCode 0067&#10;&#10;Runtime:  31.70% &#10;Memory Usage: 8.27% &#10;&#10;1）先把位数少的前面补全0&#10;2）模拟人计算加法，从低位起逐个位相加&#10;当前位=数位1+数位2+进位&#10;如果当前位=0或者1，则：当前位=0或1，进位=0&#10;如果当前位=2或3，则：当前位=0或1，进位=1&#10;3）最高位的处理&#10;如果当前位置是最高位，且进位=1，前面还要补一位">
-      <created>1595517945298</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1595517945299</updated>
-    </task>
-    <task id="LOCAL-00044" summary="LeetCode 0067&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。">
-      <created>1595604440772</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1595604440772</updated>
+      <workItem from="1599876014609" duration="4783000" />
     </task>
     <task id="LOCAL-00045" summary="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。">
       <created>1595606285661</created>
@@ -590,7 +574,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599816495185</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="LeetCode 0406. Queue Reconstruction by Height&#10;&#10;将身高先降序排列，在此基础上，相同身高按k升序排列。&#10;循环地从头读取排序后的数组，根据每个元素的k插入list链表。">
+      <created>1599935427905</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1599935427905</updated>
+    </task>
+    <task id="LOCAL-00093" summary="LeetCode 0406. Queue Reconstruction by Height&#10;&#10;将身高先降序排列，在此基础上，相同身高按k升序排列。&#10;循环地从头读取排序后的数组，根据每个元素的k插入list链表。">
+      <created>1599935471693</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1599935471693</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +607,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0617. Merge Two Binary Trees&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 63.15%&#10;&#10;思路：&#10;递归，遍历二叉树，一边遍历一边逐个翻转左右孩子即可。不要想太复杂。" />
     <MESSAGE value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
     <MESSAGE value="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ..." />
     <MESSAGE value="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。" />
@@ -634,7 +631,8 @@
     <MESSAGE value="LeetCode 0105. Construct Binary Tree from Preorder and Inorder Traversal&#10;&#10;给定一棵树先序遍历和中序遍历的数列，返回这棵树。&#10;&#10;更新了注释。" />
     <MESSAGE value="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;思路（错误思路）：&#10;初步想法：是否可以用动态规划，但是本题走的步数是不确定的，所以f(n)的n就不确定。&#10;然后发现，只能向下或者向右移动，所以一定是计算f(4)。&#10;f(0)=0, f(1)=1&#10;f(n) = f(n-1) + max{向下走，向右走}&#10;但是自己写起来太繁琐了。" />
     <MESSAGE value="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;参考答案思路：&#10;和个人思路不同的是，递推公式考虑的不是当前格子的下一步是哪个格子，而是考虑从上一个状态走到当前状态，是经过哪个格子。&#10;设当前格子为(i, j)，要注意分为四种情况：&#10;1）当前格子只能从右边来，则dp[i][j] = dp[i][j-1] + grid[i][j]&#10;2）当前格子只能从上方来，则dp[i][j] = dp[i-1][j] + grid[i][j]&#10;3）当前格子是起始位置，则dp[i][j] = grid[i][j]&#10;4）当前格子可以从上方或者右边来，则dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]&#10;同时，不需要额外建立dp数组，直接在grid上修改，因为经历过的grid位置不会再被访问到。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;参考答案思路：&#10;和个人思路不同的是，递推公式考虑的不是当前格子的下一步是哪个格子，而是考虑从上一个状态走到当前状态，是经过哪个格子。&#10;设当前格子为(i, j)，要注意分为四种情况：&#10;1）当前格子只能从右边来，则dp[i][j] = dp[i][j-1] + grid[i][j]&#10;2）当前格子只能从上方来，则dp[i][j] = dp[i-1][j] + grid[i][j]&#10;3）当前格子是起始位置，则dp[i][j] = grid[i][j]&#10;4）当前格子可以从上方或者右边来，则dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]&#10;同时，不需要额外建立dp数组，直接在grid上修改，因为经历过的grid位置不会再被访问到。" />
+    <MESSAGE value="LeetCode 0027, 0039 格式更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0027, 0039 格式更新" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -656,6 +654,10 @@
     <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
     <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="557" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592840458843" />
+    <state x="408" y="271" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1599935553583">
+      <screen x="0" y="0" width="1418" height="759" />
+    </state>
+    <state x="408" y="271" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1418.759@0.0.1418.759" timestamp="1599935553583" />
     <state x="-1672" y="219" key="GitRewordDialog" timestamp="1596619788986">
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
@@ -741,12 +743,12 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1599716369075">
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1599935566951">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1599716369075" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1597767518363" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1599935566951" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1598715924497" />
     <state x="2221" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@1920.0.1418.759" timestamp="1597976065777" />
     <state width="715" height="386" key="XDebugger.FullValuePopup" timestamp="1595068599247">
