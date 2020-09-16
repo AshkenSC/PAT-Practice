@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0406. Queue Reconstruction by Height&#10;&#10;将身高先降序排列，在此基础上，相同身高按k升序排列。&#10;循环地从头读取排序后的数组，根据每个元素的k插入list链表。">
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0148. Sort List.cpp&#10;&#10;在O(n logn)时间复杂度和常数空间复杂度内对链表排序。&#10;&#10;先用快慢指针的方法找到链表的中点&#10;再用归并排序对链表排序">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,14 +243,7 @@
       <workItem from="1599493024073" duration="2909000" />
       <workItem from="1599598917694" duration="26798000" />
       <workItem from="1599800735954" duration="6878000" />
-      <workItem from="1599876014609" duration="4783000" />
-    </task>
-    <task id="LOCAL-00045" summary="LeetCode 0961&#10;&#10;Runtime:   8.78% &#10;Memory Usage: 5.42%&#10;&#10;设置字典，记录每个数字的出现次数。当有一个数的出现次数达到N次，循环中止并返回值。&#10;&#10;注意：&#10;1）对于map，用insert方式插入时，出现过的key不会被覆盖，而是报错；使用[]的方式则可以覆盖。">
-      <created>1595606285661</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1595606285661</updated>
+      <workItem from="1599876014609" duration="5279000" />
     </task>
     <task id="LOCAL-00046" summary="LeetCode 1207&#10;&#10;Runtime: 39.62% &#10;Memory Usage: 96.60%&#10;&#10;1）用字典记录数组每个数出现的次数；&#10;2）再用字典记录出现的次数出现的次数；&#10;3）如果有出现的次数出现的次数大于1，就返回false。">
       <created>1595606708403</created>
@@ -588,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599935471693</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="LeetCode 0148. Sort List.cpp&#10;&#10;在O(n logn)时间复杂度和常数空间复杂度内对链表排序。&#10;&#10;先用快慢指针的方法找到链表的中点&#10;再用归并排序对链表排序">
+      <created>1600150555875</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1600150555875</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +607,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0448. Find All Numbers Disappeared in an Array&#10;&#10;Runtime:  43.94%&#10;Memory Usage: 90.31%&#10;&#10;思路：遍历数组a的元素，根据元素的取值，将其作为索引找到的数组的值+n。比如遍历到a[i]=3，则将a[3]的值加n。&#10;这样要注意的是，再往后会遇到加n以后的数组值，所以每次取数组值的时候，需要a[i] % a.size()。这样，最后哪个位置的值小于等于n，哪个位置就是没出现的数。" />
     <MESSAGE value="LeetCode 0172. Factorial Trailing Zeroes&#10;&#10;Runtime:  38.27%&#10;Memory Usage: 50.39%&#10;&#10;思路:&#10;1）因数里有多少个0，取决于其因数里有多少个10；&#10;2）而对10=2*5，因此可以进一步考察质因数里有多少个2和5，而10的个数取决于2和5当中较少的那个；&#10;3）再进一步思考，我们考察的是n的阶乘，因此因数由n, n-1, n-2, ..., 2, 1构成。这些数当中，每隔一个就会出现一个偶数，也就会出现一个因数2；而5的倍数则每5个数才出现一次。&#10;4）因此可以得到结论：n！的质因数里，5的个数一定不多于2的个数。问题转化为，求质因数分解后有多少个5；&#10;5）只需要考察从n到1中，末位为5和0的数，他们的质因数所含有的5的个数之和。&#10;6）进一步分析，每个5个数，会出现一个5的倍数；但每个25，又会出现25的倍数，也就是每25个数要额外加一个因数5；以此类推，每125也要额外加一个因数5……&#10;7）因此，问题转化为，求n/5 + n/25 + n/125 + ..." />
     <MESSAGE value="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。" />
     <MESSAGE value="LeetCode 0053. Maximum Subarray&#10;&#10;Runtime:  59.76%&#10;Memory Usage: 29.34%&#10;&#10;思路:&#10;动态规划&#10;初始状态：a[0] = nums[0]&#10;第 i 个子组合的最大值为：第i-1个子组合的最大值加第 i 个数字，或第i个数字本身" />
@@ -632,7 +631,8 @@
     <MESSAGE value="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;思路（错误思路）：&#10;初步想法：是否可以用动态规划，但是本题走的步数是不确定的，所以f(n)的n就不确定。&#10;然后发现，只能向下或者向右移动，所以一定是计算f(4)。&#10;f(0)=0, f(1)=1&#10;f(n) = f(n-1) + max{向下走，向右走}&#10;但是自己写起来太繁琐了。" />
     <MESSAGE value="LeetCode 0064. Minimum Path Sum&#10;&#10;给定m*n个填了非负数的格子，找从左上角到右下角的路径，并且这条路径上的数之和还要最小。&#10;只能向下或者向右移动。&#10;&#10;参考答案思路：&#10;和个人思路不同的是，递推公式考虑的不是当前格子的下一步是哪个格子，而是考虑从上一个状态走到当前状态，是经过哪个格子。&#10;设当前格子为(i, j)，要注意分为四种情况：&#10;1）当前格子只能从右边来，则dp[i][j] = dp[i][j-1] + grid[i][j]&#10;2）当前格子只能从上方来，则dp[i][j] = dp[i-1][j] + grid[i][j]&#10;3）当前格子是起始位置，则dp[i][j] = grid[i][j]&#10;4）当前格子可以从上方或者右边来，则dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]&#10;同时，不需要额外建立dp数组，直接在grid上修改，因为经历过的grid位置不会再被访问到。" />
     <MESSAGE value="LeetCode 0027, 0039 格式更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0027, 0039 格式更新" />
+    <MESSAGE value="LeetCode 0148. Sort List.cpp&#10;&#10;在O(n logn)时间复杂度和常数空间复杂度内对链表排序。&#10;&#10;先用快慢指针的方法找到链表的中点&#10;再用归并排序对链表排序" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0148. Sort List.cpp&#10;&#10;在O(n logn)时间复杂度和常数空间复杂度内对链表排序。&#10;&#10;先用快慢指针的方法找到链表的中点&#10;再用归并排序对链表排序" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -743,11 +743,11 @@
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
     <state x="284" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1592842327159" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1599935566951">
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1600150857274">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1599716369075" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1600150857274" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1599935566951" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1598715924497" />
     <state x="2221" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@1920.0.1418.759" timestamp="1597976065777" />
