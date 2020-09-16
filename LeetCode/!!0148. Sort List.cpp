@@ -11,7 +11,7 @@
 */
 
 
- struct ListNode {
+struct ListNode {
       int val;
       ListNode *next;
       ListNode(int x) : val(x), next(nullptr) {}
@@ -26,8 +26,8 @@ public:
         
         // 通过快慢指针方法，快指针走2步，慢指针走1步，这样当快指针遍历完的时候，慢指针正好在中点
         ListNode* pmid;
-        ListNode* mid;
-        ListNode* trail;
+        ListNode* mid = head;
+        ListNode* trail = head;
         while(trail && trail->next) {
             pmid = mid;
             mid = mid->next;
