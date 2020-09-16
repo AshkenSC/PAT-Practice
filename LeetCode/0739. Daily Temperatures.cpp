@@ -11,7 +11,7 @@
 注意：temperature数组的长度范围为[1, 3000],每天的温度范围在[30, 100]
 
 思路1：暴力解法（超时）
-
+思路2：改进型暴力解法，有动态规划思想。见注释。
 */
 
 #include <vector>
@@ -20,21 +20,29 @@ using namespace std;
 class Solution {
 public:
     vector<int> dailyTemperatures(vector<int>& T) {
-        vector<int> result;
-        for (int i = 0; i < T.size(); i++) {
-            int waitDay = 0;
-            for (int j = i + 1; j < T.size(); j++) {
-                // 每往后一天，等待天数就+1
-                waitDay++;
-                // 一旦遇到温度更高天，就退出循环
-                if (T[j] > T[i])
+        vector<int> res(T.size(), 0);
+
+        // 从后向前构造结果数组
+        for (int i = T.size() - 2; i >= 0; i++) {
+            // 但在内层循环，又从当前res[i]位置从前向后遍历
+            int j = i + 1;
+            while (j < T.size()) {
+                // 如果发现i后面有一天j，温度更高，直接赋值天数编号并break
+                if (T[j] > T[i]) {
+                    res[i] = j;
                     break;
-                // 如果到最后还没遇到更温暖天，就重置等待天数为0
-                if (j == T.size() - 1 && T[j] <= T[i])
-                    waitDay = 0;
+                }
+                else {
+                    // 如果i后面这一天j，温度更低，并且j天后面也没有温度更高的天了
+                    // 那只能说明对i而言，后面更没有温度更高的天了，直接退出循环
+                    if (res[j] == 0)
+                        break;
+                    else 
+                    // 如果i后面这一天j，温度更低，且j天后面有温度更高的天
+                    // 直接跳转到比j天第一次温度更高的那天，节约时间
+                        j += res[j];
+                }
             }
-            result.push_back(waitDay);
         }
-        return result;
     }
 };
