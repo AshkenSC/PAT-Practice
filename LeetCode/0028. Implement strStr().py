@@ -40,9 +40,9 @@ class Solution:
 
 
 # # test
-# sol = Solution()
-# ans = sol.strStr("aaaaa", "bba")
-# print(ans)
+sol = Solution()
+ans = sol.strStr("aaaaa", "bba")
+print(ans)
 
 
 
