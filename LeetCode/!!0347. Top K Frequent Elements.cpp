@@ -20,34 +20,34 @@ using namespace std;
 class Solution {
 public:
     
-    bool cmp(pair<int, int>& a, pair<int, int>& b) {
+    static bool cmp(pair<int, int>& a, pair<int, int>& b) {
         return a.second > b.second;
     }
-    
+
     vector<int> topKFrequent(vector<int>& nums, int k) {
-        // 首先统计元素出现次数，建立字典
+        // 首先统计每个数字出现的个数，使用字典统计
         map<int, int> freq;
-        for (int i = 0; i < nums.size(); i++) {
-            freq[nums[i]]++;
+        for (auto num : nums) {
+            freq[num]++;
         }
 
-        // pair代表map中的每一个元素
         // 使用优先队列实现小顶堆
         priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&cmp)> q(cmp);
-        for (auto& [num, count] : freq) {
-            // 如果堆中元素已经满k个了，插入时就需要删除元素了
-            if (q.size() == k) {
-                // 如果当前堆顶计数值（堆中最小值）小于当前元素计数值，则移除堆顶元素，并插入当前元素入堆
-                if (q.top().second < count) {
-                    q.pop();
-                    q.emplace(num, count);
-                }
-            }
+        for (auto entry : freq) {
+            // 如果堆中元素小于k个，直接插入
+            if (q.size() < k)
+                q.emplace(entry);
+            // 如果堆中元素等于k了，就需要对比当前元素和堆顶元素的大小
+            // 如果当前元素比堆顶元素要大，则删除堆顶元素，插入当前元素
             else {
-                    q.emplace(num, count);
+                if (q.top().second < entry.second) {
+                    q.pop();
+                    q.emplace(entry);
+                }
             }
         }
 
+        // 返回结果
         vector<int> result;
         while (!q.empty()) {
             result.push_back(q.top().first);
