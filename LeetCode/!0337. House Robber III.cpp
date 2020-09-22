@@ -40,7 +40,7 @@ public:
     
     vector<int> dfs(TreeNode* node) {
         if (node == nullptr) {
-            vector<int> arr;
+            vector<int> arr(2);
             return arr;
         }
 
