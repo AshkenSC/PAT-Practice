@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0148. Sort List.cpp&#10;&#10;在O(n logn)时间复杂度和常数空间复杂度内对链表排序。&#10;&#10;先用快慢指针的方法找到链表的中点&#10;再用归并排序对链表排序">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0148. Sort List.cpp&#10;&#10;在O(n logn)时间复杂度和常数空间复杂度内对链表排序。&#10;&#10;先用快慢指针的方法找到链表的中点&#10;再用归并排序对链表排序" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
