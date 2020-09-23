@@ -6,6 +6,7 @@
 计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。
 
 思路：树的动态规划
+https://leetcode-cn.com/problems/house-robber-iii/solution/shu-xing-dp-ru-men-wen-ti-by-liweiwei1419/
 
 使用后序遍历，因为我们想让子结点层层汇报信息给父节点，
 这样最后在根节点汇总结果。
