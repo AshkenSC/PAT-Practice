@@ -33,13 +33,13 @@ public:
         return result;
     }
 
-    void backtrack(vector<string>result, unordered_map<char, string>& phoneMap, 
-    string& digits, int index, string& combination) {
+    void backtrack(vector<string>& result, unordered_map<char, string>& phoneMap, 
+    const string& digits, int index, string& combination) {
         if (index == digits.length())
             result.push_back(combination);
         else {
             char digit = digits[index];
-            const string &letters = phoneMap[digit];
+            const string& letters = phoneMap[digit];
             for (const char& letter: letters) {
                 combination.push_back(letter);
                 backtrack(result, phoneMap, digits, index + 1, combination);
