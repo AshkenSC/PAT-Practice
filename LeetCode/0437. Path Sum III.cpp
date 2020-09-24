@@ -9,6 +9,7 @@
 以每个结点为根节点，计算路径和为sum的有多少条
 
 思路2：回溯
+参考：https://leetcode-cn.com/problems/path-sum-iii/solution/qian-zhui-he-di-gui-hui-su-by-shi-huo-de-xia-tian/
 用字典记录下从root到当前结点的路径的总和currentSum。然后检查当前字典中是否存在有路径总和为currentSum - target的结点。
 如果存在有和为currentSum - target的结点，那么从那个结点开始，到当前结点位置，这一段路径的长度就是target。
 以此模式深度遍历树，并回溯，从而得到结果。
