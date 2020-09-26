@@ -63,23 +63,23 @@ public:
             }
             // 并
             MyUnion(a, b, values[i]);
-
-            // 查
-            vector<double> result;
-            for (auto &q : queries) {
-                string a = q[0];
-                string b = q[1];
-                pair<string, double> p1 = MyFind(a);    // p1.second = a/p1
-                pair<string, double> p2 = MyFind(b);    // p2.second = b/p2
-                if (p1.first != p2.first || "" == p1.first || "" == p2.first) {
-                    result.push_back(-1.0);
-                }
-                else {
-                    // a/b = (a/p1) / (b/p2)
-                    result.push_back(p1.second / p2.second);
-                }
-            }
-            return result;
         }
+
+        // 查
+        vector<double> result;
+        for (auto &q : queries) {
+            string a = q[0];
+            string b = q[1];
+            pair<string, double> p1 = MyFind(a);    // p1.second = a/p1
+            pair<string, double> p2 = MyFind(b);    // p2.second = b/p2
+            if (p1.first != p2.first || "" == p1.first || "" == p2.first) {
+                result.push_back(-1.0);
+            }
+            else {
+                // a/b = (a/p1) / (b/p2)
+                result.push_back(p1.second / p2.second);
+            }
+        }
+        return result;
     }
 };
