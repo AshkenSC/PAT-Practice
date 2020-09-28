@@ -25,7 +25,7 @@ class Solution:
             elif c == ']':
                 # 获取当前的重复次数，和上一次的字符串结果
                 cur_multi, last_res = stack.pop()
-                # 将上一次的字符串结果和
+                # 将上一次的字符串结果和当前字符*重复次数拼接
                 res = last_res + cur_multi * res
             elif '0' <= c <= '9':
                 # 这样可以将连续多位数字转化为整数数值
