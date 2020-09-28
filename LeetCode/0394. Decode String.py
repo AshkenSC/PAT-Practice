@@ -7,6 +7,9 @@
 此外，你也可以假定所有原始数据不包含数字，数字仅仅为表示重复次数k。例如不会有诸如3a和2[4]的输入。
 
 思路：构建辅助栈
+
+参考https://leetcode-cn.com/problems/decode-string/solution/decode-string-fu-zhu-zhan-fa-di-gui-fa-by-jyd/
+
 当前c是数字时，将数字字符转为数字multi，用于后续倍数计算；
 当前c时字母时，在res尾部添加c
 当c为[时，将当前multi和res入栈，并分别置0
