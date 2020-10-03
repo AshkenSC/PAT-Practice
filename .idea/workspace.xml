@@ -50,7 +50,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.!!0018. 4Sum">
+  <component name="RunManager" selected="Python.0202. Happy Number">
     <configuration name="0067. Add Binary" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="1021. Remove Outermost Parentheses" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="0202. Happy Number" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,7 +86,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/1021. Remove Outermost Parentheses.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/0202. Happy Number.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.0202. Happy Number" />
         <item itemvalue="Python.!!0018. 4Sum" />
         <item itemvalue="Python.!0107. Binary Tree Level Order Traversal II.cpp" />
         <item itemvalue="Python.0067. Add Binary" />
         <item itemvalue="Python.771. Jewels and Stones" />
-        <item itemvalue="Python.1021. Remove Outermost Parentheses" />
       </list>
     </recent_temporary>
   </component>
@@ -247,6 +247,7 @@
       <workItem from="1600499335219" duration="2067000" />
       <workItem from="1601055615040" duration="4183000" />
       <workItem from="1601622233612" duration="6347000" />
+      <workItem from="1601748651043" duration="257000" />
     </task>
     <task id="LOCAL-00048" summary="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。">
       <created>1595776673254</created>
@@ -664,78 +665,78 @@
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1672" y="219" key="GitRewordDialog/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596619788986" />
-    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112391" />
     <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
     <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
+    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112389" />
     <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
+    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
     <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
+    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781602" />
     <state width="1374" height="208" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.1.bottom/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
+    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.1.center/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
+    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.1.left/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1601646680136">
+    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
+    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1601748826502">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
-    <state width="1374" height="215" key="GridCell.Tab.1.right/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
+    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1601087611042">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
@@ -843,6 +844,11 @@
           <line>8</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/0202. Happy Number.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -852,6 +858,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Programming_Practice$0202__Happy_Number.coverage" NAME="0202. Happy Number Coverage Results" MODIFIED="1601748826490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$_0018__4Sum.coverage" NAME="!0018. 4Sum Coverage Results" MODIFIED="1601628153717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
   </component>
 </project>
