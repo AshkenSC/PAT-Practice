@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0108. Convert Sorted Array to Binary Search Tree&#10;&#10;将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。&#10;本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。&#10;&#10;思路：分治法。&#10;每次只选取数组中间的元素创建新的根节点，然后对该根结点左右子数组分而治之，以此类推。">
-      <change beforePath="$PROJECT_DIR$/.idea/Programming-Practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Programming-Practice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="0018. 4Sum&#10;&#10;给定一个包含n 个整数的数组nums和一个目标值target，判断nums中是否存在四个元素 a，b，c和 d，使得a + b + c + d的值与target相等？找出所有满足条件且不重复的四元组。&#10;注意：答案中不可以包含重复的四元组。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,14 +246,7 @@
       <workItem from="1599876014609" duration="5279000" />
       <workItem from="1600499335219" duration="2067000" />
       <workItem from="1601055615040" duration="4183000" />
-      <workItem from="1601622233612" duration="5580000" />
-    </task>
-    <task id="LOCAL-00047" summary="LeetCode 0876&#10;&#10;Runtime: 100.00% &#10;Memory Usage: 40.19%&#10;&#10;从头遍历一遍链表，一边将其内容放在一个数组中。然后利用数组随机访问的特点，立刻找到链表的中间位置。">
-      <created>1595683139387</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1595683139387</updated>
+      <workItem from="1601622233612" duration="6347000" />
     </task>
     <task id="LOCAL-00048" summary="LeetCode 0237&#10;&#10;Runtime:  84.02% &#10;Memory Usage: 73.66%&#10;&#10;本题目的难点在于如何获取给定结点前面的结点。结论是，直接交换当前结点和下一个结点的value，然后删除下一个结点。">
       <created>1595776673254</created>
@@ -593,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601057273487</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="0018. 4Sum&#10;&#10;给定一个包含n 个整数的数组nums和一个目标值target，判断nums中是否存在四个元素 a，b，c和 d，使得a + b + c + d的值与target相等？找出所有满足条件且不重复的四元组。&#10;注意：答案中不可以包含重复的四元组。">
+      <created>1601628441188</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1601628441188</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +610,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0160. Intersection of Two Linked Lists&#10;&#10;Runtime:  91.82%&#10;Memory Usage: 15.37%&#10;&#10;思路:&#10;让两个指针分别从A，B头开始向后遍历，如果到了末尾，就从另一个链表头开始继续遍历，直到两个指针相遇为止。&#10;这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。&#10;因此，如果他们存在公共部分，一定是在公共点起始处相遇。" />
     <MESSAGE value="LeetCode 0053. Maximum Subarray&#10;&#10;Runtime:  59.76%&#10;Memory Usage: 29.34%&#10;&#10;思路:&#10;动态规划&#10;初始状态：a[0] = nums[0]&#10;第 i 个子组合的最大值为：第i-1个子组合的最大值加第 i 个数字，或第i个数字本身" />
     <MESSAGE value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  100.00%&#10;Memory Usage: 79.50%&#10;&#10;思路:&#10;动态规划&#10;f(n) 表示爬到第n级台阶，则f(n) = f(n-1) + f(n-2)，（因为只能走一步或者两步）&#10;初始条件：f(0)=1, f(1)=1&#10;由于只关心当前f(n)和前两个f(n-1), f(n-2)，所以可以只用三个变量存储之，而不用dp[n]数组。" />
     <MESSAGE value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  75.56%&#10;Memory Usage: 18.61%&#10;&#10;思路：以下是几个正确解答问题的关键：&#10;1）路径长度为经过的结点数-1（植树问题！3棵树中间有2段路）&#10;2）一个结点的孩子向下遍历经过的最多结点数就是这个孩子的深度。&#10;3）一个树的最大路径结点数 = 左孩子最大路径结点数 + 右孩子最大路径结点数 + 1（它本身）&#10;4）可以用递归，算出这棵树所有结点的最大路径结点数，只保留最大者。然后-1，即得到结果。&#10;这题有很多小细节要注意。" />
@@ -637,7 +634,8 @@
     <MESSAGE value="LeetCode 0027, 0039 格式更新" />
     <MESSAGE value="LeetCode 0148. Sort List.cpp&#10;&#10;在O(n logn)时间复杂度和常数空间复杂度内对链表排序。&#10;&#10;先用快慢指针的方法找到链表的中点&#10;再用归并排序对链表排序" />
     <MESSAGE value="LeetCode 0108. Convert Sorted Array to Binary Search Tree&#10;&#10;将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。&#10;本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。&#10;&#10;思路：分治法。&#10;每次只选取数组中间的元素创建新的根节点，然后对该根结点左右子数组分而治之，以此类推。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0108. Convert Sorted Array to Binary Search Tree&#10;&#10;将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。&#10;本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。&#10;&#10;思路：分治法。&#10;每次只选取数组中间的元素创建新的根节点，然后对该根结点左右子数组分而治之，以此类推。" />
+    <MESSAGE value="0018. 4Sum&#10;&#10;给定一个包含n 个整数的数组nums和一个目标值target，判断nums中是否存在四个元素 a，b，c和 d，使得a + b + c + d的值与target相等？找出所有满足条件且不重复的四元组。&#10;注意：答案中不可以包含重复的四元组。" />
+    <option name="LAST_COMMIT_MESSAGE" value="0018. 4Sum&#10;&#10;给定一个包含n 个整数的数组nums和一个目标值target，判断nums中是否存在四个元素 a，b，c和 d，使得a + b + c + d的值与target相等？找出所有满足条件且不重复的四元组。&#10;注意：答案中不可以包含重复的四元组。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -666,77 +664,77 @@
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1672" y="219" key="GitRewordDialog/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596619788986" />
-    <state width="1374" height="175" key="GridCell.Tab.0.bottom" timestamp="1601628153721">
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112391" />
-    <state width="1374" height="175" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601628153721" />
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="175" key="GridCell.Tab.0.center" timestamp="1601628153721">
+    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
-    <state width="1374" height="175" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601628153721" />
+    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="175" key="GridCell.Tab.0.left" timestamp="1601628153721">
+    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112389" />
-    <state width="1374" height="175" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601628153721" />
+    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210870" />
-    <state width="1374" height="175" key="GridCell.Tab.0.right" timestamp="1601628153721">
+    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
-    <state width="1374" height="175" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601628153721" />
+    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1595905529781" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@0.0.1549.831" timestamp="1593186210871" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1601627624248">
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781602" />
     <state width="1374" height="208" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601627624248" />
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.1.bottom/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1601627624247">
+    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601627624247" />
+    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.1.center/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1601627624247">
+    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601627624247" />
+    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.1.left/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1601627624248">
+    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1601646680136">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601627624248" />
+    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646680136" />
     <state width="1374" height="215" key="GridCell.Tab.1.right/0.0.1418.759@0.0.1418.759" timestamp="1595905531295" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1601087611042">
       <screen x="0" y="0" width="1418" height="759" />
@@ -746,11 +744,11 @@
     <state x="260" y="23" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1597457167617" />
     <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="-1636" y="60" key="SettingsEditor/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593190829645" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1600150857274">
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1601646530597">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1600150857274" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646530597" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1599935566951" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1598715924497" />
     <state x="2221" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@1920.0.1418.759" timestamp="1597976065777" />
