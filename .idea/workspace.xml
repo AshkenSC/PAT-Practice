@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0202. Happy Number&#10;&#10;编写一个算法来判断一个数 n 是不是快乐数。&#10;&#10;「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，&#10;然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。&#10;如果 可以变为1，那么这个数就是快乐数。">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0495. Teemo Attacking.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,6 +249,7 @@
       <workItem from="1601055615040" duration="4183000" />
       <workItem from="1601622233612" duration="6347000" />
       <workItem from="1601748651043" duration="1314000" />
+      <workItem from="1601834115690" duration="52000" />
     </task>
     <task id="LOCAL-00049" summary="LeetCode 0206. Reverse Linked List&#10;&#10;Runtime:  100.00% &#10;Memory Usage: 76.83% &#10;&#10;逆置链表，采用头插法。&#10;注意输入数据可能是nullptr。">
       <created>1595783429049</created>
