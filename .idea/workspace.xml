@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0495. Teemo Attacking&#10;&#10;在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄，他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。现在，给出提莫对艾希的攻击时间序列和提莫攻击的中毒持续时间，你需要输出艾希的中毒状态总时长。&#10;&#10;你可以认为提莫在给定的时间点进行攻击，并立即使艾希处于中毒状态。">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0414. Third Maximum Number.py" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0414. Third Maximum Number&#10;&#10;给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。&#10;&#10;思路1：先用set取集合去重，再取第三大的。其实这个是不对的，因为排序的话，时间复杂度大于O（n)&#10;思路2：用三个变量保存前三大的。主要是困惑在一开始三个变量初始值如何设置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/0495. Teemo Attacking.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0495. Teemo Attacking.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/0414. Third Maximum Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/0414. Third Maximum Number.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,14 +260,7 @@
       <workItem from="1601055615040" duration="4183000" />
       <workItem from="1601622233612" duration="6347000" />
       <workItem from="1601748651043" duration="1314000" />
-      <workItem from="1601834115690" duration="2558000" />
-    </task>
-    <task id="LOCAL-00050" summary="LeetCode 0101. Symmetric Tree&#10;&#10;Runtime:  33.33% &#10;Memory Usage: 53.59%&#10;&#10;初步思路：设计一个递归函数，里面有两个子递归过程：&#10;1）遍历左子树的左和右子树的右,只要有一层不相等，就返回false；&#10;2）遍历左子树的右和右子树的左，只要有一层不相等，就返回false。">
-      <created>1595834034225</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1595834034226</updated>
+      <workItem from="1601834115690" duration="4060000" />
     </task>
     <task id="LOCAL-00051" summary="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。">
       <created>1595946579448</created>
@@ -606,7 +598,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601834182550</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="LeetCode 0414. Third Maximum Number&#10;&#10;给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。&#10;&#10;思路1：先用set取集合去重，再取第三大的。其实这个是不对的，因为排序的话，时间复杂度大于O（n)&#10;思路2：用三个变量保存前三大的。主要是困惑在一开始三个变量初始值如何设置">
+      <created>1601864979739</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1601864979739</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,7 +624,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0070. Climbing Stairs&#10;&#10;Runtime:  75.56%&#10;Memory Usage: 18.61%&#10;&#10;思路：以下是几个正确解答问题的关键：&#10;1）路径长度为经过的结点数-1（植树问题！3棵树中间有2段路）&#10;2）一个结点的孩子向下遍历经过的最多结点数就是这个孩子的深度。&#10;3）一个树的最大路径结点数 = 左孩子最大路径结点数 + 右孩子最大路径结点数 + 1（它本身）&#10;4）可以用递归，算出这棵树所有结点的最大路径结点数，只保留最大者。然后-1，即得到结果。&#10;这题有很多小细节要注意。" />
     <MESSAGE value="LeetCode 0581. Shortest Unsorted Continuous Subarray&#10;&#10;思路：&#10;1）从左往右遍历，记录遍历过的部分的最大值。如果当前遍历到的元素比最大值要小，则该元素需要重排。记录该位置为high&#10;2）从右往左遍历，记录遍历过的部分的最小值。如果当前遍历到的元素比最小值大，则该元素需要重排。记录该位置为low&#10;3）如果high==low（记得之前需要初始化为相同值），则数组整体有序。否则返回high-low+1" />
     <MESSAGE value="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。" />
     <MESSAGE value="LeetCode 1295. Find Numbers with Even Number of Digits&#10;&#10;思路：转为字符串并检查长度。" />
@@ -650,7 +648,8 @@
     <MESSAGE value="0018. 4Sum&#10;&#10;给定一个包含n 个整数的数组nums和一个目标值target，判断nums中是否存在四个元素 a，b，c和 d，使得a + b + c + d的值与target相等？找出所有满足条件且不重复的四元组。&#10;注意：答案中不可以包含重复的四元组。" />
     <MESSAGE value="LeetCode 0202. Happy Number&#10;&#10;编写一个算法来判断一个数 n 是不是快乐数。&#10;&#10;「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，&#10;然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。&#10;如果 可以变为1，那么这个数就是快乐数。" />
     <MESSAGE value="LeetCode 0495. Teemo Attacking&#10;&#10;在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄，他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。现在，给出提莫对艾希的攻击时间序列和提莫攻击的中毒持续时间，你需要输出艾希的中毒状态总时长。&#10;&#10;你可以认为提莫在给定的时间点进行攻击，并立即使艾希处于中毒状态。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0495. Teemo Attacking&#10;&#10;在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄，他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。现在，给出提莫对艾希的攻击时间序列和提莫攻击的中毒持续时间，你需要输出艾希的中毒状态总时长。&#10;&#10;你可以认为提莫在给定的时间点进行攻击，并立即使艾希处于中毒状态。" />
+    <MESSAGE value="LeetCode 0414. Third Maximum Number&#10;&#10;给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。&#10;&#10;思路1：先用set取集合去重，再取第三大的。其实这个是不对的，因为排序的话，时间复杂度大于O（n)&#10;思路2：用三个变量保存前三大的。主要是困惑在一开始三个变量初始值如何设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0414. Third Maximum Number&#10;&#10;给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。&#10;&#10;思路1：先用set取集合去重，再取第三大的。其实这个是不对的，因为排序的话，时间复杂度大于O（n)&#10;思路2：用三个变量保存前三大的。主要是困惑在一开始三个变量初始值如何设置" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
@@ -680,73 +679,73 @@
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1672" y="219" key="GitRewordDialog/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596619788986" />
-    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1601864401007">
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1601867467386">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112391" />
-    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864401007" />
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467386" />
     <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
-    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1601864401007">
+    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1601867467386">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
-    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864401007" />
+    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467386" />
     <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.center/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
-    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1601864401007">
+    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1601867467386">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112389" />
-    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864401007" />
+    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467386" />
     <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.left/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
-    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1601864401007">
+    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1601867467386">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
-    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864401007" />
+    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467386" />
     <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state width="1506" height="213" key="GridCell.Tab.0.right/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593314421290" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1601864402853">
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1601867467387">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781602" />
     <state width="1374" height="208" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864402853" />
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467387" />
     <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1601864402853">
+    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1601867467387">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864402853" />
+    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467387" />
     <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1601864402853">
+    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1601867467386">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864402853" />
+    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467386" />
     <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1601864402853">
+    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1601867467387">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601864402853" />
+    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601867467387" />
     <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1601087611042">
       <screen x="0" y="0" width="1418" height="759" />
@@ -865,20 +864,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LeetCode/0414. Third Maximum Number.py</url>
-          <line>18</line>
+          <line>12</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/0414. Third Maximum Number.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="result" language="Python" />
         <watch expression="set(nums)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Programming_Practice$0414__Third_Maximum_Number.coverage" NAME="0414. Third Maximum Number Coverage Results" MODIFIED="1601864400618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$0414__Third_Maximum_Number.coverage" NAME="0414. Third Maximum Number Coverage Results" MODIFIED="1601867467377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$0202__Happy_Number.coverage" NAME="0202. Happy Number Coverage Results" MODIFIED="1601748826490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$_0018__4Sum.coverage" NAME="!0018. 4Sum Coverage Results" MODIFIED="1601628153717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
   </component>
