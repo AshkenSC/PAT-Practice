@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0414. Third Maximum Number&#10;&#10;给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。&#10;&#10;思路1：先用set取集合去重，再取第三大的。其实这个是不对的，因为排序的话，时间复杂度大于O（n)&#10;思路2：用三个变量保存前三大的。主要是困惑在一开始三个变量初始值如何设置">
-      <change afterPath="$PROJECT_DIR$/LeetCode/0628. Maximum Product of Three Numbers.py" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0628. Maximum Product of Three Numbers&#10;&#10;给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。&#10;&#10;思路：&#10;1. 数组中都是正数，取最大的三个数&#10;2. 数组中都是负数，取大的三个数&#10;3. 数组中有正有负，且负数不少于2个，必选最大正数，然后还需要比较最小两负数和第二第三大的正数，两个乘积谁更大">
+      <change afterPath="$PROJECT_DIR$/LeetCode/0697. Degree of an Array.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +62,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.0628. Maximum Product of Three Numbers">
+  <component name="RunManager" selected="Python.0697. Degree of an Array">
     <configuration name="0202. Happy Number" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="!0107. Binary Tree Level Order Traversal II.cpp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="0697. Degree of an Array" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Programming-Practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,7 +142,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\Projects\Programming-Practice\LeetCode\!0107. Binary Tree Level Order Traversal II.cpp" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/0697. Degree of an Array.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.0697. Degree of an Array" />
         <item itemvalue="Python.0628. Maximum Product of Three Numbers" />
         <item itemvalue="Python.0414. Third Maximum Number" />
         <item itemvalue="Python.0202. Happy Number" />
         <item itemvalue="Python.!!0018. 4Sum" />
-        <item itemvalue="Python.!0107. Binary Tree Level Order Traversal II.cpp" />
       </list>
     </recent_temporary>
   </component>
@@ -261,14 +261,8 @@
       <workItem from="1601622233612" duration="6347000" />
       <workItem from="1601748651043" duration="1314000" />
       <workItem from="1601834115690" duration="4060000" />
-      <workItem from="1601987452424" duration="1228000" />
-    </task>
-    <task id="LOCAL-00051" summary="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;Runtime: 66.90% &#10;Memory Usage: 34.58%&#10;&#10;思路：可以先自顶向下、从右到左地层序遍历该树，然后将数组里的元素逆序排列（但要保持二维数组的结构）。">
-      <created>1595946579448</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1595946579448</updated>
+      <workItem from="1601987452424" duration="1887000" />
+      <workItem from="1602045669501" duration="205000" />
     </task>
     <task id="LOCAL-00052" summary="LeetCode 0107. Binary Tree Level Order Traversal II&#10;&#10;补充代码注释。">
       <created>1595946944076</created>
@@ -606,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601864979739</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="LeetCode 0628. Maximum Product of Three Numbers&#10;&#10;给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。&#10;&#10;思路：&#10;1. 数组中都是正数，取最大的三个数&#10;2. 数组中都是负数，取大的三个数&#10;3. 数组中有正有负，且负数不少于2个，必选最大正数，然后还需要比较最小两负数和第二第三大的正数，两个乘积谁更大">
+      <created>1601988981980</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1601988981980</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,7 +626,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0581. Shortest Unsorted Continuous Subarray&#10;&#10;思路：&#10;1）从左往右遍历，记录遍历过的部分的最大值。如果当前遍历到的元素比最大值要小，则该元素需要重排。记录该位置为high&#10;2）从右往左遍历，记录遍历过的部分的最小值。如果当前遍历到的元素比最小值大，则该元素需要重排。记录该位置为low&#10;3）如果high==low（记得之前需要初始化为相同值），则数组整体有序。否则返回high-low+1" />
     <MESSAGE value="LeetCode 0078. Subsets&#10;&#10;思路：遍历该整数数组。将最终返回的结果集合记做result。&#10;每次遍历到一个新数，result中就要新增加：由result中所有子集加上当前这个数构成的一系列新集合。&#10;例如，输入[1,2,3]，遍历到了3，此时result里为[[], 1, 2, 12]。那么result里就要新增以下子集：1, 12, 23, 123。" />
     <MESSAGE value="LeetCode 1295. Find Numbers with Even Number of Digits&#10;&#10;思路：转为字符串并检查长度。" />
     <MESSAGE value="LeetCode 0046. Permutations&#10;&#10;思路：回溯法。&#10;将数组分为两个部分：已经排列的部分（设[0, first-1]）和还没排列的部分（设为[first, n-1]）。&#10;设当前要排列的数为first位，待填写的数下标为i，那么就将first和i位的数相交换，这样就当作[0, first]完成了交换，剩下没交换的位置位[first+1, n-1]。&#10;然后在此基础上进行递归。&#10;递归后将first和i位的数位置还原，再准备将first位与i+1位的数进行交换。" />
@@ -650,17 +650,10 @@
     <MESSAGE value="LeetCode 0202. Happy Number&#10;&#10;编写一个算法来判断一个数 n 是不是快乐数。&#10;&#10;「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，&#10;然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。&#10;如果 可以变为1，那么这个数就是快乐数。" />
     <MESSAGE value="LeetCode 0495. Teemo Attacking&#10;&#10;在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄，他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。现在，给出提莫对艾希的攻击时间序列和提莫攻击的中毒持续时间，你需要输出艾希的中毒状态总时长。&#10;&#10;你可以认为提莫在给定的时间点进行攻击，并立即使艾希处于中毒状态。" />
     <MESSAGE value="LeetCode 0414. Third Maximum Number&#10;&#10;给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。&#10;&#10;思路1：先用set取集合去重，再取第三大的。其实这个是不对的，因为排序的话，时间复杂度大于O（n)&#10;思路2：用三个变量保存前三大的。主要是困惑在一开始三个变量初始值如何设置" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0414. Third Maximum Number&#10;&#10;给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。&#10;&#10;思路1：先用set取集合去重，再取第三大的。其实这个是不对的，因为排序的话，时间复杂度大于O（n)&#10;思路2：用三个变量保存前三大的。主要是困惑在一开始三个变量初始值如何设置" />
+    <MESSAGE value="LeetCode 0628. Maximum Product of Three Numbers&#10;&#10;给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。&#10;&#10;思路：&#10;1. 数组中都是正数，取最大的三个数&#10;2. 数组中都是负数，取大的三个数&#10;3. 数组中有正有负，且负数不少于2个，必选最大正数，然后还需要比较最小两负数和第二第三大的正数，两个乘积谁更大" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0628. Maximum Product of Three Numbers&#10;&#10;给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。&#10;&#10;思路：&#10;1. 数组中都是正数，取最大的三个数&#10;2. 数组中都是负数，取大的三个数&#10;3. 数组中有正有负，且负数不少于2个，必选最大正数，然后还需要比较最小两负数和第二第三大的正数，两个乘积谁更大" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1553" y="74" key="#Deployment" timestamp="1593359910954">
-      <screen x="-1920" y="0" width="1549" height="831" />
-    </state>
-    <state x="-1553" y="74" key="#Deployment/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359910954" />
-    <state x="-1569" y="61" key="#SSH_Configurations" timestamp="1593359783033">
-      <screen x="-1920" y="0" width="1549" height="831" />
-    </state>
-    <state x="-1569" y="61" key="#SSH_Configurations/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359783033" />
     <state x="393" y="181" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601778712626">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
@@ -670,8 +663,6 @@
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="510" y="155" key="FileChooserDialogImpl/0.0.1418.759@0.0.1418.759" timestamp="1597684725799" />
-    <state x="552" y="169" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351722773" />
-    <state x="-1363" y="170" key="FileChooserDialogImpl/0.0.1549.831/-1920.0.1549.831@-1920.0.1549.831" timestamp="1593359964702" />
     <state x="408" y="271" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1599935553583">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
@@ -680,69 +671,69 @@
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1672" y="219" key="GitRewordDialog/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596619788986" />
-    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1601988523323">
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1602045732943">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112391" />
-    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988523323" />
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045732943" />
     <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1601988523323">
+    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1602045732943">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
-    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988523323" />
+    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045732943" />
     <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1601988523322">
+    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1602045732943">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293376" />
     <state width="1333" height="180" key="GridCell.Tab.0.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112389" />
-    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988523322" />
+    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045732943" />
     <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1601988523323">
+    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1602045732943">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.0.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="180" key="GridCell.Tab.0.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593441749273" />
     <state width="1374" height="175" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
-    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988523323" />
+    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045732943" />
     <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1601988524708">
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1602045734767">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.bottom/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.bottom/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781602" />
     <state width="1374" height="208" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988524708" />
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045734767" />
     <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1601988524708">
+    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1602045734767">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.center/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.center/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988524708" />
+    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045734767" />
     <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1601988524707">
+    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1602045734767">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.left/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.left/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988524707" />
+    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045734767" />
     <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1601988524708">
+    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1602045734767">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="230" key="GridCell.Tab.1.right/-1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1594696293377" />
     <state width="1333" height="262" key="GridCell.Tab.1.right/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593439781601" />
     <state width="1374" height="208" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601988524708" />
+    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1602045734767" />
     <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1601087611042">
       <screen x="0" y="0" width="1418" height="759" />
@@ -750,7 +741,6 @@
     <state x="-1668" y="22" key="SettingsEditor/0.0.1376.733/-1920.0.1376.733@-1920.0.1376.733" timestamp="1593438931550" />
     <state x="260" y="23" key="SettingsEditor/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601087611042" />
     <state x="260" y="23" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1597457167617" />
-    <state x="282" y="59" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593351731408" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1601834192458">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
@@ -875,18 +865,19 @@
           <line>26</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeetCode/0697. Degree of an Array.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="set(nums)" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Programming_Practice$0414__Third_Maximum_Number.coverage" NAME="0414. Third Maximum Number Coverage Results" MODIFIED="1601867467377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$0202__Happy_Number.coverage" NAME="0202. Happy Number Coverage Results" MODIFIED="1601748826490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$0628__Maximum_Product_of_Three_Numbers.coverage" NAME="0628. Maximum Product of Three Numbers Coverage Results" MODIFIED="1601988523177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/Programming_Practice$0697__Degree_of_an_Array.coverage" NAME="0697. Degree of an Array Coverage Results" MODIFIED="1602045732495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/Programming_Practice$_0018__4Sum.coverage" NAME="!0018. 4Sum Coverage Results" MODIFIED="1601628153717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
   </component>
 </project>
