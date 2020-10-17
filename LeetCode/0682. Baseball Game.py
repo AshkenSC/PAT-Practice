@@ -1,4 +1,4 @@
-/*
+'''
 0682. Baseball Game
 
 你现在是棒球比赛记录员。
@@ -10,7 +10,7 @@
 
 每一轮的操作都是永久性的，可能会对前一轮和后一轮产生影响。
 你需要返回你在所有回合中得分的总和。
-*/
+'''
 
 class Solution:
     def calPoints(self, ops: List[str]) -> int:
