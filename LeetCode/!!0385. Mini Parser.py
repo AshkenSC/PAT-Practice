@@ -20,20 +20,24 @@ class Solution:
         stack = list()
 
         for c in s:
-            if c == '[':
+            if c.isdigit():
+                num = num * 10 + int(c)
+                is_num = True
+            elif c == '[':
                 stack.append(NestedInteger())
             elif c == '-':
                 sign = -1
             elif c == ',' or c == ']':
                 # 将当前数字存入列表中
                 # 方法是先将栈顶列表取出，将数字放入列表，再放回栈中
-                cur_list = stack.pop()
-                cur_list.add(NestedInteger(sign * num))
-                stack.append(cur_list)
-
+                if is_num:
+                    cur_list = stack.pop()
+                    cur_list.add(NestedInteger(sign * num))
+                    stack.append(cur_list)
+                num, sign, is_num = 0, 1, False
                 # 如果是嵌套情形，要把当前子列表存入母列表中
                 if c == ']' and len(stack) > 1:
                     cur_list = stack.pop()
-                    stack[-1].append(cur_list)
+                    stack[-1].add(cur_list)
         
         return stack[0]
