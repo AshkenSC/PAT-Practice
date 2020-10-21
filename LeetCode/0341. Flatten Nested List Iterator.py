@@ -5,6 +5,8 @@
 列表中的每一项或者为一个整数，或者是另一个列表。其中列表的元素也可能是整数或是其他列表。
 
 思路：参考https://leetcode-cn.com/problems/flatten-nested-list-iterator/solution/python-zhan-dai-ma-jian-dan-yi-li-jie-by-hsyv5897/
+
+将NestedInteger结构体中的内容依次压栈，并保证栈顶为Integer即可
 '''
 
 class NestedIterator:
@@ -16,6 +18,6 @@ class NestedIterator:
     
     def hasNext(self) -> bool:
         # 对栈顶list进行层层去嵌套，直到栈顶存的是int为止
-        while len(self.stack) > 0 and self.stack[-1].isInteger is False:
+        while len(self.stack) > 0 and self.stack[-1].isInteger() is False:
             self.stack += self.stack.pop().getList()[::-1]
         return len(self.stack) > 0
