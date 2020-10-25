@@ -47,6 +47,7 @@ class Solution:
                 new_x = start_x + direction[0]
                 new_y = start_y + direction[1]
                 # 递归判断路径是否可行
+                # 需要注意：坐标不能越界；不能走已经走过的位置
                 if 0 <= new_x < m and 0 <= new_y < n and \
                         not marked[new_x][new_y] and \
                         self.__search_word(board, word, index + 1, new_x, new_y, m, n, marked):
