@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0665. Non-decreasing Array&#10;&#10;给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。&#10;&#10;思路：初步思路是判断，遍历数组，初始count = 0，如果当前元素值比它上一个元素值小，则count += 1，当count &gt; 1时，直接返回false。&#10;但是这种思路无法处理一种特殊情况：[3, 4, 2, 3]这一类。&#10;假设当前i = 2，也就是a[i] &lt; a[i - 2]，且a[i + 1] &lt; a[i - 1]这个情形。这时可以直接返回false">
-      <change afterPath="$PROJECT_DIR$/LeetCode/!!0079. Word Search.py" afterDir="false" />
+    <list default="true" id="dad7d195-60a8-4ade-9dca-36f6267b8e9b" name="Default Changelist" comment="LeetCode 0079. Word Search&#10;&#10;给定一个二维网格和一个单词，找出该单词是否存在于网格中。&#10;单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。&#10;&#10;思路：参考&#10;https://leetcode-cn.com/problems/word-search/solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/&#10;&#10;我好笨啊，背都背了好久！哎。。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -265,14 +264,8 @@
       <workItem from="1602045669501" duration="2502000" />
       <workItem from="1602090895343" duration="792000" />
       <workItem from="1602124500113" duration="2063000" />
-      <workItem from="1603526580008" duration="9661000" />
-    </task>
-    <task id="LOCAL-00056" summary="LeetCode 0020. Valid Parentheses&#10;&#10;Runtime:  46.99%&#10;Memory Usage: 67.76%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。">
-      <created>1596204915475</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1596204915475</updated>
+      <workItem from="1603526580008" duration="10009000" />
+      <workItem from="1603764628530" duration="351000" />
     </task>
     <task id="LOCAL-00057" summary="LeetCode 0155. Min Stack&#10;&#10;Runtime:  76.69%&#10;Memory Usage: 13.63%&#10;&#10;思路1（错误）：使用map记录所有左括号'(',  '{',  '[' 的个数。每次读取字符串的一个字符。&#10;每次读取右括号时，先看看对应的左括号计数是否为0。如果为0，则直接返回不合法。如果不为0，则对应左括号的计数-1。&#10;最后结束时，必须保证所有左括号的计数为0，否则也不合法。&#10;&#10;这个思路存在一个问题：&#10;形如&quot;([)]&quot;的字符串，是不合法的，括号对之间交叉了。&#10;&#10;思路2：采用栈记录所有左括号，遇到左括号就入栈。如果遇到右括号就看当前它和栈顶左括号是否对应。如果不对应则返回false。">
       <created>1596289421603</created>
@@ -610,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602125953859</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="LeetCode 0079. Word Search&#10;&#10;给定一个二维网格和一个单词，找出该单词是否存在于网格中。&#10;单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。&#10;&#10;思路：参考&#10;https://leetcode-cn.com/problems/word-search/solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/&#10;&#10;我好笨啊，背都背了好久！哎。。">
+      <created>1603546790285</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1603546790285</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +629,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LeetCode 0338. Counting Bits&#10;&#10;给定一个非负整数，对每个在 0 ≤ i ≤ num范围内的整数i，计算它们二进制形式下含有1的个数，以数组形式返回。&#10;&#10;思路1：用STL的bitset，其中的count函数进行1个数的计数。" />
     <MESSAGE value="LeetCode 0094. Binary Tree Inorder Traversal&#10;&#10;实现二叉树的中序遍历。" />
     <MESSAGE value="LeetCode 0114. Flatten Binary Tree to Linked List&#10;&#10;给定一个二叉树，原地将它展开为一个单链表。&#10;&#10;思路：&#10;1）先找到root左子树最右侧的叶子节点；&#10;2）将root的右子树，作为1）找到的节点的右孩子；&#10;3）将经过2）修改后的左子树，作为root的右子树；&#10;4）将root左子树设为空；&#10;5）root = root.right，重复循环。" />
     <MESSAGE value="LeetCode 0238. Product of Array Except Self&#10;&#10;思路：参考官方解法1.&#10;先从左向右遍历，获取每个元素左边数值的乘积；&#10;再从右向左遍历，获取每个元素右边数值的乘积；&#10;再将两个乘积相乘，得到每个元素总乘积。" />
@@ -654,7 +653,8 @@
     <MESSAGE value="LeetCode 0442. Find All Duplicates in an Array&#10;&#10;给定一个整数数组 a，其中1 ≤ a[i] ≤ n （n为数组长度）, 其中有些元素出现两次而其他元素出现一次。&#10;找到所有出现两次的元素。&#10;你可以不用到任何额外空间并在O(n)时间复杂度内解决这个问题吗？&#10;&#10;思路1：用长度为n+1的数组记录“还允许出现多少次”，每出现一次，对应位就-1.这样，第二次出现时，就为0，就知道是再次出现了。&#10;&#10;思路2：不使用额外空间，那就只能修改原来的数组。由于1 ≤ a[i] ≤ n，因此访问过的数可改为负数，就不使用额外空间也能直到是再次访问了。" />
     <MESSAGE value="LeetCode 0453. Minimum Moves to Equal Array Elements&#10;&#10;给定一个长度为 n 的非空整数数组，找到让数组所有元素相等的最小移动次数。每次移动将会使 n - 1 个元素增加 1。&#10;&#10;思路：每次移动使得n-1个元素增加1，也就是每次同时让n个元素增加1，再让1个元素-1&#10;也就是，只要找到，每次让一个元素-1，经过多少次操作，所有元素相等，即可。&#10;那也就是找到数组的最小值，然后遍历所有元素，对每个元素，都需要进行“与最小值的差”次操作，才行。" />
     <MESSAGE value="LeetCode 0665. Non-decreasing Array&#10;&#10;给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。&#10;&#10;思路：初步思路是判断，遍历数组，初始count = 0，如果当前元素值比它上一个元素值小，则count += 1，当count &gt; 1时，直接返回false。&#10;但是这种思路无法处理一种特殊情况：[3, 4, 2, 3]这一类。&#10;假设当前i = 2，也就是a[i] &lt; a[i - 2]，且a[i + 1] &lt; a[i - 1]这个情形。这时可以直接返回false" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0665. Non-decreasing Array&#10;&#10;给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。&#10;&#10;思路：初步思路是判断，遍历数组，初始count = 0，如果当前元素值比它上一个元素值小，则count += 1，当count &gt; 1时，直接返回false。&#10;但是这种思路无法处理一种特殊情况：[3, 4, 2, 3]这一类。&#10;假设当前i = 2，也就是a[i] &lt; a[i - 2]，且a[i + 1] &lt; a[i - 1]这个情形。这时可以直接返回false" />
+    <MESSAGE value="LeetCode 0079. Word Search&#10;&#10;给定一个二维网格和一个单词，找出该单词是否存在于网格中。&#10;单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。&#10;&#10;思路：参考&#10;https://leetcode-cn.com/problems/word-search/solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/&#10;&#10;我好笨啊，背都背了好久！哎。。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCode 0079. Word Search&#10;&#10;给定一个二维网格和一个单词，找出该单词是否存在于网格中。&#10;单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。&#10;&#10;思路：参考&#10;https://leetcode-cn.com/problems/word-search/solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/&#10;&#10;我好笨啊，背都背了好久！哎。。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="393" y="181" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603527232628">
@@ -674,64 +674,64 @@
       <screen x="-1920" y="0" width="1418" height="759" />
     </state>
     <state x="-1672" y="219" key="GitRewordDialog/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596619788986" />
-    <state width="1374" height="175" key="GridCell.Tab.0.bottom" timestamp="1603528369301">
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="175" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112391" />
     <state width="1374" height="175" key="GridCell.Tab.0.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528369301" />
-    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="175" key="GridCell.Tab.0.center" timestamp="1603528369301">
+    <state width="1374" height="222" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
+    <state width="1374" height="222" key="GridCell.Tab.0.center" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="175" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
     <state width="1374" height="175" key="GridCell.Tab.0.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528369301" />
-    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="175" key="GridCell.Tab.0.left" timestamp="1603528369301">
+    <state width="1374" height="222" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
+    <state width="1374" height="222" key="GridCell.Tab.0.left" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="175" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112389" />
     <state width="1374" height="175" key="GridCell.Tab.0.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528369301" />
-    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="175" key="GridCell.Tab.0.right" timestamp="1603528369301">
+    <state width="1374" height="222" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
+    <state width="1374" height="222" key="GridCell.Tab.0.right" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="175" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625112390" />
     <state width="1374" height="175" key="GridCell.Tab.0.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528369301" />
-    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1603528315716">
+    <state width="1374" height="222" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="208" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528315716" />
-    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1603528315716">
+    <state width="1374" height="222" key="GridCell.Tab.1.bottom/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
+    <state width="1374" height="222" key="GridCell.Tab.1.center" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="208" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528315716" />
-    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1603528315716">
+    <state width="1374" height="222" key="GridCell.Tab.1.center/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
+    <state width="1374" height="222" key="GridCell.Tab.1.left" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="208" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528315716" />
-    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1603528315716">
+    <state width="1374" height="222" key="GridCell.Tab.1.left/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
+    <state width="1374" height="222" key="GridCell.Tab.1.right" timestamp="1603553590279">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1374" height="208" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1601625105661" />
     <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603528315716" />
-    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759@0.0.1418.759" timestamp="1601748826502" />
+    <state width="1374" height="222" key="GridCell.Tab.1.right/0.0.1418.759@0.0.1418.759" timestamp="1603553590279" />
     <state x="260" y="23" key="SettingsEditor" timestamp="1601087611042">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="260" y="23" key="SettingsEditor/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601087611042" />
     <state x="260" y="23" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1597457167617" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1602091087905">
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2" timestamp="1603546798169">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="-1619" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@-1920.0.1418.759" timestamp="1596554470997" />
-    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1601646530597" />
+    <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759/-1920.0.1418.759@0.0.1418.759" timestamp="1603546798169" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1602091087905" />
     <state x="301" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@0.0.1418.759" timestamp="1598715924497" />
     <state x="2221" y="112" key="Vcs.Push.Dialog.v2/1920.0.1418.759/0.0.1418.759@1920.0.1418.759" timestamp="1597976065777" />
