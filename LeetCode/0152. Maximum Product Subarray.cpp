@@ -22,6 +22,10 @@ public:
             if (num < 0) {
                 swap(iMax, iMin);
             }
+            // iMax*num：当前数字继续和之前的连续子数组乘积相乘得到的积
+            // num：当前数字本身
+            // 如果num比连乘更大，则iMax更新为num单独一个数，另起炉灶。
+            // iMin*sum同理。
             iMax = max(num, iMax * num);
             iMin = min(num, iMin * num);
             res = max(res, iMax);
