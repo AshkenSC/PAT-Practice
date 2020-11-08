@@ -38,6 +38,9 @@ public:
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
+        // 注意！这里right从nums.size()-1开始，下面while的结束条件却不是left <= right
+        // 需要注意这一点比较特殊。
+        
         int left = 0, right = nums.size() - 1;
         while (left < right) {
             int mid = (left + right) / 2;
