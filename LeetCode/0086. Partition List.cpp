@@ -6,6 +6,9 @@
 遍历原链表，只要小于x，就接在small后面。大于等于x，接在large后面。
 */
 
+#include <cstdio>
+using namespace std;
+
 struct ListNode {
     int val;
     ListNode *next;
@@ -44,3 +47,8 @@ public:
         return small->next;
     }
 };
+
+int main() {
+    printf("hello\n");
+    return 0;
+}
