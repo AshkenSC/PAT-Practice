@@ -8,6 +8,9 @@
 
 '''
 
+from typing import List
+
+
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         temp = [0] + flowerbed + [0]
