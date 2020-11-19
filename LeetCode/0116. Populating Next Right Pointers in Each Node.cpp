@@ -6,6 +6,8 @@
 
 思路1：层序遍历，对每一层的结点，相互设指针。但是不符合常数空间的要求。
 
+思路2：先序遍历。每次遍历，给自己的左右孩子设next。
+左孩子的next设为右孩子，**右孩子的next则是自己的next的左孩子。记得利用这点很关键。**
 */
 
 #include <cstring>
@@ -29,7 +31,7 @@ public:
         : val(_val), left(_left), right(_right), next(_next) {}
 };
 
-class Solution {
+class Solution1 {
 public:
     Node* connect(Node* root) {
         if (root == nullptr)
@@ -72,4 +74,30 @@ public:
     }
 };
 
+
+class Solution {
+public:
+    void traverse(Node* node) {
+        if (node == nullptr)
+            return;
+        // 左孩子的next。如果node->left为空，则为根或者叶子结点
+        if (node->left != nullptr)
+            node->left->next = node->right;
+        // 右孩子的next。如果node->right为空，则为根或者叶子结点
+        if (node->right != nullptr) {
+            if (node->next != nullptr)
+                node->right->next = node->next->left;
+            else
+                node->right->next = nullptr;
+        }      
+        // 递归
+        traverse(node->left);
+        traverse(node->right);
+    }
+
+    Node* connect(Node* root) {
+        traverse(root);
+        return root;
+    }
+};
 
