@@ -6,6 +6,7 @@
 */
 
 #include <vector>
+#include <stack>
 using namespace std;
 
 struct TreeNode {
@@ -17,6 +18,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+// 递归解法
 class Solution {
 public:
     vector<int> res;
@@ -31,6 +33,33 @@ public:
 
     vector<int> preorderTraversal(TreeNode* root) {
         traverse(root);
+        return res;
+    }
+};
+
+// 迭代解法
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        stack<TreeNode *> s;
+        vector<int> res;
+
+        if (root == nullptr)
+            return res;
+
+        s.emplace(root);
+        while (s.empty() == false) {
+            TreeNode *currentNode = s.top();
+            s.pop();
+            // 向结果vector添加当前元素
+            res.push_back(currentNode->val);
+            // 将当前元素孩子入栈
+            if (currentNode->right != nullptr)
+                s.emplace(currentNode->right);
+            if (currentNode->left != nullptr)
+                s.emplace(currentNode->left);
+        }
+
         return res;
     }
 };
