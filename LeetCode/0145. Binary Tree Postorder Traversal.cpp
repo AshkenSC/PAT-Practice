@@ -49,3 +49,26 @@ public:
         return res;
     }
 };
+
+class Solution {
+public:
+    vector<int> res;
+
+    void traverse(TreeNode *node) {
+        if (node == nullptr) {
+            return;
+        }
+
+        if (node->left != nullptr)
+            traverse(node->left);
+        if (node->right != nullptr)
+            traverse(node->right);
+
+        res.emplace_back(node->val);
+    }
+
+    vector<int> postorderTraversal(TreeNode* root) {
+        traverse(root);
+        return res;
+    }
+};
