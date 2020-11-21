@@ -27,9 +27,8 @@ public:
         if (root == nullptr)
             return res;
 
-        s.emplace(root);
         TreeNode *prev = nullptr;
-        while (s.empty() == false) {
+        while (root != nullptr || s.empty() == false) {
             while (root != nullptr) {
                 s.emplace(root);
                 root = root->left;
