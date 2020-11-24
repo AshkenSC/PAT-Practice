@@ -10,9 +10,11 @@
 class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
+        // 记录当前是第几大的数。当cnt==k，输出结果
         int cnt = 0;
         stack<TreeNode*> s;
 
+        // 中序遍历BST
         while (root != nullptr || s.empty() == false) {
             while (root != nullptr) {
                 s.emplace(root);
@@ -21,11 +23,13 @@ public:
             root = s.top();
             s.pop();
             cnt++;
+            // 当cnt==k，输出结果
             if (cnt == k)
                 return root->val;
             root = root->right;
         }
 
+        // 其实走不到这里，单纯为了符合力扣语法要求
         return 0;
     }
 };
