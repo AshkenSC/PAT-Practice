@@ -64,8 +64,10 @@ class Solution:
         pre.next = None
         # 中点左右的子链表递归构建BST
         new_head = TreeNode(slow.val, self.sortedListToBST(dummy.next), self.sortedListToBST(slow.next))
-        new_head.left = self.sortedListToBST(dummy.next)
-        new_head.right = self.sortedListToBST(slow.next)
+        
+        # 犯迷糊了！第一版竟然还多此一举写了下面两行！傻！
+        # new_head.left = self.sortedListToBST(dummy.next)
+        # new_head.right = self.sortedListToBST(slow.next)
 
         return new_head
 
