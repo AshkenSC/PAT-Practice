@@ -34,9 +34,9 @@ using namespace std;
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-        vector<unordered_set<int>> col(9);
-        vector<unordered_set<int>> row(9);
-        vector < vector<unordered_set<int>> > box(3, vector<unordered_set<int>>(3));
+        vector<unordered_set<char>> col(9);
+        vector<unordered_set<char>> row(9);
+        vector < vector<unordered_set<char>> > box(3, vector<unordered_set<char>>(3));
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -45,19 +45,15 @@ public:
                     continue;
 
                 // 字符转数字
-                int num = board[i][j] - '0';
-                // 检查col[j]和row[i]的set里，是否有该元素
-                if (col[j].count(num) > 0 || row[i].count(num) > 0)
-                    return false;
+                // 检查col[j]和row[i]以及box[i / 3][j / 3]的set里，是否有该元素
+                if (col[j].count(board[i][j]) > 0 || 
+                    row[i].count(board[i][j]) > 0 ||
+                    box[i / 3][j / 3].count(board[i][j]) > 0)
+                        return false;
                 else {
-                    col[j].emplace(num);
-                    row[i].emplace(num);
-                }
-                // 检查box里是否有该元素
-                if (box[i / 3][j / 3].count(num) > 0)
-                    return false;
-                else {
-                    box[i / 3][j / 3].emplace(num);
+                    col[j].emplace(board[i][j]);
+                    row[i].emplace(board[i][j]);
+                    box[i / 3][j / 3].emplace(board[i][j]);
                 }
             }
         }
