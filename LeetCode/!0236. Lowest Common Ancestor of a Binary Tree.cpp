@@ -9,6 +9,7 @@
 1. left和right同时为空：说明left和right都不p或q，返回null
 2. left和right同时不为空，说明left和right各包含一个p或q，返回当前root
 3. left为空，right不为空，说明right中同时包含p或q，返回right
+4. right为空，left不为空，说明left中同时包含p或q，返回left
 */
 
 struct TreeNode {

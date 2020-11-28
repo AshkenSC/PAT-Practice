@@ -33,7 +33,7 @@ public:
             return root;
         }
         // p，q分别位于同一侧，则需要继续向下找
-        else if ((root->val - p->val) * (root->val - q->val) > 0){
+        else {
             return lowestCommonAncestor(root->val > p->val ? root->left : root->right, p, q);
         }
     }
