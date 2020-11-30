@@ -10,26 +10,29 @@
 递归后将first和i位的数位置还原，再准备将first位与i+1位的数进行交换。
 */
 
+#include <vector>
+#include <algorithm>
+using namespace std;
+
 class Solution {
 public:
-    void backtrack(vector<vector<int>>& result, vector<int>& output, int first, int len) {
+    vector<vector<int>> res;
 
-        if (first == len) {
-            result.push_back(output);
+    void backtrack(vector<int>& nums, int start, int len) {
+        if (start == len) {
+            res.push_back(nums);
             return;
         }
-        else {
-            for (int i = first; i < len; i++) {
-                swap(output[i], output[first]);
-                backtrack(result, output, first + 1, len);
-                swap(output[i], output[first]);
-            }
+        for (int i = start; i < len; i++) {
+            swap(nums[i], nums[start]);
+            backtrack(nums, start + 1, len);
+            swap(nums[i], nums[start]);
         }
     }
 
     vector<vector<int>> permute(vector<int>& nums) {
-        vector<vector<int>> result;
-        backtrack(result, nums, 0, nums.size());
-        return result;
+        int len = nums.size();
+        backtrack(nums, 0, len);
+        return res;
     }
 };
