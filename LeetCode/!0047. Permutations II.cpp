@@ -11,6 +11,7 @@
 一开始，只通过判定used[i]是否为false，结果并不能剪枝，还是会重复输出。
 后来，想到通过判断if (i > startIndex && nums[i] == nums[i - 1]）则直接continue，又走进另一个极端：完全没结果。
 然后看liweiwei参考答案。有了第三版成功版。
+https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/
 */
 
 #include <vector>
