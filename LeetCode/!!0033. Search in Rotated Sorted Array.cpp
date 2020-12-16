@@ -1,8 +1,11 @@
 /*
 0033. Search in Rotated Sorted Array
 
-思路：先找到断点的位置。找到以后，在其中一个子数组中进行寻找。
+思路1：先找到断点的位置。找到以后，在其中一个子数组中进行寻找。
 
+思路2：参考官方解答。解答思路中核心一句话：
+“我们能够根据有序的那部分判断出 target 在不在这个部分”
+虽然整体不是有序的，但是我们可以找到有序的那一部分，然后根据这一小部分来逐步缩小范围。
 */
 
 #include <vector>
@@ -50,6 +53,8 @@ public:
 
 /*
 第一遍写的垃圾，留着，好好反思！
+最后卡在了，如果数组中找不到这个元素的情况。
+比如[1, 3]，找2，就会报错。
 
 class Solution {
 public:
@@ -125,7 +130,7 @@ public:
                 while (left < right) {
                     mid = left + (right - left) / 2;
                     if (nums[mid] == target) {
-                        right = mid;
+                        return mid;
                     }
                     else if (nums[mid] > target) {
                         right = mid;
