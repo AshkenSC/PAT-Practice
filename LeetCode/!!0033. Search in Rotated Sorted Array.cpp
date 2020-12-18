@@ -29,6 +29,7 @@ public:
             if (nums[mid] == target)
                 return mid;
             if (nums[0] <= nums[mid]) {
+                // target == nums[mid] 在上面已经单独考察过了，所以不取等号。
                 if (nums[0] <= target && target < nums[mid]) {
                     right = mid - 1;
                 }
@@ -37,6 +38,7 @@ public:
                 }
             }
             else {
+                // target == nums[mid] 在上面已经单独考察过了，所以不取等号。
                 if (nums[mid] < target && target <= nums[len - 1]) {
                     left = mid + 1;
                 }
