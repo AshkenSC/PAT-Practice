@@ -7,6 +7,9 @@
 思路：递归，递推公式。
 */
 
+#include <iostream>
+using namespace std;
+
 class Solution {
 public:
     int fib(int n) {
@@ -18,3 +21,10 @@ public:
             return fib(n - 1) + fib(n - 2);
     }
 };
+
+int main() {
+    Solution sol;
+    int res = sol.fib(5);
+    cout << res;
+    return 0;
+}
