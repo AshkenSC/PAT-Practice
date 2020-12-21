@@ -12,6 +12,7 @@ dp[n] = dp[n - 1] + dp[n - 2]
 
 尝试了递归写法，但输入38时超出时间限制了。
 下面是用dp数组存储。
+第二种方法是仅使用三个变量存储。
 '''
 
 # dp数组存储
@@ -29,3 +30,20 @@ class Solution:
                 i += 1
             return dp[-1] 
 
+# 仅用三个变量存储
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n == 0:
+            return 1
+        elif n == 1:
+            return 1
+        else:
+            dpN_1 = 1
+            dpN_2 = 1
+            i = 2
+            while i <= n:
+                dpN = dpN_1 + dpN_2
+                i += 1
+                dpN_2 = dpN_1
+                dpN_1 = dpN
+            return dpN
