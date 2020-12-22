@@ -1,6 +1,12 @@
-#include <vector>
-#include <iostream>
-using namespace std;
+/*
+剑指 Offer 34. 二叉树中和为某一值的路径
+
+输入一棵二叉树和一个整数，打印出二叉树中节点值的和为输入整数的所有路径。
+从树的根节点开始往下一直到叶节点所经过的节点形成一条路径。
+
+思路：回溯法。
+注意：必须到根节点，才算一整个路径。如果在中途得到和了，不算路径！
+*/
 
 class Solution {
 public:
@@ -8,11 +14,8 @@ public:
     vector<int> curPath;
 
     void backtrack(TreeNode* node, int sum, int curSum) {
-        if (node->left == nullptr && node->right == nullptr && curSum == sum) {
+        if (curSum == sum && node->left == nullptr && node->right == nullptr) {
             res.emplace_back(curPath);
-            return;
-        }
-        else if (curSum > sum) {
             return;
         }
         else {
@@ -39,19 +42,3 @@ public:
         return res;
     }
 };
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-int main() {
-    Solution sol;
-    vector<int> input = {2, 3, 1, 1, 4};
-    bool res = sol.canJump(input);
-    cout << res;
-
-    return 0;
-}
