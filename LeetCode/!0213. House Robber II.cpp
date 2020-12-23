@@ -1,13 +1,23 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
+/*
+0213. House Robber II
 
-// 213. House Robber II
+你是一个专业的小偷，计划偷窃沿街的房屋，每间房内都藏有一定的现金。这个地方所有的房屋都 围成一圈 ，这意味着第一个房屋和最后一个房屋是紧挨着的。同时，相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警 。
+给定一个代表每个房屋存放金额的非负整数数组，计算你 在不触动警报装置的情况下 ，能够偷窃到的最高金额。
+
+思路：
+关键在于分类讨论： 可以偷第0个家 和 不可以偷第0个家。
+
+参考：https://leetcode-cn.com/problems/house-robber-ii/solution/213-c-shuang-100-da-jia-jie-she-by-smart_shelly/
+*/
 
 class Solution {
 public:
     int rob(vector<int>& nums) {
+        if (nums.size() == 0)
+		    return 0;
+        if (nums.size() <= 3)
+            return *max_element(nums.begin(), nums.end());
+
         vector<int> dp1(nums.size(), 0);
         vector<int> dp2(nums.size(), 0);
         dp1[0] = nums[0];
@@ -37,19 +47,3 @@ public:
         return result;
     }
 };
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-int main() {
-    Solution sol;
-    vector<int> input = {2, 3, 1, 1, 4};
-    bool res = sol.canJump(input);
-    cout << res;
-
-    return 0;
-}
