@@ -4,39 +4,8 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> res;
-    vector<int> curPath;
+    int rob(vector<int>& nums) {
 
-    void backtrack(TreeNode* node, int sum, int curSum) {
-        if (node->left == nullptr && node->right == nullptr && curSum == sum) {
-            res.emplace_back(curPath);
-            return;
-        }
-        else if (curSum > sum) {
-            return;
-        }
-        else {
-            if (node->left != nullptr) {
-                curPath.push_back(node->left->val);
-                backtrack(node->left, sum, curSum + node->left->val);
-                curPath.pop_back();
-            }
-            if (node->right != nullptr) {
-                curPath.push_back(node->right->val);
-                backtrack(node->right, sum, curSum + node->right->val);
-                curPath.pop_back();
-            }
-        }
-        
-    }
-
-    vector<vector<int>> pathSum(TreeNode* root, int sum) {
-        if (root == nullptr)
-            return res;
-        
-        curPath.push_back(root->val);
-        backtrack(root, sum, root->val);
-        return res;
     }
 };
 
