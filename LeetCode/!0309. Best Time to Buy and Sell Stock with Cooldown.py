@@ -1,13 +1,11 @@
-# 198
-
-from typing import List
-
+# 0309. Best Time to Buy and Sell Stock with Cooldown
+# 注意Python二维数组的声明！！！
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         n = len(prices)
         # dp = [[-prices[0], 0, 0]] + [[0, 0, 0]] * (n - 1)
-        # 不能这样写！这样写修改某一行某元素，其他行对应元素也会修改！！！
+        # 不能这样写！这样写修改i行j列的元素时，其他行的j列元素也会修改！！！
         dp = [[-prices[0], 0, 0]] + [0] * (n - 1)
         for i in range(1, n):
             # 第i天手中持有股票
@@ -19,8 +17,3 @@ class Solution:
         
         return max(dp[n-1][1], dp[n-1][2])
 
-
-
-sol = Solution()
-res = sol.maxProfit([1,2,3,0,2])
-print(res)

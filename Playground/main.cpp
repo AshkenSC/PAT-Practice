@@ -5,40 +5,33 @@ using namespace std;
 
 // 213. House Robber II
 
-class Solution {
-public:
-    int rob(vector<int>& nums) {
-        vector<int> dp1(nums.size(), 0);
-        vector<int> dp2(nums.size(), 0);
-        dp1[0] = nums[0];
-        dp1[1] = nums[1];
-        dp1[2] = nums[2] + nums[0];
-        dp2[1] = nums[1];
-        dp2[2] = nums[2];
-        dp2[3] = nums[3] + nums[1];
-
-        for (int i = 3; i < nums.size(); i++) {
-            if (i == 3) {
-                dp1[i] = max(dp1[i - 2], dp1[i - 3]) + nums[i];
+class Solution
+{
+public
+    int minSteps(int n)
+    {
+        if (n <= 1)
+            return 0;
+        if (n <= 3)
+            return n;
+        int[] dp = new int[n + 1];
+        dp[1] = 0;
+        for (int i = 2; i <= n; i++)
+            dp[i] = i;
+        for (int i = 2; i <= n; i++)
+        {
+            for (int mult = 2; multi <= n; mult++)
+            {
+                //每个格子都尝试去标记之后的自己可以到达的格子。对多种可能取最小。
+                dp[multi] = Math.min(dp[mult * i], dp[i] + mult);
             }
-            else if (i == nums.size() - 1) {
-                dp2[i] = max(dp2[i - 2], dp2[i - 3]) + nums[i];
-            }
-            dp1[i] = max(dp1[i - 2], dp1[i - 3]) + nums[i];
-            dp2[i] = max(dp2[i - 2], dp2[i - 3]) + nums[i];
         }
-
-        int result;
-        int n = nums.size();
-        result = max(dp1[n - 2], dp1[n - 3]);
-        result = max(result, dp2[n - 2]);
-        result = max(result, dp2[n - 1]);
-
-        return result;
+        return dp[n];
     }
-};
+}
 
-struct TreeNode {
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
