@@ -1,23 +1,12 @@
-# 198
 '''
-/*
-dp[0] = 0
-dp[i] = min(dp[i - coins[j]]) + 1
+0322. Coin Change
 
-dp[0] = 0
-dp[1] = 1
-dp[2] = min(dp[1], dp[0], dp[-3]) + 1 = 1
-dp[3] = min(dp[2], dp[1], dp[-2]) + 1 = 2
-dp[4] = min(dp[3], dp[2], dp[-1]) + 1 = 2
-dp[5] = min(dp4, dp3, dp0) + 1= 1
-dp[6] = min(dp5, dp4, dp1) + 1= 2
-dp[7] = min(dp6, dp5, dp2) + 1=2
-dp8 = min(dp7, dp6, dp3) + 1 = 3
-dp9 = min()
-*/
+给定不同面额的硬币 coins 和一个总金额 amount。
+编写一个函数来计算可以凑成总金额所需的最少的硬币个数。
+如果没有任何一种硬币组合能组成总金额，返回 -1。
+
+思路：动态规划
 '''
-
-from typing import List
 
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
@@ -36,7 +25,3 @@ class Solution:
             return -1
 
 
-
-sol = Solution()
-res = sol.coinChange([2], 3)
-print(res)
