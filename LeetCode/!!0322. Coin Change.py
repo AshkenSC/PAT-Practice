@@ -6,6 +6,13 @@
 如果没有任何一种硬币组合能组成总金额，返回 -1。
 
 思路：动态规划
+
+首先初始化dp元素为INT MAX，
+dp[i] = min(dp[i - coins[j]]) + 1
+（如果i - coins[j]是负数，直接跳过）
+
+最后如果dp[n]是INT MAX，返回-1，
+如果不等于INT MAX，说明有解，返回dp[n]。
 '''
 
 class Solution:
