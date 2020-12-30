@@ -1,9 +1,14 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
+/*
+0494. Target Sum
 
-// 0322. Coin Change
+给定一个非负整数数组，a1, a2, ..., an, 和一个目标数，S。现在你有两个符号 + 和 -。对于数组中的任意一个整数，你都可以从 + 或 -中选择一个符号添加在前面。
+返回可以使最终数组和为目标数 S 的所有添加符号的方法数。
+
+思路：动态规划。
+
+参考：https://leetcode-cn.com/problems/target-sum/solution/dong-tai-gui-hua-si-kao-quan-guo-cheng-by-keepal/
+
+*/
 
 class Solution {
 public:
@@ -38,20 +43,3 @@ public:
         return dp[len - 1][sum + S];
     }
 };
-
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-int main() {
-    Solution sol;
-    vector<int> input = {2, 3, 1, 1, 4};
-    bool res = sol.canJump(input);
-    cout << res;
-
-    return 0;
-}
