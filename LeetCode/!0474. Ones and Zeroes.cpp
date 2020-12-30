@@ -1,9 +1,14 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
+/*
+0474. Ones and Zeroes
 
-// 0322. Coin Change
+给你一个二进制字符串数组 strs 和两个整数 m 和 n 。
+请你找出并返回 strs 的最大子集的大小，该子集中 最多 有 m 个 0 和 n 个 1 。
+如果 x 的所有元素也是 y 的元素，集合 x 是集合 y 的 子集 。
+
+思路：动态规划。
+参考https://leetcode-cn.com/problems/ones-and-zeroes/solution/dong-tai-gui-hua-0-1bei-bao-wen-ti-labuladongdong-/
+
+*/
 
 class Solution {
 public:
@@ -42,20 +47,3 @@ public:
     }
 };
 
-
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-int main() {
-    Solution sol;
-    vector<int> input = {2, 3, 1, 1, 4};
-    bool res = sol.canJump(input);
-    cout << res;
-
-    return 0;
-}
