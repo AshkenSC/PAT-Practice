@@ -4,38 +4,27 @@
 using namespace std;
 
 // 0322. Coin Change
+/*
+1，1，1，1
+
+
+*/
 
 class Solution {
 public:
-    int findTargetSumWays(vector<int>& nums, int S) {
-        int sum = 0;
-        for (int num : nums) {
-            sum += num;
-        }
-        if (abs(sum) < abs(S)) {
-            return 0;
-        }
+    int combinationSum4(vector<int>& nums, int target) {
+        vector<int> dp(target + 1);
 
-        int len = nums.size();
-        int range = sum * 2 + 1;
-        vector<vector<int>> dp(len, vector<int>(range));
-        if (nums[0] == 0) {
-            dp[0][sum] = 2;
-        }
-        else {
-            dp[0][sum + nums[0]] = 1;
-            dp[0][sum - nums[0]] = 1;
-        }
-        for (int i = 1; i < len; i++) {
-            for (int j = 0; j < range; j++) {
-                // 边界
-                int l = (j - nums[i]) > 0 ? (j - nums[i]) : 0;
-                int r = (j + nums[i]) < range ? (j + nums[i]) : 0;
-                dp[i][j] = dp[i - 1][l] + dp[i - 1][r];
+        dp[0] = 1;
+        for (int i = 1; i <= target; i++) {
+            for (auto num : nums) {
+                if (i >= num) {
+                    dp[i] += dp[i - num];
+                }
             }
         }
 
-        return dp[len - 1][sum + S];
+        return dp[target];
     }
 };
 
