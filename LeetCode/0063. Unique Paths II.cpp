@@ -6,6 +6,9 @@
 现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
 
 思路：
+动态规划，稍微调整62题的思路。
+参考：https://leetcode-cn.com/problems/unique-paths-ii/solution/jian-dan-dpbi-xu-miao-dong-by-sweetiee/
+
 本人思路：递推公式基本不变，根据来的方向是否有石头确定是否计算上方/左方的路径数。
 但其实是有问题的：如果来的方向本来就有石头，那肯定就没有路径了！
 所以其实应该直接判断当前格子本身是否是有石头的。
@@ -13,6 +16,32 @@
 
 */
 
+
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        int m = obstacleGrid.size();
+        int n = obstacleGrid[0].size();
+        vector<vector<int>> dp(m, vector<int>(n));
+
+        for (int i = 0; i < m && obstacleGrid[i][0] == 0; i++) {
+            dp[i][0] = 1;
+        }
+        for (int j = 0; j < n && obstacleGrid[0][j] == 0; j++) {
+            dp[0][j] = 1;
+        }
+
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (obstacleGrid[i][j] == 0) {
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+                }
+            }
+        }
+
+        return dp[m - 1][n - 1];
+    }
+};
 
 // 本人错误思路
 /*
