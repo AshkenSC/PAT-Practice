@@ -3,6 +3,8 @@
 dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
 （索引不能出界）
 
+dp[i][j] = dp[i - 1][j] * obstacleGrid[i - 1][j] + dp[i][j - 1] * obstacleGrid[i][j - 1];
+
 
 '''
 
