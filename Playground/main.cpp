@@ -3,53 +3,27 @@
 #include <algorithm>
 using namespace std;
 
-// 0322. Coin Change
+// 0096. Unique Binary Search Trees
 /*
-这题实际上给出的是一个直角三角形。只能向下或者向右走。
-1）在原点
-dp{i]{j] = dp[i][j]
-2）只能从上来
-dp[i][j] = dp[i - 1][j]
-3）只能从左上来
-dp[i][j] = dp[i - 1][j - 1]
-4）可从左上or上来
-dp[i][j] = min(dp[i - 1][j], dp[i - 1][j - 1])
+dp[i] 以1到i为结点组成的二叉搜索树有多少种
+dp[i] = dp
 
 
 */
 
 class Solution {
 public:
-    int maximalSquare(vector<vector<char>>& matrix) {
-        int m = matrix.size();
-        int n = matrix[0].size();
-        if (m == 0 || n == 0) {
-            return 0;
-        }
+    int numTrees(int n) {
+        vector<int> dp(n + 1);
+        dp[0] = 1;
 
-        vector<vector<int>> dp;
-        dp.resize(m);
-        for (int i = 0; i < m; i++) {
-            dp[i].resize(n);
-        }
-
-        int maxSide = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == '1') {
-                    if (i == 0 || j == 0) {
-                        dp[i][j] = 1;
-                    }
-                    else {
-                        dp[i][j] = min(min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1;
-                    }
-
-                    maxSide = max(dp[i][j], maxSide);
-                }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                dp[i] += dp[j - 1] * dp[i - j];
             }
         }
 
-        return maxSide * maxSide;
+        return dp[n];
     }
 };
 

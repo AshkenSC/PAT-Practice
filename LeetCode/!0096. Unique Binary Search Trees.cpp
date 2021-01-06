@@ -18,6 +18,8 @@ f(5) = f(0)*f(4) + f(1)*f(3) + f(2)*f(2) + f(3)*f(1) + f(4)*f(0)
 
 可以发现规律：
 f(n) = f(0)*f(n-1) + f(1)*f(n-2) + ... + f(n-2)*f(1) + f(n-1)*f(0)
+
+参考：https://leetcode-cn.com/problems/unique-binary-search-trees/solution/cdong-tai-gui-hua-zhu-bu-fen-xi-zhuang-tai-zhuan-y/
 */
 
 class Solution {
@@ -36,5 +38,21 @@ public:
             }
             return f[n];
         }
+    }
+};
+
+class Solution {
+public:
+    int numTrees(int n) {
+        vector<int> dp(n + 1);
+        dp[0] = 1;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                dp[i] += dp[j - 1] * dp[i - j];
+            }
+        }
+
+        return dp[n];
     }
 };
