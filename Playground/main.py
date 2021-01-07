@@ -18,26 +18,42 @@ dp[i][j] = min(dp[i][j - 1], dp[i - 1][j])
 from typing import List
 
 class Solution:
-    def minPathSum(self, grid: List[List[int]]) -> int:
-        m = len(grid)
-        n = len(grid[0])
-        dp = [[0] * n for _ in range(m)]
-        for i in range(m):
-            for j in range(n):
-                if i == 0 and j == 0:
-                    continue
-                elif i == 0:
-                    grid[i][j] = grid[i][j - 1] + grid[i][j]
-                elif j == 0:
-                    grid[i][j] = grid[i - 1][j] + grid[i][j]
-                else:
-                    grid[i][j] = min(grid[i][j - 1], grid[i - 1][j]) + grid[i][j]
-        
-        return grid[m - 1][n - 1]
-        
+    def is_palindrome(self, s):
+        start = 0
+        end = len(s) - 1
+        while start < end:
+            if s[start] != s[end]:
+                return False
+            else:
+                start += 1
+                end -= 1
+        return True
 
+    def backtrack(self, current, s, start, end):
+        if start == end:
+            if start == len(s) and 
+            return
+        else:
+            for i in range(end, len(s) + 1):
+                for j in range(i, len(s) + 1):
+                    # 将当前子串添加到结果列表
+                    if self.is_palindrome(s[i:j]):
+                        current.append(s[i:j])
+                        self.backtrack(current, s, i, j)
+                        current.pop()
+
+    def partition(self, s: str) -> List[List[str]]:
+        res = []
+        for i in range(1, len(s) + 1):
+            current = []
+            if self.is_palindrome(s[0:i]):
+                current += s[0:i]
+                self.backtrack(current, s, 0, i)
+                if len(current) > 1:
+                    res += current
+        return res
 
 
 sol = Solution()
-res = sol.coinChange([2], 3)
+res = sol.partition('aab')
 print(res)
