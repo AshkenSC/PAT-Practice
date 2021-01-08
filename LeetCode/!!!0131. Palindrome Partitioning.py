@@ -22,3 +22,4 @@ class Solution:
                     result.append([left] + right[j])
         
         return result
+        

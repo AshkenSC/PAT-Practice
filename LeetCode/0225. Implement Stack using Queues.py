@@ -1,11 +1,10 @@
-# 198
 '''
-1 3 4 5 2
+0225. Implement Stack using Queues
 
+思路：用两个队列实现。
+每次top或者pop，就转移到另一个队列中去，直到留下最后一个数，再pop或者top。
 
 '''
-
-from typing import List
 
 class MyStack:
 
@@ -52,7 +51,7 @@ class MyStack:
         """
         Returns whether the stack is empty.
         """
-        return len(self.q[self.current]) < 0
+        return len(self.q[self.current]) < 1
 
 
 
@@ -62,18 +61,3 @@ class MyStack:
 # param_2 = obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.empty()
-
-# Your MyStack object will be instantiated and called as such:
-# obj = MyStack()
-# obj.push(x)
-# param_2 = obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.empty()
-
-#sol = Solution()
-obj = MyStack()
-obj.push(1)
-obj.push(2)
-a = obj.top()
-b = obj.pop()
-c = obj.empty()
