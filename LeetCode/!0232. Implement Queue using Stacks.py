@@ -1,11 +1,9 @@
-# 198
 '''
-1 3 4 5 2
+0232. Implement Queue using Stacks
 
+请你仅使用两个栈实现先入先出队列。队列应当支持一般队列的支持的所有操作（push、pop、peek、empty）。
 
 '''
-
-from typing import List
 
 class MyQueue:
 
@@ -36,9 +34,8 @@ class MyQueue:
         3）temp中剩余元素压回stk，temp清空
         """
         while len(self.stk) > 0:
-            cur = self.stk.pop()
-            self.temp.append(cur)
-        top = self.pop()
+            self.temp.append(self.stk.pop())
+        top = self.temp.pop()
         while len(self.temp) > 0:
             cur = self.temp.pop()
             self.stk.append(cur)
@@ -69,27 +66,4 @@ class MyQueue:
         1）检查len(stk)
         """
         return len(self.stk) < 1
-         
-
-
-# Your MyStack object will be instantiated and called as such:
-# obj = MyStack()
-# obj.push(x)
-# param_2 = obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.empty()
-
-# Your MyStack object will be instantiated and called as such:
-# obj = MyStack()
-# obj.push(x)
-# param_2 = obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.empty()
-
-#sol = Solution()
-obj = MyQueue()
-obj.push(1)
-obj.push(2)
-a = obj.peek()
-b = obj.pop()
-c = obj.empty()
+   
