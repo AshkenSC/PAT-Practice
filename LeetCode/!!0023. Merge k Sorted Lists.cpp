@@ -1,13 +1,10 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
-
-// 0096. Unique Binary Search Trees
 /*
-dp[i] 以1到i为结点组成的二叉搜索树有多少种
-dp[i] = dp
+0023. Merge k Sorted Lists
 
+给你一个链表数组，每个链表都已经按升序排列。
+请你将所有链表合并到一个升序链表中，返回合并后的链表。
+
+思路：归并排序经典题。参考官方解答。
 
 */
 
@@ -54,29 +51,3 @@ public:
         return merge(lists, 0, lists.size() - 1);
     }
 };
-
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-int main() {
-    Solution sol;
-    //vector<vector<int>> input = {{0,0,0},{0,1,0},{0,0,0}};
-    vector<vector<char>> input = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
-    int res = sol.maximalSquare(input);
-    cout << res;
-
-    return 0;
-}
