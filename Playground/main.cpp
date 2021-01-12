@@ -13,45 +13,36 @@ dp[i] = dp
 
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* a, ListNode* b) {
-        if (!a || !b) {
-            return a ? a : b;
+    void maxHeapify(vector<int>& a, int i, int heapSize) {
+        int l = 2 * i + 1, r = 2 * i + 2;
+        int largest = i;
+        if (l < heapSize && a[l] > a[largest]) {
+            largest = l;
         }
-        ListNode head;
-        ListNode *tail = &head;
-        ListNode *aPtr = a, *bPtr = b;
-        while (aPtr && bPtr) {
-            if (aPtr->val < bPtr->val) {
-                tail->next = aPtr;
-                aPtr = aPtr->next;
-            }
-            else {
-                tail->next = bPtr;
-                bPtr = bPtr->next;
-            }
-            tail = tail->next;
+        if (r < heapSize && a[r] > a[largest]) {
+            largest = r;
         }
-
-        // 归并完了，a或者b会剩下一部分有序的，将他们放到归并结果尾部。
-        tail->next = (aPtr ? aPtr : bPtr);
-
-        return head.next;
+        if (largest != i) {
+            swap(a[largest], a[i]);
+            maxHeapify(a, largest, heapSize);
+        }
     }
 
-    ListNode* merge(vector<ListNode*>& lists, int start, int end) {
-        if (start == end) {
-            return lists[start];
+    void buildMaxHeap(vector<int>& a, int heapSize) {
+        for (int i = heapSize / 2; i >= 0; i--) {
+            maxHeapify(a, i, heapSize);
         }
-        if (start > end) {
-            return nullptr;
-        }
-
-        int mid = (start + end) / 2;
-        return mergeTwoLists(merge(lists, start, mid), merge(lists, mid + 1, end));
     }
 
-    ListNode* mergeKLists(vector<ListNode*>& lists) {
-        return merge(lists, 0, lists.size() - 1);
+    int findKthLargest(vector<int>& nums, int k) {
+        int heapSize = nums.size();
+        buildMaxHeap(nums, heapSize);
+        for (int i = nums.size() - 1; i >= nums.size() - k + 1;  i--) {
+            swap(nums[0], nums[i]);
+            --heapSize;
+            maxHeapify(nums, 0, heapSize);
+        }
+        return nums[0];
     }
 };
 

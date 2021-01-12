@@ -18,7 +18,7 @@ class Solution:
             num, x, y = heapq.heappop(pq)
             if y != n - 1:
                 heapq.heappush(pq, (matrix[x][y + 1], x, y + 1))
-
+        
         return heapq.heappop(pq)[0]
         
 
