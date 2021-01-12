@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <unordered_map>
 using namespace std;
 
 // 0096. Unique Binary Search Trees
@@ -13,14 +14,16 @@ dp[i] = dp
 
 class Solution {
 public:
-    void maxHeapify(vector<int>& a, int i, int heapSize) {
-        int l = 2 * i + 1, r = 2 * i + 2;
+    void maxHeapify(vector<pair<int, int>>& a, int i, int heapSize) {
+        int left = i * 2 + 1;
+        int right = i * 2 + 2;
         int largest = i;
-        if (l < heapSize && a[l] > a[largest]) {
-            largest = l;
+        
+        if (left < heapSize && a[left].second > a[largest].second) {
+            largest = left;
         }
-        if (r < heapSize && a[r] > a[largest]) {
-            largest = r;
+        if (right < heapSize && a[right].second > a[largest].second) {
+            largest = right;
         }
         if (largest != i) {
             swap(a[largest], a[i]);
@@ -28,21 +31,43 @@ public:
         }
     }
 
-    void buildMaxHeap(vector<int>& a, int heapSize) {
-        for (int i = heapSize / 2; i >= 0; i--) {
+    void buildMaxHeap(vector<pair<int, int>>& a, int heapSize) {
+        for (int i = heapSize / 2; i > 0; --i) {
             maxHeapify(a, i, heapSize);
         }
     }
 
-    int findKthLargest(vector<int>& nums, int k) {
-        int heapSize = nums.size();
-        buildMaxHeap(nums, heapSize);
-        for (int i = nums.size() - 1; i >= nums.size() - k + 1;  i--) {
-            swap(nums[0], nums[i]);
-            --heapSize;
-            maxHeapify(nums, 0, heapSize);
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        // 用map统计数字出现的次数
+        unordered_map<int, int> occur;
+        for (auto num : nums) {
+            if (occur.count(num) == 0) {
+                occur[num] = 1;
+            }
+            else {
+                ++occur[num];
+            }
         }
-        return nums[0];
+        // 用vector<pair<int, int>> 存储统计结果，便于排序
+        vector<pair<int, int>> occurList;
+        for (auto stat : occur) {
+            occurList.push_back(pair<int, int>(stat.first, stat.second));
+        }
+
+        // 根据occur构建大根堆
+        int heapSize = occurList.size();
+        buildMaxHeap(occurList, heapSize);
+
+        // 保存结果
+        vector<int> res;
+        for (int i = occurList.size() - 1; i >= occurList.size() - k; i--) {
+            res.push_back(occurList[0].first);
+            swap(occurList[0], occurList[i]);
+            --heapSize;
+            maxHeapify(occurList, 0, heapSize);
+        }
+
+        return res;
     }
 };
 
@@ -65,9 +90,11 @@ struct ListNode {
 int main() {
     Solution sol;
     //vector<vector<int>> input = {{0,0,0},{0,1,0},{0,0,0}};
-    vector<vector<char>> input = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
-    int res = sol.maximalSquare(input);
-    cout << res;
+    vector<int> input = {1, 1, 1, 2, 2, 3};
+    vector<int> res = sol.topKFrequent(input, 2);
+    for (auto num : res) {
+        cout << num << " ";
+    }
 
     return 0;
 }
