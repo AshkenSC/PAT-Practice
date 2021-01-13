@@ -16,6 +16,8 @@ topk （前k大）用小根堆，维护堆大小不超过 k 即可。
 
 求前 k 大，用小根堆，求前 k 小，用大根堆。
 
+自己实现堆：https://leetcode-cn.com/problems/top-k-frequent-elements/solution/python-dui-pai-xu-by-xxinjiee/
+
 思路：使用小顶堆
 使用生疏的容器优先队列来实现（priority_queue)
 小顶堆，堆顶为堆中出现次数最少的那个元素。最多只保存k个元素。当不满k个时直接加入堆。
