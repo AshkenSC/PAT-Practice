@@ -2,6 +2,8 @@
 #include <iostream>
 #include <algorithm>
 #include <unordered_map>
+#include <map>
+#include <queue>
 using namespace std;
 
 // 0096. Unique Binary Search Trees
@@ -14,58 +16,30 @@ dp[i] = dp
 
 class Solution {
 public:
-    void maxHeapify(vector<pair<int, int>>& a, int i, int heapSize) {
-        int left = i * 2 + 1;
-        int right = i * 2 + 2;
-        int largest = i;
+    vector<string> topKFrequent(vector<string>& words, int k) {
+        map<string, int> stat;
+        for (auto& word : words) {
+            ++stat[word];
+        }
         
-        if (left < heapSize && a[left].second > a[largest].second) {
-            largest = left;
-        }
-        if (right < heapSize && a[right].second > a[largest].second) {
-            largest = right;
-        }
-        if (largest != i) {
-            swap(a[largest], a[i]);
-            maxHeapify(a, largest, heapSize);
-        }
-    }
-
-    void buildMaxHeap(vector<pair<int, int>>& a, int heapSize) {
-        for (int i = heapSize / 2; i > 0; --i) {
-            maxHeapify(a, i, heapSize);
-        }
-    }
-
-    vector<int> topKFrequent(vector<int>& nums, int k) {
-        // 用map统计数字出现的次数
-        unordered_map<int, int> occur;
-        for (auto num : nums) {
-            if (occur.count(num) == 0) {
-                occur[num] = 1;
-            }
-            else {
-                ++occur[num];
+        typedef pair<int, string> pis;
+        auto cmp = [](pis& a, pis& b) {
+            return a.first > b.first || (a.first == b.first && a.second < b.second);
+        };
+        priority_queue<pis, vector<pis>, decltype(cmp)> pq;
+        for (auto& cnt : stat) {
+            pq.push(make_pair(cnt.second, cnt.first));
+            if (pq.size() > k) {
+                pq.pop();
             }
         }
-        // 用vector<pair<int, int>> 存储统计结果，便于排序
-        vector<pair<int, int>> occurList;
-        for (auto stat : occur) {
-            occurList.push_back(pair<int, int>(stat.first, stat.second));
-        }
 
-        // 根据occur构建大根堆
-        int heapSize = occurList.size();
-        buildMaxHeap(occurList, heapSize);
-
-        // 保存结果
-        vector<int> res;
-        for (int i = occurList.size() - 1; i >= occurList.size() - k; i--) {
-            res.push_back(occurList[0].first);
-            swap(occurList[0], occurList[i]);
-            --heapSize;
-            maxHeapify(occurList, 0, heapSize);
+        vector<string> res;
+        for (int i = 0; i < k; i++) {
+            res.push_back(pq.top().second);
+            pq.pop();
         }
+        reverse(res.begin(), res.end());
 
         return res;
     }

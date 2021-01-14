@@ -8,6 +8,7 @@
 首先用unordered_map统计，然后转存到vector排序，最后输出前k个项。
 
 思路2：小根堆。
+参考：https://leetcode-cn.com/problems/top-k-frequent-words/solution/zhong-gui-zhong-ju-liang-chong-jie-fa-by-jyj407-2/
 */
 
 class Solution {
@@ -19,7 +20,7 @@ public:
             return a.second > b.second;
         }
         else {
-            return a.first < b.first;
+            return a.first <  b.first;
         }
     }
 
@@ -46,6 +47,37 @@ public:
         for (int i = 0; i < k; ++i) {
             res.push_back(stat_list[i].first);
         }
+
+        return res;
+    }
+};
+
+class Solution {
+public:
+    vector<string> topKFrequent(vector<string>& words, int k) {
+        map<string, int> mp;
+        for (const auto& word : words) {
+            ++mp[word];
+        }
+
+        typedef pair<int, string> pis;
+        auto cmp = [](pis& a, pis& b) {
+            return a.first > b.first || (a.first == b.first && a.second < b.second);
+        };
+        priority_queue<pis, vector<pis>, decltype(cmp)> pq(cmp);
+        for (const auto& m : mp) {
+            pq.push(make_pair(m.second, m.first));
+            if (pq.size() > k) {
+                pq.pop();
+            }
+        }
+
+        vector<string> res;
+        for (int i = 0; i < k; ++i) {
+            res.push_back(pq.top().second);
+            pq.pop();
+        }
+        reverse(res.begin(), res.end());
 
         return res;
     }
