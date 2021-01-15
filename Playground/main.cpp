@@ -16,30 +16,19 @@ dp[i] = dp
 
 class Solution {
 public:
-    vector<string> topKFrequent(vector<string>& words, int k) {
-        map<string, int> stat;
-        for (auto& word : words) {
-            ++stat[word];
-        }
-        
-        typedef pair<int, string> pis;
-        auto cmp = [](pis& a, pis& b) {
-            return a.first > b.first || (a.first == b.first && a.second < b.second);
-        };
-        priority_queue<pis, vector<pis>, decltype(cmp)> pq;
-        for (auto& cnt : stat) {
-            pq.push(make_pair(cnt.second, cnt.first));
-            if (pq.size() > k) {
-                pq.pop();
+    int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
+        int res = 0;
+        unordered_map<int, int> A_B;
+        for (auto& a : A) {
+            for (auto& b : B) {
+                ++A_B[a + b];
             }
         }
-
-        vector<string> res;
-        for (int i = 0; i < k; i++) {
-            res.push_back(pq.top().second);
-            pq.pop();
+        for (auto& c : C) {
+            for (auto& d : D) {
+                res = res + A_B[-c - d];
+            }
         }
-        reverse(res.begin(), res.end());
 
         return res;
     }
