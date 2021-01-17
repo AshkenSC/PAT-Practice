@@ -1,21 +1,17 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-#include <unordered_map>
-#include <map>
-#include <queue>
-using namespace std;
-
-// 0096. Unique Binary Search Trees
 /*
-dp[i] 以1到i为结点组成的二叉搜索树有多少种
-dp[i] = dp
+0073. Set Matrix Zeroes
 
+给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。
 
+思路：原地算法有点难想。
+方法就是利用数组的首行和首列来记录 0 值。
+从数组下标的 A[1][1] 开始遍历。
+那么首行首列两个布尔值记录首行首列是否需要置0。
 */
 
 class Solution {
-    void setZeroes(vector<vector<int>> matrix) {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
         // 判断首行是否设0，记录在rowFlag
         bool rowFlag = false;
         for (int i = 0; i < matrix[0].size(); i++) {
@@ -77,30 +73,4 @@ class Solution {
     }
 };
 
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
 
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-int main() {
-    Solution sol;
-    //vector<vector<int>> input = {{0,0,0},{0,1,0},{0,0,0}};
-    vector<int> input = {1, 1, 1, 2, 2, 3};
-    vector<int> res = sol.topKFrequent(input, 2);
-    for (auto num : res) {
-        cout << num << " ";
-    }
-
-    return 0;
-}
