@@ -5,6 +5,8 @@
 
 思路：动态规划，参考官方题解。其他题解讲的太繁琐了。
 
+参考：https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution/
+
 */
 
 class Solution {
