@@ -1,17 +1,9 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-#include <unordered_map>
-#include <map>
-#include <queue>
-#include <numeric>
-using namespace std;
-
-// 0096. Unique Binary Search Trees
 /*
-dp[i] 以1到i为结点组成的二叉搜索树有多少种
-dp[i] = dp
+0416. Partition Equal Subset Sum
 
+给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
+
+思路：参考官方解答。
 
 */
 
@@ -48,31 +40,3 @@ public:
         return dp[n - 1][target];
     }
 };
-
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-int main() {
-    Solution sol;
-    //vector<vector<int>> input = {{0,0,0},{0,1,0},{0,0,0}};
-    vector<int> input = {1, 1, 1, 2, 2, 3};
-    vector<int> res = sol.topKFrequent(input, 2);
-    for (auto num : res) {
-        cout << num << " ";
-    }
-
-    return 0;
-}
