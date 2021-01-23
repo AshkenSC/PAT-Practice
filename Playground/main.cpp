@@ -17,35 +17,35 @@ dp[i] = dp
 
 class Solution {
 public:
-    bool canPartition(vector<int>& nums) {
-        int n = nums.size();
-        if (n < 2) {
-            return false;
+    void maxHeapify(vector<int>& a, int i, int heapSize) {
+        int left = i * 2 + 1, right = i * 2 + 2;
+        int largest = i;
+        if (left < heapSize && a[left] > a[largest]) {
+            largest = left;
         }
-        int sum = accumulate(nums.begin(), nums.end(), 0);
-        int maxNum = *max_element(nums.begin(), nums.end());
-        
-        if (sum & 1) {
-            return false;
+        if (right < heapSize && a[right] > a[largest]) {
+            largest = right;
         }
-        int target = sum / 2;
-        if (maxNum > target) {
-            return false;
+        if (largest != i) {
+            swap(a[largest], a[i]);
+            maxHeapify(a, i, heapSize);
         }
-        vector<vector<int>> dp(n, vector<int>(target + 1, 0));
-        for (int i = 0; i < n; i++) {
-            int num = nums[i];
-            for (int j = 1; j <= target; j++) {
-                if (j >= num) {
-                    dp[i][j] = dp[i - 1][j] | dp[i - 1][j - num];
-                }
-                else {
-                    dp[i][j] = dp[i - 1][j];
-                }
-            }
-        }
+    }
 
-        return dp[n - 1][target];
+    void buildMaxHeap(vector<int>& a, int heapSize) {
+        for (int i = heapSize / 2; i >= 0; --i) {
+            maxHeapify(a, i, heapSize);
+        }
+    }
+    
+    int findKthLargest(vector<int>& nums, int k) {
+        int heapSize = nums.size();
+        buildMaxHeap(nums, heapSize);
+        for (int i = nums.size() - 1; i >= nums.size() - k + 1; --i) {
+            swap(nums[0], nums[i]);
+            maxHeapify(nums, 0, --heapSize);
+        }
+        return nums[0];
     }
 };
 

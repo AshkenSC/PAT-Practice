@@ -35,41 +35,33 @@ public:
 
 class Solution {
 public:
-
-    // 从结点i开始递归建堆
-    void buildMaxHeap(vector<int>& a,  int i, int heapSize) {   
-        int left = i * 2 + 1;
-        int right = i * 2 + 2;
+    void maxHeapify(vector<int>& a, int i, int heapSize) {
+        int left = i * 2 + 1, right = i * 2 + 2;
         int largest = i;
-        if (left < heapSize && a[left] > a[largest])
+        if (left < heapSize && a[left] > a[largest]) {
             largest = left;
-        if (right < heapSize && a[right] > a[largest])
+        }
+        if (right < heapSize && a[right] > a[largest]) {
             largest = right;
+        }
         if (largest != i) {
-            swap(a[i], a[largest]);
-            buildMaxHeap(a, largest, heapSize);
-        }           
-        
-    }
-
-    // 完整构造大根堆
-    void maxHeap(vector<int>& a, int heapSize) {
-        for (int i = heapSize / 2; i >= 0; i--) {
-            buildMaxHeap(a, i, heapSize);
+            swap(a[largest], a[i]);
+            maxHeapify(a, i, heapSize);
         }
     }
 
+    void buildMaxHeap(vector<int>& a, int heapSize) {
+        for (int i = heapSize / 2; i >= 0; --i) {
+            maxHeapify(a, i, heapSize);
+        }
+    }
+    
     int findKthLargest(vector<int>& nums, int k) {
         int heapSize = nums.size();
-        // 构造大根堆
-        maxHeap(nums, heapSize);
-        for (int i = nums.size() - 1; i >= nums.size() - k + 1; i--) {
-            // 将最大的元素和末尾元素相交换
+        buildMaxHeap(nums, heapSize);
+        for (int i = nums.size() - 1; i >= nums.size() - k + 1; --i) {
             swap(nums[0], nums[i]);
-            // 交换到末尾的元素不再属于堆，heapSize减小
-            heapSize--;
-            // 交换完以后失去大根堆特性，需要重新堆整体建堆
-            buildMaxHeap(nums, 0, heapSize);
+            maxHeapify(nums, 0, --heapSize);
         }
         return nums[0];
     }
