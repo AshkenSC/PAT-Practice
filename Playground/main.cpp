@@ -5,6 +5,7 @@
 #include <map>
 #include <queue>
 #include <numeric>
+#include <unordered_set>
 using namespace std;
 
 // 0096. Unique Binary Search Trees
@@ -17,35 +18,33 @@ dp[i] = dp
 
 class Solution {
 public:
-    void maxHeapify(vector<int>& a, int i, int heapSize) {
-        int left = i * 2 + 1, right = i * 2 + 2;
-        int largest = i;
-        if (left < heapSize && a[left] > a[largest]) {
-            largest = left;
-        }
-        if (right < heapSize && a[right] > a[largest]) {
-            largest = right;
-        }
-        if (largest != i) {
-            swap(a[largest], a[i]);
-            maxHeapify(a, i, heapSize);
-        }
-    }
+    int lengthOfLongestSubstring(string s) {
+       if (s.size() == 0) {
+           return 0;
+       }
 
-    void buildMaxHeap(vector<int>& a, int heapSize) {
-        for (int i = heapSize / 2; i >= 0; --i) {
-            maxHeapify(a, i, heapSize);
-        }
-    }
-    
-    int findKthLargest(vector<int>& nums, int k) {
-        int heapSize = nums.size();
-        buildMaxHeap(nums, heapSize);
-        for (int i = nums.size() - 1; i >= nums.size() - k + 1; --i) {
-            swap(nums[0], nums[i]);
-            maxHeapify(nums, 0, --heapSize);
-        }
-        return nums[0];
+       int start = 0, end = 0;
+       int maxLen = 0;
+       unordered_set<char> appeared;
+
+       while (end < s.size()) {
+           // 当窗口内没有重复字母时，调整右边界
+            if (appeared.count(s[end]) == 0) {
+               appeared.emplace(s[end++]);
+            }
+            // 当窗口内出现重复字母时，调整左边界
+            // 因为重复的不一定就是s[start]，左边界向右移动一直移动到和end所指的位置元素重复的位置
+            // 移动过程中的元素也都要从appeared里删除。
+            else {
+                maxLen = max(maxLen, end - start);
+                while (appeared.count(s[end]) != 0) {
+                    appeared.erase(s[start++]);
+                }
+            }
+       }
+
+       maxLen = max(maxLen, end - start);
+       return maxLen;
     }
 };
 

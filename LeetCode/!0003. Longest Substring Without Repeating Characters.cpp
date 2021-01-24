@@ -36,28 +36,31 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int start = 0, end = 0;
-        int maxLen = 0;
-        unordered_set<char> appeared;
+       if (s.size() == 0) {
+           return 0;
+       }
 
-        while (end < s.length()) {
+       int start = 0, end = 0;
+       int maxLen = 0;
+       unordered_set<char> appeared;
+
+       while (end < s.size()) {
+           // 当窗口内没有重复字母时，调整右边界
             if (appeared.count(s[end]) == 0) {
-                // 当窗口内没有重复字母时，调整右边界
-                appeared.emplace(s[end++]);
+               appeared.emplace(s[end++]);
             }
+            // 当窗口内出现重复字母时，调整左边界
+            // 因为重复的不一定就是s[start]，左边界向右移动一直移动到和end所指的位置元素重复的位置
+            // 移动过程中的元素也都要从appeared里删除。
             else {
-                // 当窗口内出现重复字母时，调整左边界
-                // 因为重复的不一定就是s[start]，左边界向左移动一直移动到和end所指的位置元素重复的位置后面
-                // 移动过程中的元素也都要从appeared里删除。
                 maxLen = max(maxLen, end - start);
                 while (appeared.count(s[end]) != 0) {
-                    appeared.erase(s[start]);
-                    start++;
+                    appeared.erase(s[start++]);
                 }
             }
-        }
-        maxLen = max(maxLen, end - start);
+       }
 
-        return maxLen;
+       maxLen = max(maxLen, end - start);
+       return maxLen;
     }
 };
