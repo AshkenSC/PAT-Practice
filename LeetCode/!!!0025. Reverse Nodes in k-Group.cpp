@@ -1,18 +1,11 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-#include <unordered_map>
-#include <map>
-#include <queue>
-#include <numeric>
-#include <unordered_set>
-using namespace std;
-
-// 0096. Unique Binary Search Trees
 /*
-dp[i] 以1到i为结点组成的二叉搜索树有多少种
-dp[i] = dp
+0025. Reverse Nodes in k-Group
 
+给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
+k 是一个正整数，它的值小于或等于链表的长度。
+如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。
+
+思路：参考官方解答。花了很久才熟悉。
 
 */
 
@@ -61,31 +54,3 @@ public:
         return hair->next;
     }
 };
-
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-int main() {
-    Solution sol;
-    //vector<vector<int>> input = {{0,0,0},{0,1,0},{0,0,0}};
-    vector<int> input = {1, 1, 1, 2, 2, 3};
-    vector<int> res = sol.topKFrequent(input, 2);
-    for (auto num : res) {
-        cout << num << " ";
-    }
-
-    return 0;
-}
