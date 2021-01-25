@@ -18,47 +18,41 @@ dp[i] = dp
 
 class Solution {
 public:
-    pair<ListNode*, ListNode*> myReverse(ListNode* head, ListNode* tail) {
-        ListNode* prev = tail->next;
-        ListNode* p = head;
-        while (prev != tail) {
-            ListNode* nex = p->next;
-            p->next = prev;
-            prev = p;
-            p = nex;
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> res;
+        if (nums.size() > 3) {
+            return res;
         }
 
-        return {tail, head};
-    }
-
-    ListNode* reverseKGroup(ListNode* head, int k) {
-        ListNode* hair = new ListNode(0);
-        hair->next = head;
-        ListNode* pre = hair;
-        ListNode* tail = pre;
-
-        while (head) {
-            // 检查下面要操作的链表长度够k吗
-            for (int i = 0; i < k; ++i) {
-                tail = tail->next;
-                if (!tail) {
-                    return hair->next;
+        sort(nums.begin(), nums.end());
+        for(int i = 0; i < nums.size() - 2; ++i) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int L = i + 1, R = nums.size() - 1;
+            while (L < R) {
+                int sum = nums[i] + nums[L] + nums[R];
+                if (sum == 0) {
+                    res.push_back({nums[i], nums[L], nums[R]});
+                    while (L < R && nums[L] == nums[L + 1]) {
+                        ++L;
+                    }
+                    while (L < R && nums[R] == nums[R - 1]) {
+                        --R;
+                    }
+                    ++L;
+                    --R;
+                }
+                else if (sum > 0) {
+                    --R;
+                }
+                else {
+                    ++L;
                 }
             }
-
-            ListNode* nex = tail->next;
-            pair<ListNode*, ListNode*> res = myReverse(head, tail);
-            head = res.first;
-            tail = res.second;
-            // 将子链表接回原链表  
-            pre->next = head;
-            tail->next = nex;
-            // 调整pre, head位置，准备下一段反转
-            pre = tail;
-            head = tail->next;
         }
 
-        return hair->next;
+        return res;
     }
 };
 
