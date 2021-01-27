@@ -1,20 +1,14 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
-#include <unordered_map>
-#include <map>
-#include <queue>
-#include <numeric>
-#include <unordered_set>
-using namespace std;
-
-// 0096. Unique Binary Search Trees
 /*
-dp[i] 以1到i为结点组成的二叉搜索树有多少种
-dp[i] = dp
+0146. LRU Cache
+
+运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。
+它应该支持以下操作： 获取数据 get 和 写入数据 put 。
 
 
 */
+
+#include <unordered_map>
+using namespace std;
 
 struct Node {
     int key;
@@ -53,6 +47,7 @@ public:
         }
     }
     
+    // ！！！容易错的一个函数！！！
     void put(int key, int value) {
         // 若key不存在
         if (!cache.count(key)) {
@@ -66,9 +61,6 @@ public:
                 Node* removed = removeTail();
                 cache.erase(removed->key);
                 delete removed;
-                
-                cache[key] = node;
-                addToHead(node);
                 --curSize;
             }
         }
@@ -77,6 +69,7 @@ public:
             Node* node = cache[key];
             node->value = value;
             moveToHead(node);
+            // 这里不要再加++curSize
             ++curSize;
         }
     }
@@ -112,38 +105,3 @@ public:
     }
 };
 
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache* obj = new LRUCache(capacity);
- * int param_1 = obj->get(key);
- * obj->put(key,value);
- */
-
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-int main() {
-    LRUCache* obj = new LRUCache(2);
-    obj->put(1,1);
-    obj->put(2, 2);
-    int p1 = obj->get(1);
-    obj->put(3,3);
-    int p2 = obj->get(2);
-    obj->put(4,4);
-    int p3 = obj->get(1);
-
-    return 0;
-}
