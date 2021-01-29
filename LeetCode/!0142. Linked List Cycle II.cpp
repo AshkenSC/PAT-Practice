@@ -29,23 +29,30 @@ struct ListNode {
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        ListNode *slow = head;
-        ListNode *fast = head;
-        // 首先确定是否有环
+        ListNode* slow = head;
+        ListNode* fast = head;
+        
+        // 确定是否有环
         while (true) {
-            if (fast == nullptr || fast->next == nullptr)
-                return nullptr;
+            if (fast == NULL || fast->next == NULL) {
+                return NULL;
+            }
+
             slow = slow->next;
             fast = fast->next->next;
-            if (slow == fast)
+
+            if (slow == fast) {
                 break;
+            }
         }
-        // 如果有环，确定入口
+
+        // 如果有环确定位置
         fast = head;
         while (slow != fast) {
-            slow = slow->next;
             fast = fast->next;
+            slow = slow->next;
         }
+
         return slow;
     }
 };
