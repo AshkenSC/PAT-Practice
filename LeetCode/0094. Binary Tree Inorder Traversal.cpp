@@ -42,10 +42,11 @@ public:
     vector<int> inorderTraversal(TreeNode* root) {
         vector<int> res;
 
-        if (root == nullptr)
+        if (root == nullptr) {
             return res;
-        
-        stack<TreeNode *> s;
+        }
+
+        stack<TreeNode*> s;
         while (s.empty() == false || root != nullptr) {
             while (root != nullptr) {
                 s.emplace(root);
