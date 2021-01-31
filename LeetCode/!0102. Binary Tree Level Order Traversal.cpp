@@ -24,35 +24,47 @@ struct TreeNode {
       TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
-        vector<vector<int>> result;
-        if (root == nullptr)
-            return result;
+        vector<vector<int>> res;
+        if (root == NULL) {
+            return res;
+        }
 
-        queue<TreeNode *> q;
-        q.push(root);
-        while (q.empty() == false) {
+        queue<TreeNode*> q;
+        q.emplace(root);
+        while (q.empty() == false || root == NULL) {
             // 记录当前队列大小，也就是当前层结点数
             int currentLevelSize = q.size();
             vector<int> subList;
-            for (int i = 0; i < currentLevelSize; i++) {
+            for (int i = 0; i < currentLevelSize; ++i) {
                 auto currentNode = q.front();
                 q.pop();
-                // 将当前结点插入子数组
+                 // 将当前结点插入子数组
                 subList.push_back(currentNode->val);
+
                 // 将当前结点的子结点插入队列
                 // 注意插入前判断是否为空
-                if (currentNode->left)
-                    q.push(currentNode->left);
-                if (currentNode->right)
-                    q.push(currentNode->right);
+                if (currentNode->left) {
+                    q.emplace(currentNode->left);
+                }
+                if (currentNode->right) {
+                    q.emplace(currentNode->right);
+                }
             }
-            // 将子数组插入结果数组里
-            result.push_back(subList);
+            res.push_back(subList);
         }
 
-        return result;
+        return res;
     }
 };
