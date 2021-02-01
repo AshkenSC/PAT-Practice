@@ -33,10 +33,12 @@ struct TreeNode {
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> res;
+
         if (root == NULL) {
             return res;
         }
@@ -45,24 +47,25 @@ public:
         q.emplace(root);
         while (q.empty() == false || root == NULL) {
             // 记录当前队列大小，也就是当前层结点数
+            vector<int> currentLevel;
             int currentLevelSize = q.size();
-            vector<int> subList;
             for (int i = 0; i < currentLevelSize; ++i) {
-                auto currentNode = q.front();
+                TreeNode* node = q.front();
                 q.pop();
-                 // 将当前结点插入子数组
-                subList.push_back(currentNode->val);
+
+                // 将当前结点插入子数组
+                currentLevel.push_back(node->val);
 
                 // 将当前结点的子结点插入队列
                 // 注意插入前判断是否为空
-                if (currentNode->left) {
-                    q.emplace(currentNode->left);
+                if (node->left) {
+                    q.emplace(node->left);
                 }
-                if (currentNode->right) {
-                    q.emplace(currentNode->right);
+                if(node->right) {
+                    q.emplace(node->right);
                 }
             }
-            res.push_back(subList);
+            res.push_back(currentLevel);
         }
 
         return res;
