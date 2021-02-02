@@ -45,7 +45,7 @@ public:
 
         queue<TreeNode*> q;
         q.emplace(root);
-        while (q.empty() == false || root == NULL) {
+        while (q.empty() == false && root != NULL) {
             // 记录当前队列大小，也就是当前层结点数
             vector<int> currentLevel;
             int currentLevelSize = q.size();
