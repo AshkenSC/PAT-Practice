@@ -30,3 +30,17 @@ public:
         return maxSum;
     }
 };
+
+// 常数空间的dp解法
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int pre = 0, dp = nums[0];
+        for (int i = 0; i < nums.size(); ++i) {
+            pre = max(pre + nums[i], nums[i]);
+            dp = max(dp, pre);
+        }
+
+        return dp;
+    }
+};
