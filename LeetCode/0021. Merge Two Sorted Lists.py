@@ -1,4 +1,4 @@
-# 21. Merge Two Sorted Lists
+# 0021. Merge Two Sorted Lists
 '''
 用两个指针分别指向l1, l2，逐个比较元素，将小的放入output。最后其中一个链表剩下的部分再接到output上。
 需要考虑l1,l2为空的情况。
