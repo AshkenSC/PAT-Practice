@@ -16,49 +16,44 @@
 class Solution {
 public:
     string addStrings(string num1, string num2) {
-        vector<char> result_bit;
-
-        // 位数少的数，前面补全0
+        // 将位数少的前面补0
         if (num1.size() < num2.size()) {
-            int sizeDiff = num2.size() - num1.size();
-            for (int i = 0; i < sizeDiff; i++) {
-                num1 = "0" + num1;
-            }
+            addZero(num1, num2.size() - num1.size());
         }
-        else if (num1.size() > num2.size()) {
-            int sizeDiff = num1.size() - num2.size();
-            for (int i = 0; i < sizeDiff; i++) {
-                num2 = "0" + num2;
-            }
+        else {
+            addZero(num2, num1.size() - num2.size());
         }
 
         // 逐位计算
-        int carry = 0; // 进位位
-        for (int i = num1.size() - 1; i >= 0; i--) {
-            int currentPos = num1[i] - '0' + num2[i] - '0' + carry;
-            if (currentPos < 10) {
-                carry = 0;
-                currentPos = currentPos + '0';
+        vector<char> res;
+        int carry = 0;
+        for (int i = num1.size() - 1; i >= 0; --i) {
+            int curDigit = num1[i] - '0' + num2[i] - '0' + carry;
+            if (curDigit >= 10) {
+                curDigit -= 10;
+                carry = 1;
             }
             else {
-                carry = 1;
-                currentPos = currentPos - 10 + '0';
+                carry = 0;
             }
-            result_bit.insert(result_bit.begin(), currentPos);
-
-            // 如果当前位置是最后一位且需要进位
-            if (i == 0 && carry == 1) {
-                result_bit.insert(result_bit.begin(), '1');
-            }
+            res.insert(res.begin(), curDigit + '0');
         }
 
-
-        // 结果拼接字符串
-        string result_str = "";
-        for (int i = 0; i < result_bit.size(); i++) {
-            result_str += result_bit[i];
+        // 拼接结果字符串
+        // 注意最高位是否满10进1
+        string resStr;
+        if (carry == 1) {
+            resStr = "1";
         }
+        for (char c : res) {
+            resStr += c;
+        }
+        return resStr;
+    }
 
-        return result_str;
+    void addZero(string &num, int diff) {
+        for (int i = 0; i < diff; ++i) {
+            num = '0' + num;
+        }
     }
 };
