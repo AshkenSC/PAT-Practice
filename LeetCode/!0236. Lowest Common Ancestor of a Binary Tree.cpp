@@ -22,14 +22,19 @@ struct TreeNode {
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if (root == nullptr || root == p || root == q)
+        if (root == NULL || root == p || root == q) {
             return root;
-        TreeNode* left = lowestCommonAncestor(root->left, p, q);
-        TreeNode* right = lowestCommonAncestor(root->right, p, q);
-        if (left == nullptr)
+        }
+        
+        auto left = lowestCommonAncestor(root->left, p, q);
+        auto right = lowestCommonAncestor(root->right, p, q);
+        if (left == NULL) {
             return right;
-        if (right == nullptr)
+        }
+        if (right == NULL) {
             return left;
-        return root; 
+        }
+
+        return root;
     }
 };
