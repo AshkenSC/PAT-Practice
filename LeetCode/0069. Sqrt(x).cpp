@@ -17,14 +17,17 @@ public:
         long long mid;
         while (left < right) {
             mid = left + (right - left) / 2;
-            if (mid * mid == x)
+            if (mid * mid == x) {
                 right = mid;
-            else if (mid * mid > x)
+            }
+            else if (mid * mid > x) {
                 right = mid;
-            else if (mid * mid < x)
+            }
+            else if (mid * mid < x) {
                 left = mid + 1;
+            }
         }
-        return left * left < x ? left : left - 1;
+
+        return left * left <= x ? left : left - 1;
     }
 };
-
