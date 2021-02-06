@@ -7,6 +7,9 @@
 这是因为，假设链表A自有部分长a，链表B自有部分长b，公共部分长c，那么这种情况下，两个指针都会走a+b+c的长度。
 因此，如果他们存在公共部分，一定是在公共点起始处相遇。
 
+如果不相交会不会无限循环？不会。
+假设两个链表不相交，两个指针交换后会同时遍历完链表指向空结点，此时pA等于pB等于空，也就终止了。
+
 参考:
 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/jiao-ni-yong-lang-man-de-fang-shi-zhao-dao-liang-2/
 */
