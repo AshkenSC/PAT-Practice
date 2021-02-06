@@ -13,24 +13,38 @@
 这题有很多小细节要注意。
 */
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-
     int res = 0;
 
-    int getDepth(TreeNode* node) {
-        if (node == NULL)
+    int getDepth(TreeNode *node) {
+        if (node == nullptr) {
             return 0;
+        }
+
         int left = getDepth(node->left);
         int right = getDepth(node->right);
         res = max(res, left + right + 1);
+
         return max(left, right) + 1;
     }
 
     int diameterOfBinaryTree(TreeNode* root) {
-        if (root == NULL)
+        if (root == nullptr) {
             return 0;
+        }
+        
         getDepth(root);
+
         return res - 1;
     }
 };
