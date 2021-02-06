@@ -122,3 +122,38 @@ public:
         return leftStack.empty();
     }
 };
+
+// 二刷（使用思路2）
+class Solution {
+public:
+    bool isValid(string str) {
+        // 遇到左括号，入栈。
+        // 遇到右括号，检测栈顶是否匹配。若匹配，出栈；若不匹配，不合法。
+        // 最终为空栈，才合法。否则不合法。
+        unordered_map<char, char> paren;
+        paren[')'] = '(';
+        paren[']'] = '[';
+        paren['}'] = '{';
+
+        stack<char> s;
+        for (auto c : str) {
+            // 如果不是paren的key，就是左半边括号
+            if (paren.count(c) == 0) {
+                s.emplace(c);
+            }
+            // 如果是paren的key，就是右半边括号
+            else {
+                // 检查是否和栈顶匹配
+                if (s.empty() == false && paren[c] == s.top()) {
+                    s.pop();
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+
+        // 最后栈必须清空才为有效
+        return s.empty();
+    }
+};
