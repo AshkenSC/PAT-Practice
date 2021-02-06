@@ -19,23 +19,24 @@ using namespace std;
 
 class Solution {
 public:
-    int res = 0;
-    // bfs方向：上，右，下，左
-    vector<vector<int>> directions = { {-1, 0}, {0, 1}, {1, 0}, {0, -1} };
+    int res;
     int row, col;
+    // bfs方向
+    vector<vector<int>> directions = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
 
-    // 判断当前位置是否出格
+    // 判断当前位置是否出界
     bool inArea(int x, int y) {
-        if (x >= 0 && x < row && y >= 0 && y < col)
+        if (x >= 0 && x < row && y >= 0 && y < col) {
             return true;
-        else
+        }
+        else {
             return false;
+        }
     }
 
-    void bfs(vector<vector<char>>& grid, int i, int j) {
+    void bfs(vector<vector<char>>& grid, int x, int y) {
         queue<pair<int, int>> q;
-        grid[i][j] = '0';
-        q.emplace(pair<int, int>(i, j));
+        q.emplace(pair<int, int>(x, y));
 
         while (q.empty() == false) {
             int currentX = q.front().first;
@@ -44,31 +45,32 @@ public:
 
             // 之前把这循环里本应写currentX，currentY的都写成了i，j！难怪错了
             for (auto d : directions) {
-                if (inArea(currentX + d[0], currentY + d[1]) && grid[currentX + d[0]][currentY + d[1]] == '1') {
+                int nextX = currentX + d[0];
+                int nextY = currentY + d[1];
+                if (inArea(nextX, nextY) && grid[nextX][nextY] == '1') {
                     // 将要入队的（即将访问的岛屿位置）结点标为0
-                    grid[currentX + d[0]][currentY + d[1]] = '0';
+                    grid[nextX][nextY] = '0';
                     // 入队
-                    q.emplace(pair<int, int>(currentX + d[0], currentY + d[1]));
+                    q.emplace(pair<int, int>(nextX, nextY));
                 }
             }
         }
 
-        return;
     }
 
     int numIslands(vector<vector<char>>& grid) {
         row = grid.size();
         col = grid[0].size();
 
-        for (int i = 0; i < grid.size(); i++) {
-            for (int j = 0; j < grid[0].size(); j++) {
+        for (int i = 0; i < row; ++i) {
+            for (int j = 0; j < col; ++j) {
                 if (grid[i][j] == '1') {
                     bfs(grid, i, j);
-                    res++;
+                    ++res;
                 }
             }
         }
+
         return res;
     }
 };
-
