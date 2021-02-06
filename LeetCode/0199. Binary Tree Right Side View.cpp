@@ -59,3 +59,38 @@ public:
         return res;
     }
 };
+
+// 二刷,不需要两个队列,只需要记录每层节点个数,然后只保留每层最后一个节点即可
+class Solution {
+public:
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int> res;
+        if (root == nullptr) {
+            return res;
+        }
+
+        queue<TreeNode*> q;
+        q.emplace(root);
+        while (!q.empty() && root) {
+            int currentLevelSize = q.size();
+            // 每一层的前n-1个不存
+            for (int i = 0; i < currentLevelSize; ++i) {
+                auto node = q.front();
+                q.pop();
+                if (node->left) {
+                    q.emplace(node->left);
+                }
+                if (node->right) {
+                    q.emplace(node->right);
+                }
+
+                // 只保存每层最后一个
+                if (i == currentLevelSize - 1) {
+                    res.push_back(node->val);
+                }
+            }
+        }
+
+        return res;
+    }
+};
