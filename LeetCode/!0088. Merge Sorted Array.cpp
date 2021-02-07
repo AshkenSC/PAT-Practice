@@ -23,28 +23,20 @@ public:
         // 将数组从后向前插入
         while (p >= 0 && i >= 0 && j >= 0) {
             if (nums1[i] >= nums2[j]) {
-                nums1[p] = nums1[i];
-                i--;
+                nums1[p--] = nums1[i--];
             }
             else {
-                nums1[p] = nums2[j];
-                j--;
+                nums1[p--] = nums2[j--];
             }
-            p--;
         }
 
         // 将两个原数组中剩下的部分拷贝入结果数组
         // 两个while只有一个会执行
-        while (i >= 0 && p >= 0) {
-            nums1[p] = nums1[i];
-            p--;
-            i--;
+         while (i >= 0 && p >= 0) {
+            nums1[p--] = nums1[i--];
         }
         while (j >= 0 && p >= 0) {
-            nums1[p] = nums2[j];
-            p--;
-            j--;
+            nums1[p--] = nums2[j--];
         }
-
     }
 };
