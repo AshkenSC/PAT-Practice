@@ -10,15 +10,21 @@
 
 class Solution {
 public:
-    bool hasCycle(ListNode* head) {
-        ListNode* fastPtr = head;
-        ListNode* slowPtr = head;
-        while (fastPtr && fastPtr->next) {
-            fastPtr = fastPtr->next->next;
-            slowPtr = slowPtr->next;
-            if (fastPtr == slowPtr)
-                return true;
+    bool hasCycle(ListNode *head) {
+        if (!head) {
+            return false;
         }
+        
+        auto slow = head;
+        auto fast = head;
+        while (fast != nullptr && fast->next != nullptr) {
+            slow = slow->next;
+            fast = fast->next->next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+
         return false;
     }
 };
