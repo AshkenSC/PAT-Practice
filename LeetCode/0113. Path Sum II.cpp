@@ -23,31 +23,37 @@ class Solution {
 public:
     vector<vector<int>> res;
 
-    void traverse(TreeNode* node, vector<int> currentPath, int currentSum, int sum) {
-        // 如果当前结点是叶子结点
+    void traverse(TreeNode *node, int targetSum, int curSum, vector<int> curPath) {
+        // 到达叶子节点
         if (node->left == nullptr && node->right == nullptr) {
-            if (node->val + currentSum == sum) {
-                currentPath.push_back(node->val);
-                res.push_back(currentPath);
+            if (curSum == targetSum) {
+                res.push_back(curPath);
             }
             return;
         }
-        // 如果当前结点是非叶子结点
-        else {
-            currentPath.push_back(node->val);
-            if (node->left != nullptr)
-                traverse(node->left, currentPath, currentSum + node->val, sum);
-            if (node->right != nullptr)
-                traverse(node->right, currentPath, currentSum + node->val, sum);
+
+        // 非叶子节点，dfs遍历
+        if (node->left) {
+            curPath.push_back(node->left->val);
+            traverse(node->left, targetSum, curSum + node->left->val, curPath);
+            curPath.pop_back();
+        }
+        if (node->right) {
+            curPath.push_back(node->right->val);
+            traverse(node->right, targetSum, curSum + node->right->val, curPath);
+            curPath.pop_back();
         }
     }
 
-    vector<vector<int>> pathSum(TreeNode* root, int sum) {
-        if (root == nullptr)
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        if (root == nullptr) {
             return res;
+        }
 
-        vector<int> currentSum;
-        traverse(root, currentSum, 0, sum);
+        vector<int> curPath;
+        curPath.push_back(root->val);
+        traverse(root, targetSum, root->val, curPath);
+
         return res;
     }
 };
