@@ -24,6 +24,9 @@ public:
             pre = pre->next;
         }
         // 遍历，逐个翻转链表
+        // 通过修改指针，跳过del，来逐个“删除”del
+        // 再将删除的del，逐个接到del后面
+        // 最终实现反转
         ListNode *cur = pre->next;
         for (int i = 0; i < n - m; i++) {
             ListNode *del = cur->next;
