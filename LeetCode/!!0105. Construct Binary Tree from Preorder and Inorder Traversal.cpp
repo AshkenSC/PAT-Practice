@@ -22,6 +22,7 @@ public:
     TreeNode* build(vector<int>& preorder, vector<int>& inorder,
                     int preorder_left, int preorder_right, int inorder_left, int inorder_right) {
         // 如果左 > 右，则退出递归
+        // 注意别忘了！！！忘记好多次！！！
         if (preorder_left > preorder_right)
             return nullptr;
 
