@@ -46,22 +46,26 @@ public:
 class Solution {
 public:
     int traverse(TreeNode* node) {
-        if (node == nullptr)
+        if (node == nullptr) {
             return 0;
+        }
+
+        // 只要左右子树有高度差大于1的，就返回-1
+        // 否则，就返回当前高度差
+        // 左右子遍历都要判定一次，尽可能减少递归。
+        int leftHeight = traverse(node->left);
+        if (leftHeight == -1) {
+            return -1;
+        }
+        int rightHeight = traverse(node->right);
+        if (rightHeight == -1) {
+            return -1;
+        }
+        if (abs(leftHeight - rightHeight) > 1) {
+            return -1;
+        }
         else {
-            // 只要左右子树有高度差大于1的，就返回-1
-            // 否则，就返回当前高度差
-            // 左右子遍历都要判定一次，尽可能减少递归。
-            int leftHeight = traverse(node->left);
-            if (leftHeight == -1)
-                return -1;
-            int rightHeight = traverse(node->right);
-            if (rightHeight == -1)
-                return -1;
-            if (abs(leftHeight - rightHeight) > 1)
-                return -1;
-            else
-                return max(leftHeight, rightHeight) + 1;
+            return max(leftHeight, rightHeight) + 1;
         }
     }
 
