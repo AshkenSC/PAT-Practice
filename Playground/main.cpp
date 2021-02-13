@@ -6,6 +6,7 @@
 #include <queue>
 #include <numeric>
 #include <unordered_set>
+#include <stack>
 using namespace std;
 
 // 0096. Unique Binary Search Trees
@@ -28,24 +29,40 @@ struct Node {
 
 class Solution {
 public:
-    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        int i = 0, j = 0;
-        while (i < m && j < n) {
-            if (nums1[i] > nums2[j]) {
-                swap(nums1[i], nums2[j]);
-                ++j;
+    string reverseWords(string s) {
+        stack<string> words;
+        
+        string temp;
+        for (char c : s) {
+            // 如果是空格字符，且缓存字符串非空，将缓存单词存入栈
+            if (c == ' ') {
+                if (temp.size() > 0) {
+                    words.push(temp);
+                    temp = "";
+                }
+                else
+                    continue;
             }
+            // 非空字符，则存入缓存单词字符串后面
             else {
-                ++i;
+                temp.push_back(c);
             }
         }
+        // 将最后一个单词入栈
+        if (temp.size() > 0)
+            words.push(temp);
 
-        for (int i = m; i < m + n; ++i) {
-            nums1[i] = nums2[i - m];
+        string res;
+        while (words.size() > 1) {
+            res += words.top() + " ";
+            words.pop();
         }
+        res += words.top();
+        words.pop();
+
+        return res;
     }
 };
-
 
 struct TreeNode
 {
@@ -68,8 +85,8 @@ int main() {
     vector<int> nums1{4,0,0,0,0,0};
     vector<int> nums2{1,2,3,5,6};
 
-    sol.merge(nums1, 1, nums2, 5);
-    cout << "1";
+    string res = sol.reverseWords(" hello world ");
+    cout << res;
 
     return 0;
 }
