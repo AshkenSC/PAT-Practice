@@ -7,6 +7,7 @@
 注意测试用例取了一些边界值。可以考虑直接上long，也可以设一个flag记录首次访问。
 */
 
+
 #include <stack>
 using namespace std;
 
