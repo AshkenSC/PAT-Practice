@@ -15,22 +15,19 @@ using namespace std;
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int len = nums.size();
-        if (len == 0)
-            return -1;
-        if (len < 2) {
-            nums[0] == target ? 0 : -1;
-        }
-
-        int left = 0, right = len - 1;
+        int left = 0, right = nums.size() - 1;
         int mid;
+
         while (left <= right) {
             mid = left + (right - left) / 2;
-            if (nums[mid] == target)
+            if (nums[mid] == target) {
                 return mid;
-            if (nums[0] <= nums[mid]) {
-                // target == nums[mid] 在上面已经单独考察过了，所以不取等号。
-                if (nums[0] <= target && target < nums[mid]) {
+            }
+
+            // 注意这个等号不能省略！
+            if (nums[mid] >= nums[left]) {
+                // 如果左半边是有序的，且target在这有序区间内
+                if (nums[left] <= target && target < nums[mid]) {
                     right = mid - 1;
                 }
                 else {
@@ -38,20 +35,20 @@ public:
                 }
             }
             else {
-                // target == nums[mid] 在上面已经单独考察过了，所以不取等号。
-                if (nums[mid] < target && target <= nums[len - 1]) {
+                // 如果右半边是有序的，而且target在这有序区间内
+                if (nums[mid] < target && target <= nums[right]) {
                     left = mid + 1;
                 }
                 else {
                     right = mid - 1;
                 }
             }
-            
         }
-
+    
         return -1;
     }
 };
+
 
 /*
 第一遍写的垃圾，留着，好好反思！
