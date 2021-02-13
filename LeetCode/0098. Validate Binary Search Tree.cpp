@@ -20,9 +20,8 @@ struct TreeNode {
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        long currentNum;
+        stack<TreeNode*> s;
         long preNum = -LONG_MAX - 1;
-        stack<TreeNode *> s;
 
         while (root != nullptr || s.empty() == false) {
             while (root != nullptr) {
@@ -32,14 +31,14 @@ public:
             root = s.top();
             s.pop();
             // 判断当前数是否小于上一个数。如果小于，直接判断false
-            if (root->val <= preNum)
+            if (root->val <= preNum) {
                 return false;
+            }
             preNum = root->val;
             // 移动到右孩子
             root = root->right;
         }
 
-        // 能走到这里的，都是经受住考验的好BST
         return true;
     }
 };
