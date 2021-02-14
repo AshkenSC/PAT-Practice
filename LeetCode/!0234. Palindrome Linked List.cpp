@@ -14,35 +14,35 @@
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head;
-        ListNode* p = head;
-        ListNode* pre = nullptr;
-        // 空链表算回文链表
-        if (!head || !head->next)
+        // 节点数为0或1，是回文
+        if (head == nullptr || head->next == nullptr) {
             return true;
-        // 这里不能只写while(fast)，一方面因为fast一次走2步，要保证fast.next.next不为空。
-        // 另一方面，为了后面能用fast试探出链表总数是否为奇数个。
-        while (fast && fast->next) {
+        }
+        
+        // 用2倍速指针和1倍速指针走过链表，直到2倍速指针到达链表末端
+        ListNode *slow = head, *fast = head, *p = head, *pre = nullptr;
+        while (fast != nullptr && fast->next != nullptr) {
             // 遍历
             p = slow;
-            slow = slow->next;
             fast = fast->next->next;
+            slow = slow->next;
 
-            // 翻转
+            // 慢速指针一边走一边反转链表
             p->next = pre;
             pre = p;
         }
-        // 如果链表是奇数个结点，跳过中点
-        if (fast)
-            slow = slow->next;
-        // 现在前半和后半链表分别以p和slow开头。遍历之
-        while (slow && p) {
-            if (slow->val != p->val)
-                return false;
-            slow = slow->next;
-            p = p->next;
+
+        // 检查链表前后半是否回文
+        if (fast) {
+            slow = slow->next; // 奇数链情形, slow跳过中间点
         }
-        return true;
+        while (p && slow) {
+            if (p->val != slow->val) {
+                return false;
+            }
+            p = p->next;
+            slow = slow->next;
+        }
+       return true;
     }
 };
