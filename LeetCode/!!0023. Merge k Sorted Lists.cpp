@@ -10,10 +10,12 @@
 
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* a, ListNode* b) {
+    ListNode* mergeTwoLists(ListNode *a, ListNode *b) {
+        // 如果a和b有空链表，直接返回另一个非空的
         if (!a || !b) {
             return a ? a : b;
         }
+        // 合并链表
         ListNode head;
         ListNode *tail = &head;
         ListNode *aPtr = a, *bPtr = b;
@@ -28,9 +30,8 @@ public:
             }
             tail = tail->next;
         }
-
-        // 归并完了，a或者b会剩下一部分有序的，将他们放到归并结果尾部。
-        tail->next = (aPtr ? aPtr : bPtr);
+        // 将其中一个链表的剩余部分链接
+        tail->next = aPtr ? aPtr : bPtr;
 
         return head.next;
     }
@@ -39,11 +40,12 @@ public:
         if (start == end) {
             return lists[start];
         }
-        if (start > end) {
+        else if (start > end) {
             return nullptr;
         }
 
-        int mid = (start + end) / 2;
+        // 两两合并，递归调用本函数
+        int mid = start + (end - start) / 2;
         return mergeTwoLists(merge(lists, start, mid), merge(lists, mid + 1, end));
     }
 
