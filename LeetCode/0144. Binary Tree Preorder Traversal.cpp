@@ -41,22 +41,20 @@ public:
 class Solution {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
-        stack<TreeNode *> s;
         vector<int> res;
-
-        if (root == nullptr)
+        if (root == nullptr) {
             return res;
+        }
 
+        stack<TreeNode*> s;
         s.emplace(root);
-        while (s.empty() == false) {
-            TreeNode *currentNode = s.top();
-            s.pop();
-            // 向结果vector添加当前元素
+        while (!s.empty()) {
+            auto currentNode = s.top();
             res.push_back(currentNode->val);
-            // 将当前元素孩子入栈
-            if (currentNode->right != nullptr)
+            s.pop();
+            if (currentNode->right)
                 s.emplace(currentNode->right);
-            if (currentNode->left != nullptr)
+            if (currentNode->left)
                 s.emplace(currentNode->left);
         }
 
