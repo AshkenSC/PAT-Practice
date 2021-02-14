@@ -17,6 +17,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+// 递归法
 class Solution {
 public:
     vector<int> result;
@@ -37,11 +38,11 @@ public:
     }
 };
 
+// 迭代法
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
         vector<int> res;
-
         if (root == nullptr) {
             return res;
         }
