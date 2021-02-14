@@ -18,15 +18,16 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+// 迭代遍历
 class Solution {
 public:
     vector<int> postorderTraversal(TreeNode* root) {
-        stack<TreeNode *> s;
         vector<int> res;
-
-        if (root == nullptr)
+        if (root == nullptr) {
             return res;
+        }
 
+        stack<TreeNode*> s;
         TreeNode *prev = nullptr;
         while (root != nullptr || s.empty() == false) {
             while (root != nullptr) {
@@ -35,7 +36,7 @@ public:
             }
             root = s.top();
             s.pop();
-            if (root->right == nullptr || root->right == prev) {
+            if (root->right == nullptr || prev == root->right) {
                 res.push_back(root->val);
                 prev = root;
                 root = nullptr;
@@ -50,6 +51,7 @@ public:
     }
 };
 
+// 递归遍历
 class Solution {
 public:
     vector<int> res;
