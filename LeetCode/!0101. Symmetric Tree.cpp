@@ -12,6 +12,31 @@
 
 */
 
+// 二刷
+// 绝大部分是自己写，但是被提醒了核心思想：左子树左=右子树右，且左子树右=右子树左
+class Solution {
+public:
+    bool checkSymmetric(TreeNode *a, TreeNode *b) {
+        if (a == nullptr || b == nullptr) {
+            if (a == nullptr && b == nullptr)
+                return true;
+            else
+                return false;
+        }
+
+        return (a->val == b->val) && checkSymmetric(a->left, b->right) && checkSymmetric(a->right, b->left);
+    }
+
+    bool isSymmetric(TreeNode* root) {
+        if (root == nullptr) {
+            return true;
+        }
+
+        return checkSymmetric(root->left, root->right); 
+    }
+};
+
+// 一刷
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
