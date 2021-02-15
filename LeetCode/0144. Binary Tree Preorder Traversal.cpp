@@ -45,13 +45,14 @@ public:
         if (root == nullptr) {
             return res;
         }
-
+        
         stack<TreeNode*> s;
         s.emplace(root);
-        while (!s.empty()) {
-            auto currentNode = s.top();
-            res.push_back(currentNode->val);
+        while (s.empty() == false) {
+            TreeNode *currentNode = s.top();
             s.pop();
+            res.push_back(currentNode->val);
+
             if (currentNode->right)
                 s.emplace(currentNode->right);
             if (currentNode->left)
