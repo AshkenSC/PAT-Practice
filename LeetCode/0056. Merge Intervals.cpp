@@ -31,8 +31,10 @@ public:
 
         // 将区间按左端点进行升序排序
         // 使用lambda表达式
+        // 使用const和&可以显著降低时间
         sort(intervals.begin(), intervals.end(),
-        [](vector<int>& a, vector<int>& b){return a[0] < b[0];});
+        [](const vector<int>& a, const vector<int>& b){return a[0] < b[0];}
+        );
 
         // 遍历区间
         res.push_back(intervals[0]);
