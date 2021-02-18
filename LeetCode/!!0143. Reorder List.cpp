@@ -24,36 +24,27 @@ struct ListNode {
 class Solution {
 public:
     void reorderList(ListNode* head) {
-        if (!head || !head->next || !head->next->next) {
-            return;
-        }
-
-        // 1. 找到链表终点
-        ListNode *slow = head;
-        ListNode *fast = head;
-        while (fast && fast->next)
-        {
+        // 1. 找到链表中点
+        ListNode *slow = head, *fast = head;
+        while (fast && fast->next) {
             fast = fast->next->next;
             slow = slow->next;
         }
 
-        // 此时slow->next是链表后半段的头结点
-        // slow作为前半段的终点，mid作为后半段的起点（逆置后的终点）
         // 2. 就地逆置后半段
         ListNode *mid = slow->next;
         slow->next = nullptr;
-        ListNode *p = mid;
-        ListNode *prior = nullptr;
-        ListNode *next = p->next;
-        while (next) {
-            p->next = prior;
-            prior = p;
+        ListNode *pre = nullptr, *p = mid, *next = p->next;
+        while (p != nullptr) {
+            p->next = pre;
+            pre = p;
             p = next;
             next = next->next;
         }
-        p->next = prior;    // 此时p是逆置后的后半链表的起点
+        p->next = pre;
 
-        // 3. 交错拼接两个子链表
+        // 3. 拼接两个子链表
+        // 此时p是后半段逆置链表的起点
         ListNode *q = head;
         ListNode *qNext = q->next;
         ListNode *pNext = p->next;
