@@ -20,10 +20,11 @@ public:
 
     void backtrack(vector<int>& nums, int start, int len) {
         if (start == len) {
-            res.push_back(nums);
+            res.emplace_back(nums);
             return;
         }
-        for (int i = start; i < len; i++) {
+
+        for (int i = start; i < len; ++i) {
             swap(nums[i], nums[start]);
             backtrack(nums, start + 1, len);
             swap(nums[i], nums[start]);
