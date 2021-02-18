@@ -21,44 +21,43 @@ struct ListNode {
 class Solution {
 public:
     ListNode* sortList(ListNode* head) {
-        if (head == nullptr || head->next == nullptr)
+        if (head == nullptr || head->next == nullptr) {
             return head;
-        
-        // 通过快慢指针方法，快指针走2步，慢指针走1步，这样当快指针遍历完的时候，慢指针正好在中点
-        ListNode* pmid;
-        ListNode* mid = head;
-        ListNode* trail = head;
-        while(trail && trail->next) {
-            pmid = mid;
-            mid = mid->next;
-            trail = trail->next->next;
         }
-        pmid->next = nullptr;
+
+        ListNode *preMid;
+        ListNode *mid = head;
+        ListNode *p = head;
+        while (p && p->next) {
+            preMid = mid;
+            mid = mid->next;
+            p = p->next->next;
+        }
+        preMid->next = nullptr;
 
         return twoWayMerge(sortList(head), sortList(mid));
     }
 
-    ListNode* twoWayMerge(ListNode* l1, ListNode* l2) {
-        ListNode header(-1);
-        ListNode* p = &header;
+    ListNode* twoWayMerge(ListNode *l1, ListNode *l2) {
+        ListNode *head = new ListNode(0);
+        ListNode *p = head;
 
         while (l1 && l2) {
             if (l1->val < l2->val) {
                 p->next = l1;
                 l1 = l1->next;
             }
-            else {
+            else
+            {
                 p->next = l2;
                 l2 = l2->next;
             }
             p = p->next;
         }
-
-        if (l1 == nullptr)
-            p->next = l2;
-        else
-            p->next = l1;
         
-        return header.next;
+        p->next = l1 == nullptr ? l2 : l1;
+
+        return head->next;
     }
 };
+
