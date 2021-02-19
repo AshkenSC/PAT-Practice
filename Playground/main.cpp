@@ -29,38 +29,27 @@ struct Node {
 
 class Solution {
 public:
-    string reverseWords(string s) {
-        stack<string> words;
+    bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
+        if (matrix.size() == 0 || matrix[0].size() == 0) {
+            return false;
+        }
         
-        string temp;
-        for (char c : s) {
-            // 如果是空格字符，且缓存字符串非空，将缓存单词存入栈
-            if (c == ' ') {
-                if (temp.size() > 0) {
-                    words.push(temp);
-                    temp = "";
-                }
-                else
-                    continue;
+        int m = matrix.size(), n = matrix[0].size();
+        int i = 0, j = n - 1;
+
+        while (i < m && j < n) {
+            if (matrix[i][j] == target) {
+                return true;
             }
-            // 非空字符，则存入缓存单词字符串后面
+            else if (matrix[i][j] > target) {
+                --j;
+            }
             else {
-                temp.push_back(c);
+                ++i;
             }
         }
-        // 将最后一个单词入栈
-        if (temp.size() > 0)
-            words.push(temp);
 
-        string res;
-        while (words.size() > 1) {
-            res += words.top() + " ";
-            words.pop();
-        }
-        res += words.top();
-        words.pop();
-
-        return res;
+        return false;
     }
 };
 
@@ -84,8 +73,9 @@ int main() {
     Solution sol;
     vector<int> nums1{4,0,0,0,0,0};
     vector<int> nums2{1,2,3,5,6};
+    vector<vector<int>> test(1, vector<int>(1, -5));
 
-    string res = sol.reverseWords(" hello world ");
+    bool res = sol.findNumberIn2DArray(test, -10);
     cout << res;
 
     return 0;
