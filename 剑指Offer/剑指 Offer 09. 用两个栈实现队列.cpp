@@ -7,6 +7,45 @@
 思路1：其中一个栈直接存储，另一个栈用作缓存。
 */
 
+// 解法2：参考官方解答下面的评论。
+class CQueue {
+private:
+    stack<int> s1;
+    stack<int> s2;
+
+public:
+    CQueue() {
+    }
+    
+    void appendTail(int value) {
+        s1.emplace(value);
+    }
+    
+    int deleteHead() {
+       if (s2.empty() == false) {
+           int headValue = s2.top();
+           s2.pop();
+           return headValue;
+       }
+       else {
+           while (s1.empty() == false) {
+               s2.emplace(s1.top());
+               s1.pop();
+           }
+           if (s2.empty() == false) {
+                int headValue = s2.top();
+                s2.pop();
+                return headValue;
+           }
+           else {
+                return -1;
+           }
+       }
+    }
+};
+
+// 解法1：自己想的，时间复杂度较高。
+class CQueue {
 private:
     stack<int> s1;
     stack<int> s2;
