@@ -29,27 +29,21 @@ struct Node {
 
 class Solution {
 public:
-    bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
-        if (matrix.size() == 0 || matrix[0].size() == 0) {
-            return false;
-        }
-        
-        int m = matrix.size(), n = matrix[0].size();
-        int i = 0, j = n - 1;
+    int fib(int n) {
+        vector<long long> f(3, 0);
+        f[1] = 1; f[2] = 1;
 
-        while (i < m && j < n) {
-            if (matrix[i][j] == target) {
-                return true;
-            }
-            else if (matrix[i][j] > target) {
-                --j;
-            }
-            else {
-                ++i;
-            }
+        if (n < 3) {
+            return f[n];
         }
 
-        return false;
+        for (int i = 3; i <= n; ++i) {
+            f[0] = f[1];
+            f[1] = f[2];
+            f[2] = f[0] + f[1];
+            cout << f[2] << endl;
+        }
+        return f[2];
     }
 };
 
@@ -75,7 +69,7 @@ int main() {
     vector<int> nums2{1,2,3,5,6};
     vector<vector<int>> test(1, vector<int>(1, -5));
 
-    bool res = sol.findNumberIn2DArray(test, -10);
+    long long res = sol.fib(45);
     cout << res;
 
     return 0;
