@@ -12,6 +12,7 @@
 
 */
 
+// 方法1：单指针
 class Solution {
 public:
     ListNode* deleteNode(ListNode* head, int val) {
@@ -28,3 +29,24 @@ public:
         return head;
     }
 };
+
+// 方法2：双指针
+class Solution {
+public:
+    ListNode* deleteNode(ListNode* head, int val) {
+        if (head->val == val) {
+            return head->next;
+        }
+
+        ListNode *p = head;
+        ListNode *pre = nullptr;
+        while (p->val != val) {
+            pre = p;
+            p = p->next;
+        }
+        pre->next = p->next;
+
+        return head;      
+    }
+};
+
