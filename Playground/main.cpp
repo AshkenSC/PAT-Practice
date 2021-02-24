@@ -29,23 +29,26 @@ struct Node {
 
 class Solution {
 public:
-    int fib(int n) {
-        vector<long long> f(3, 0);
-        f[1] = 1; f[2] = 1;
-
-        if (n < 3) {
-            return f[n];
+    vector<int> exchange(vector<int>& nums) {
+        int front = 0, back = nums.size() - 1;
+        while (front < back) {
+            if (nums[front] % 2 == 1) {
+                ++front;
+                continue;
+            }
+            if (nums[back] % 2 == 0) {
+                --back;
+                continue;
+            }
+            if (nums[front] % 2 == 0 && nums[back] % 2 == 1) {
+                swap(nums[front], nums[back]);
+            }
         }
 
-        for (int i = 3; i <= n; ++i) {
-            f[0] = f[1];
-            f[1] = f[2];
-            f[2] = f[0] + f[1];
-            cout << f[2] << endl;
-        }
-        return f[2];
+        return nums;
     }
 };
+
 
 struct TreeNode
 {
@@ -66,11 +69,10 @@ struct ListNode {
 int main() {
     Solution sol;
     vector<int> nums1{4,0,0,0,0,0};
-    vector<int> nums2{1,2,3,5,6};
-    vector<vector<int>> test(1, vector<int>(1, -5));
-
-    long long res = sol.fib(45);
-    cout << res;
+    vector<int> nums2{1,2,3,4};
+    
+    vector<int> res = sol.exchange(nums2);
+    cout << '1';
 
     return 0;
 }
