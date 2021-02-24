@@ -4,6 +4,22 @@
 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
 */
 
+// 递归解法
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if (head == nullptr || head->next == nullptr) {
+            return head;
+        }
+
+        ListNode *node = reverseList(head->next);
+        head->next->next = head;
+        head->next = nullptr;
+        return node;
+    }
+};
+
+// 迭代解法
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
