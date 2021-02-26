@@ -16,36 +16,36 @@ public:
             return head;
         }
 
-        // 完成链表节点复制
-        Node *cur = head;
-        while (cur != nullptr) {
-            Node* copyNode = new Node(cur->val);
-            copyNode->next = cur->next;
-            cur->next = copyNode;
-            cur = cur->next->next;
+        // 复制节点值和next
+        Node *p = head;
+        while (p != nullptr) {
+            Node *copy = new Node(p->val);
+            copy->next = p->next;
+            p->next = copy;
+            p = p->next->next;
         }
 
-        // 完成随机指针复制
-        cur = head;
-        while (cur != nullptr) {
-            if (cur->random != nullptr) {
-                // 注意这里，cur指向原身一个节点
-                // 因此cur->random指向原身所指引的随机节点的拷贝
-                cur->next->random = cur->random->next;
+        // 复制随机指针
+        p = head;
+        while (p != nullptr) {
+            // 让p指向原身，则p->random也是原身，p->random->next就是原身的拷贝
+            if (p->random != nullptr) {
+                p->next->random = p->random->next;
             }
-            cur = cur->next->next;
+            p = p->next->next;
         }
 
-        // 分离链表
+        // 链表一分为二
         Node *copyHead = head->next;
-        Node *p = head, *pCopy = head->next;
+        p = head;
+        Node *pCopy = head->next;
         while (p != nullptr) {
             p->next = p->next->next;
             p = p->next;
             if (pCopy->next != nullptr) {
                 pCopy->next = pCopy->next->next;
                 pCopy = pCopy->next;
-            } 
+            }
         }
 
         return copyHead;
