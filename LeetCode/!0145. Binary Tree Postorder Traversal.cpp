@@ -36,8 +36,8 @@ public:
             }
             root = s.top();
             s.pop();
-            if (root->right == nullptr || prev == root->right) {
-                res.push_back(root->val);
+            if (root->right == prev || root->right == nullptr) {
+                res.emplace_back(root->val);
                 prev = root;
                 root = nullptr;
             }
