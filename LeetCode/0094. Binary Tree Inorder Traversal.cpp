@@ -17,6 +17,29 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+// 迭代法
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res;
+        if (root == nullptr) return res;
+
+        stack<TreeNode*> s;
+        while (root != nullptr || s.empty() == false) {
+            while (root != nullptr) {
+                s.emplace(root);
+                root = root->left;
+            }
+            root = s.top();
+            s.pop();
+            res.push_back(root->val);
+            root = root->right;
+        }
+
+        return res;
+    }
+};
+
 // 递归法
 class Solution {
 public:
@@ -38,27 +61,3 @@ public:
     }
 };
 
-// 迭代法
-class Solution {
-public:
-    vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> res;
-        if (root == nullptr) {
-            return res;
-        }
-
-        stack<TreeNode*> s;
-        while (s.empty() == false || root != nullptr) {
-            while (root != nullptr) {
-                s.emplace(root);
-                root = root->left;
-            }
-            root = s.top();
-            s.pop();
-            res.push_back(root->val);
-            root = root->right;
-        }
-
-        return res;
-    }
-};
