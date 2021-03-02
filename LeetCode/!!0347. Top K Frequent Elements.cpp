@@ -31,6 +31,45 @@ topk （前k大）用小根堆，维护堆大小不超过 k 即可。
 #include <queue>
 using namespace std;
 
+
+// 使用priority_queue
+class Solution {
+public:
+    static bool cmp(pair<int, int>& a, pair<int, int>& b) {
+        return a.second > b.second;
+    }
+
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        // 统计出现次数
+        map<int, int> freq;
+        for (int num : nums) {
+            freq[num]++;
+        }
+
+        // 用优先队列实现小顶堆
+        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&cmp)> q(cmp);
+        for (auto entry : freq) {
+            if (q.size() < k) {
+                q.emplace(entry);
+            }
+            else {
+                if (q.top().second < entry.second) {
+                    q.pop();
+                    q.emplace(entry);
+                }
+            }
+        }
+
+        // 输出结果
+        vector<int> res;
+        while (q.empty() == false) {
+            res.push_back(q.top().first);
+            q.pop();
+        }
+        return res;
+    }
+};
+
 // 2021-01-12重做，个人失败版本
 class Solution {
 public:
@@ -88,46 +127,5 @@ public:
         }
 
         return res;
-    }
-};
-
-
-class Solution {
-public:
-    
-    static bool cmp(pair<int, int>& a, pair<int, int>& b) {
-        return a.second > b.second;
-    }
-
-    vector<int> topKFrequent(vector<int>& nums, int k) {
-        // 首先统计每个数字出现的个数，使用字典统计
-        map<int, int> freq;
-        for (auto num : nums) {
-            freq[num]++;
-        }
-
-        // 使用优先队列实现小顶堆
-        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&cmp)> q(cmp);
-        for (auto entry : freq) {
-            // 如果堆中元素小于k个，直接插入
-            if (q.size() < k)
-                q.emplace(entry);
-            // 如果堆中元素等于k了，就需要对比当前元素和堆顶元素的大小
-            // 如果当前元素比堆顶元素要大，则删除堆顶元素，插入当前元素
-            else {
-                if (q.top().second < entry.second) {
-                    q.pop();
-                    q.emplace(entry);
-                }
-            }
-        }
-
-        // 返回结果
-        vector<int> result;
-        while (!q.empty()) {
-            result.push_back(q.top().first);
-            q.pop();
-        }
-        return result;
     }
 };
