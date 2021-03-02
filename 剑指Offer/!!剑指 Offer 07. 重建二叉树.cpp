@@ -39,3 +39,34 @@ public:
         return build(preorder, inorder, 0, n - 1, 0, n - 1);
     }
 };
+
+// 二刷，牛客网
+class Solution {
+private:
+    unordered_map<int, int> occur;
+public:
+    TreeNode* build(vector<int>& pre, vector<int>& vin, 
+                    int preLeft, int preRight, int vinLeft, int vinRight) {
+        int rootInMidPos = occur[pre[preLeft]];
+        int leftTreeSize = rootInMidPos - vinLeft;
+        int rightTreeSize = vinRight - rootInMidPos;
+        
+        TreeNode *node = new TreeNode(pre[preLeft]);
+        if (leftTreeSize > 0)
+            node->left = build(pre, vin, preLeft + 1, preLeft + leftTreeSize, vinLeft, rootInMidPos - 1);
+        if (rightTreeSize > 0)
+            node->right = build(pre, vin, preLeft + leftTreeSize + 1, preRight, rootInMidPos + 1, vinRight);
+        
+        return node;
+    }
+    
+    TreeNode* buildTree(vector<int> pre,vector<int> vin) {
+        // 遍历中序数组，记录出现位置
+        for (int i = 0; i < vin.size(); ++i) {
+            occur[vin[i]] = i;
+        }
+        
+        TreeNode *node = build(pre, vin, 0, pre.size() - 1, 0, vin.size() - 1);
+        return node;
+    }
+};
