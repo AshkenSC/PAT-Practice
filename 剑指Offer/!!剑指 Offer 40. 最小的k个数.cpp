@@ -36,9 +36,10 @@ public:
 
     void partitionArray(vector<int>& arr, int low, int high, int k) {
         // 进行一次partition, 得到一个正确排在第m的数
+        // 同时，比该数小的都在它左边，比该数大的都在他右边
         int m = partition(arr, low, high);
 
-        // 恰好k == m 直接返回
+        // 恰好k == m，则partition后，前m个数已满足题目要求，故直接返回
         if (k == m) {
             return;
         }
