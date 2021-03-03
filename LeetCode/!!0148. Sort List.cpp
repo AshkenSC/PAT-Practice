@@ -1,5 +1,4 @@
 /*
-
 0148. Sort List.cpp
 
 在O(n logn)时间复杂度和常数空间复杂度内对链表排序
@@ -17,47 +16,51 @@ struct ListNode {
       ListNode(int x) : val(x), next(nullptr) {}
   };
  
-
 class Solution {
 public:
+    ListNode* merge(ListNode* l1, ListNode* l2) {
+        ListNode *p1 = l1, *p2 = l2;
+        ListNode *head = new ListNode(-1);
+        ListNode *p = head;
+
+        while (p1 != nullptr && p2 != nullptr) {
+            if (p1->val < p2->val) {
+                p->next = p1;
+                p1 = p1->next;
+            }
+            else {
+                p->next = p2;
+                p2 = p2->next;
+            }
+            p = p->next;
+        }
+
+        if (p1 != nullptr) {
+            p->next = p1;
+        }
+        else {
+            p->next = p2;
+        }
+
+        return head->next;
+    }
+
     ListNode* sortList(ListNode* head) {
+        // 注意两个判断条件都不能丢
         if (head == nullptr || head->next == nullptr) {
             return head;
         }
 
-        ListNode *preMid;
-        ListNode *mid = head;
-        ListNode *p = head;
-        while (p && p->next) {
-            preMid = mid;
-            mid = mid->next;
-            p = p->next->next;
+        // 使用快慢双指针找到链表中间结点
+        ListNode *fast = head, *slow = head, *preMid = head;
+        while (fast != nullptr && fast->next != nullptr) {
+            preMid = slow;
+            slow = slow->next;
+            fast = fast->next->next;
         }
+        // 注意别忘记断链
         preMid->next = nullptr;
 
-        return twoWayMerge(sortList(head), sortList(mid));
-    }
-
-    ListNode* twoWayMerge(ListNode *l1, ListNode *l2) {
-        ListNode *head = new ListNode(0);
-        ListNode *p = head;
-
-        while (l1 && l2) {
-            if (l1->val < l2->val) {
-                p->next = l1;
-                l1 = l1->next;
-            }
-            else
-            {
-                p->next = l2;
-                l2 = l2->next;
-            }
-            p = p->next;
-        }
-        
-        p->next = l1 == nullptr ? l2 : l1;
-
-        return head->next;
+        return merge(sortList(head), sortList(slow));
     }
 };
-
