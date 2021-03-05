@@ -6,13 +6,57 @@
 
 典型top K问题。
 思路1：快速排序变形。
+思路2：小根堆。
 
 参考：
 https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/solution/tu-jie-top-k-wen-ti-de-liang-chong-jie-fa-you-lie-/
 */
 
+// 小根堆
+class Solution {
+public:
+    void maxHeapify(vector<int>& arr, int i, int heapSize) {
+        int left = i * 2 + 1, right = i * 2 + 2;
+        int curMin = i;
 
-// 思路1：快速排序变形
+        if (left < heapSize && arr[curMin] > arr[left]) {
+            curMin = left;
+        }
+        if (right < heapSize && arr[curMin] > arr[right]) {
+            curMin = right;
+        }
+        if (curMin != i) {
+            swap(arr[curMin], arr[i]);
+            maxHeapify(arr, curMin, heapSize);
+        }
+    }
+
+    void buildMaxHeap(vector<int>& arr, int heapSize) {
+        for (int i = heapSize / 2; i >= 0; --i) {
+            maxHeapify(arr, i, heapSize);
+        }
+    }
+
+    vector<int> getLeastNumbers(vector<int>& arr, int k) {
+        int heapSize = arr.size();
+        buildMaxHeap(arr, heapSize);
+
+        vector<int> res;
+        for (int i = 0; i < k; ++i) {
+            res.push_back(arr[0]);
+            // 将当前堆顶交换到数组末尾，并减小heapsize
+            // 当前堆顶就此打入冷宫
+            swap(arr[0], arr[heapSize - 1]);
+            --heapSize;
+            maxHeapify(arr, 0, heapSize);
+        }
+
+        return res;
+    }
+};
+
+
+// 快速排序变形
 class Solution {
 public:
 
