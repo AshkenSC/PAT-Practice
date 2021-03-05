@@ -7,13 +7,53 @@
 典型top K问题。
 思路1：快速排序变形。
 思路2：小根堆。
-思路3：大根堆（容量为k）。
+思路3：大根堆（手动建堆）。
+思路4：大根堆（优先队列）。
 
 参考：
 https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/solution/tu-jie-top-k-wen-ti-de-liang-chong-jie-fa-you-lie-/
 */
 
-// 大根堆（容量为k）
+// 大根堆（优先队列）
+class Solution {
+public:
+    static bool cmp(int& a, int& b) {
+        return a < b;
+    }
+
+    vector<int> getLeastNumbers(vector<int>& arr, int k) {
+        vector<int> res;
+        // 可恶，怎么会有k == 0
+        if (k == 0) {
+            return res;
+        }
+        else if (arr.size() <= k) {
+            return arr;
+        }
+        
+        priority_queue<int, vector<int>, decltype(&cmp)> q(cmp);
+        for (auto num : arr) {
+            if (q.size() < k) {
+                q.emplace(num);
+            }
+            else {
+                if (num < q.top()) {
+                    q.pop();
+                    q.emplace(num);
+                }
+            }
+        }
+
+        while (q.empty() == false) {
+            res.push_back(q.top());
+            q.pop();
+        }
+        return res;
+    }
+};
+
+
+// 大根堆（手动建堆）
 class Solution {
 public:
     void heapify(vector<int>& a, int i, int heapSize) {
