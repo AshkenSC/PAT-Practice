@@ -7,15 +7,65 @@
 典型top K问题。
 思路1：快速排序变形。
 思路2：小根堆。
+思路3：大根堆（容量为k）。
 
 参考：
 https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/solution/tu-jie-top-k-wen-ti-de-liang-chong-jie-fa-you-lie-/
 */
 
+// 大根堆（容量为k）
+class Solution {
+public:
+    void heapify(vector<int>& a, int i, int heapSize) {
+        int left = i * 2 + 1, right = i * 2 + 2;
+        int curMax = i;
+
+        if (left < heapSize && a[curMax] < a[left]) {
+            curMax = left;
+        }
+        if (right < heapSize && a[curMax] < a[right]) {
+            curMax = right;
+        }
+        if (curMax != i) {
+            swap(a[i], a[curMax]);
+            heapify(a, curMax, heapSize);
+        }
+    }
+
+    void buildHeap(vector<int>& a, int heapSize) {
+        for (int i = heapSize / 2; i >= 0; --i) {
+            heapify(a, i, heapSize);
+        }
+    }
+
+    vector<int> getLeastNumbers(vector<int>& arr, int k) {
+        if (arr.size() <= k) {
+            return arr;
+        }
+
+        // 对前k个数建立堆
+        // 对第k + 1个数开始，就只比较堆头和arr[i]，如果堆头更大就交换之
+        buildHeap(arr, k);
+        for (int i = k; i < arr.size(); ++i) {
+            if (arr[i] < arr[0]) {
+                swap(arr[i], arr[0]);
+                heapify(arr, 0, k);
+            }
+        }
+
+        // 输出前k个
+        vector<int> res;
+        for (int i = 0; i < k; ++i) {
+            res.push_back(arr[i]);
+        }
+        return res;
+    }
+};
+
 // 小根堆
 class Solution {
 public:
-    void maxHeapify(vector<int>& arr, int i, int heapSize) {
+    void minHeapify(vector<int>& arr, int i, int heapSize) {
         int left = i * 2 + 1, right = i * 2 + 2;
         int curMin = i;
 
@@ -27,19 +77,19 @@ public:
         }
         if (curMin != i) {
             swap(arr[curMin], arr[i]);
-            maxHeapify(arr, curMin, heapSize);
+            minHeapify(arr, curMin, heapSize);
         }
     }
 
-    void buildMaxHeap(vector<int>& arr, int heapSize) {
+    void buildMinHeap(vector<int>& arr, int heapSize) {
         for (int i = heapSize / 2; i >= 0; --i) {
-            maxHeapify(arr, i, heapSize);
+            minHeapify(arr, i, heapSize);
         }
     }
 
     vector<int> getLeastNumbers(vector<int>& arr, int k) {
         int heapSize = arr.size();
-        buildMaxHeap(arr, heapSize);
+        buildMinHeap(arr, heapSize);
 
         vector<int> res;
         for (int i = 0; i < k; ++i) {
@@ -48,7 +98,7 @@ public:
             // 当前堆顶就此打入冷宫
             swap(arr[0], arr[heapSize - 1]);
             --heapSize;
-            maxHeapify(arr, 0, heapSize);
+            minHeapify(arr, 0, heapSize);
         }
 
         return res;

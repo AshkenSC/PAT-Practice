@@ -29,26 +29,51 @@ struct Node {
 
 class Solution {
 public:
-    vector<int> exchange(vector<int>& nums) {
-        int front = 0, back = nums.size() - 1;
-        while (front < back) {
-            if (nums[front] % 2 == 1) {
-                ++front;
-                continue;
-            }
-            if (nums[back] % 2 == 0) {
-                --back;
-                continue;
-            }
-            if (nums[front] % 2 == 0 && nums[back] % 2 == 1) {
-                swap(nums[front], nums[back]);
+    void heapify(vector<int>& a, int i, int heapSize) {
+        int left = i * 2 + 1, right = i * 2 + 2;
+        int curMax = i;
+
+        if (left < heapSize && a[curMax] < a[left]) {
+            curMax = left;
+        }
+        if (right < heapSize && a[curMax] < a[right]) {
+            curMax = right;
+        }
+        if (curMax != i) {
+            swap(a[i], a[curMax]);
+            heapify(a, curMax, heapSize);
+        }
+    }
+
+    void buildHeap(vector<int>& a, int heapSize) {
+        for (int i = heapSize / 2; i >= 0; --i) {
+            heapify(a, i, heapSize);
+        }
+    }
+
+    vector<int> getLeastNumbers(vector<int>& arr, int k) {
+        if (arr.size() <= k) {
+            return arr;
+        }
+
+        // 前k个逐渐增大堆，直到堆容量为k
+        // 然后就只比较堆头和arr[i]，如果堆头更大就交换之
+        buildHeap(arr, k);
+        for (int i = k; i < arr.size(); ++i) {
+            if (arr[i] < arr[0]) {
+                swap(arr[i], arr[0]);
+                heapify(arr, 0, k);
             }
         }
 
-        return nums;
+        // 输出前k个
+        vector<int> res;
+        for (int i = 0; i < k; ++i) {
+            res.push_back(arr[i]);
+        }
+        return res;
     }
 };
-
 
 struct TreeNode
 {
@@ -68,10 +93,10 @@ struct ListNode {
 
 int main() {
     Solution sol;
-    vector<int> nums1{4,0,0,0,0,0};
+    vector<int> nums1{0,0,1,2,4,2,2,3,1,4,8};
     vector<int> nums2{1,2,3,4};
     
-    vector<int> res = sol.exchange(nums2);
+    vector<int> res = sol.getLeastNumbers(nums1, 8);
     cout << '1';
 
     return 0;
