@@ -28,32 +28,32 @@ struct Node {
     Node(int _key, int _value): key(_key), value(_value), prev(nullptr), next(nullptr) {}
 };
 
-class Solution {
-private:
-    int getNum(char a, char b) {
-        int numA = a - '0';
-        int numB = b - '0';
-        return numA * 10 + numB;
-    }
+/*
+dp[i][j] （i，j）格能拿到最高价值的礼物
+dp[0][0] = a[0][0]
+dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
+*/
 
+class Solution {
 public:
-    int translateNum(int num) {
-        string s = to_string(num);
-        int n = s.size();
-        vector<int> dp(n + 1);
-        dp[0] = 1;
-        dp[1] = 1;
-        for (int i = 2; i <= n; ++i) {
-            int preTwoDigitsNum = getNum(s[i - 2], s[i - 1]);
-            if (preTwoDigitsNum <= 25) {
-                dp[i] = dp[i - 1] + dp[i - 2];
-            }
-            else {
-                dp[i] = dp[i - 1];
+    int maxValue(vector<vector<int>>& grid) {
+        int row = grid.size();
+        int col = grid[0].size();
+        vector<vector<int>> dp(row, vector<int>(col));
+        
+        for (int i = 0; i < row; ++i) {
+            for (int j = 0; j < col; ++j) {
+                if (i == 0 && j == 0) {
+                    dp[0][0] = grid[0][0];
+                    continue;
+                }
+                int up = i == 0 ? 0 : dp[i - 1][j];
+                int left = j == 0 ? 0 : dp[i][j - 1];
+                dp[i][j] = max(up, left) + grid[i][j];
             }
         }
 
-        return dp[n];
+        return dp[row - 1][col - 1];
     }
 };
 
@@ -74,8 +74,10 @@ struct ListNode {
 };
 
 int main() {
+    // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
-    int n = sol.translateNum(506);
+    vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
+    int n = sol.maxValue(input);
 
     cout << n;
 
