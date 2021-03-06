@@ -7,6 +7,7 @@
 #include <numeric>
 #include <unordered_set>
 #include <stack>
+#include <string>
 using namespace std;
 
 // 0096. Unique Binary Search Trees
@@ -27,45 +28,32 @@ struct Node {
     Node(int _key, int _value): key(_key), value(_value), prev(nullptr), next(nullptr) {}
 };
 
-class MedianFinder {
+class Solution {
 private:
-    // 大根堆存放小数，小根堆存放大数
-    priority_queue<int, vector<int>, greater<int>> large;
-    priority_queue<int> small;
+    int getNum(char a, char b) {
+        int numA = a - '0';
+        int numB = b - '0';
+        return numA * 10 + numB;
+    }
 
 public:
-    /** initialize your data structure here. */
-    MedianFinder() {
+    int translateNum(int num) {
+        string s = to_string(num);
+        int n = s.size();
+        vector<int> dp(n + 1);
+        dp[0] = 1;
+        dp[1] = 1;
+        for (int i = 2; i <= n; ++i) {
+            int preTwoDigitsNum = getNum(s[i - 2], s[i - 1]);
+            if (preTwoDigitsNum <= 25) {
+                dp[i] = dp[i - 1] + dp[i - 2];
+            }
+            else {
+                dp[i] = dp[i - 1];
+            }
+        }
 
-    }
-    
-    void addNum(int num) {
-        // 首先我们约定：small中元素个数大于等于large中元素个数
-        // 因此，如果当前已存数量为偶数，就将num插入small，small经过调整后的队头移入large
-        // 如果当前已存数量为奇数，就将num插入large，large经过调整后的队头移入small
-        if (large.size() == small.size()) {
-            small.emplace(num);
-            int smallTop = small.top();
-            small.pop();
-            large.emplace(smallTop);
-        }
-        else {
-            large.emplace(num);
-            int largeTop = large.top();
-            large.pop();
-            small.emplace(largeTop);
-        }
-    }
-    
-    double findMedian() {
-        double median;
-        if (large.size() == small.size()) {
-            median = (large.top() + small.top()) / 2.0;
-        }
-        else {
-            median = (double)small.top();
-        }
-        return median;
+        return dp[n];
     }
 };
 
@@ -86,15 +74,10 @@ struct ListNode {
 };
 
 int main() {
-    //Solution sol;
-    MedianFinder m;
-    m.addNum(1);
-    m.addNum(2);
-    double a = m.findMedian();
-    m.addNum(3);
-    double b = m.findMedian();
+    Solution sol;
+    int n = sol.translateNum(506);
 
-    cout << '1';
+    cout << n;
 
     return 0;
 }
