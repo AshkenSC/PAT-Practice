@@ -36,24 +36,24 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 
 class Solution {
 public:
-    int maxValue(vector<vector<int>>& grid) {
-        int row = grid.size();
-        int col = grid[0].size();
-        vector<vector<int>> dp(row, vector<int>(col));
-        
-        for (int i = 0; i < row; ++i) {
-            for (int j = 0; j < col; ++j) {
-                if (i == 0 && j == 0) {
-                    dp[0][0] = grid[0][0];
-                    continue;
-                }
-                int up = i == 0 ? 0 : dp[i - 1][j];
-                int left = j == 0 ? 0 : dp[i][j - 1];
-                dp[i][j] = max(up, left) + grid[i][j];
+    int lengthOfLongestSubstring(string s) {
+        int current = 0;
+        int result = 0;
+        int currentLength = 0;
+        unordered_map<char, int> occur;
+
+        for (int i = 0; i < s.size(); ++i) {
+            if (occur.count(s[i]) == 0) {
+                current += 1;
             }
+            else {
+                current = i - occur[s[i]];
+            }
+            occur[s[i]] = i;
+            result = max(current, result);
         }
 
-        return dp[row - 1][col - 1];
+        return result;
     }
 };
 
@@ -77,8 +77,7 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    int n = sol.maxValue(input);
-
+    int n = sol.lengthOfLongestSubstring("abba");
     cout << n;
 
     return 0;
