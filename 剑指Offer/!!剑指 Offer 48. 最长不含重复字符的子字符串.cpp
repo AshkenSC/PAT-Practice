@@ -26,6 +26,7 @@ public:
             else {
                 // 注意这个判断很关键，不能直接current = i - occur[s[i]]
                 // 否则的话，可能在s[i]与上一个重复s[i]之间存在有重复字母的串
+                // 例如：abba！不判断的话，走到第二个a处就会计算成current = 3-0 = 3
                 if (current < i - occur[s[i]]) {
                     current += 1;
                 }
