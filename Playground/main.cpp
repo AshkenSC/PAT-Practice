@@ -34,23 +34,28 @@ dp[0][0] = a[0][0]
 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 */
 
+
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s) {
-        int current = 0;
-        int result = 0;
-        int currentLength = 0;
-        unordered_map<char, int> occur;
+    int nthUglyNumber(int n) {
+        if (n == 1) return 1;
+        int two = 0, three = 0, five = 0;
+        int result;
+        for (int i = 2; i <= n; ++i) {
+            int nextTwo = 2 * (two + 1) + 3 * three + 5 * five;
+            int nextThree = 2 * two + 3 * (three + 1) + 5 * five;
+            int nextFive = 2 * two + 3 * three + 5 * (five + 1);
+            int current = min(nextTwo, nextThree);
+            current = min(current, nextFive);
 
-        for (int i = 0; i < s.size(); ++i) {
-            if (occur.count(s[i]) == 0) {
-                current += 1;
-            }
-            else {
-                current = i - occur[s[i]];
-            }
-            occur[s[i]] = i;
-            result = max(current, result);
+            if (current == nextTwo) 
+                ++two;
+            if (current == nextThree) 
+                ++three;
+            if (current == nextFive) 
+                ++five;
+            
+            result = current;
         }
 
         return result;
@@ -77,7 +82,7 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    int n = sol.lengthOfLongestSubstring("abba");
+    int n = sol.nthUglyNumber(10);
     cout << n;
 
     return 0;
