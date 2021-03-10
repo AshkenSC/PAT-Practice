@@ -37,28 +37,15 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 
 class Solution {
 public:
-    int nthUglyNumber(int n) {
-        if (n == 1) return 1;
-        int two = 0, three = 0, five = 0;
-        int result;
-        for (int i = 2; i <= n; ++i) {
-            int nextTwo = 2 * (two + 1) + 3 * three + 5 * five;
-            int nextThree = 2 * two + 3 * (three + 1) + 5 * five;
-            int nextFive = 2 * two + 3 * three + 5 * (five + 1);
-            int current = min(nextTwo, nextThree);
-            current = min(current, nextFive);
-
-            if (current == nextTwo) 
-                ++two;
-            if (current == nextThree) 
-                ++three;
-            if (current == nextFive) 
-                ++five;
-            
-            result = current;
+    char firstUniqChar(string s) {
+        vector<int> occur(26);
+        for (char c : s) {
+            occur[c - 'a']++;
         }
-
-        return result;
+        for (char c : s) {
+            if (occur[c - 'a']) return c;
+        }
+        return ' ';
     }
 };
 
@@ -82,7 +69,7 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    int n = sol.nthUglyNumber(10);
+    int n = sol.firstUniqChar("loveleetcode");
     cout << n;
 
     return 0;
