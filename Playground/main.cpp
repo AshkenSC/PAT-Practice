@@ -37,17 +37,45 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 
 class Solution {
 public:
-    char firstUniqChar(string s) {
-        vector<int> occur(26);
-        for (char c : s) {
-            occur[c - 'a']++;
+    int search(vector<int>& nums, int target) {
+        int left = 0, right = nums.size();
+        int mid, targetStart, targetEnd;
+
+        while (left < right) {
+            mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                right = mid;
+            }
+            else if (nums[mid] > target) {
+                right = mid;
+            }
+            else if (nums[mid] < target) {
+                left = mid + 1;
+            }
         }
-        for (char c : s) {
-            if (occur[c - 'a']) return c;
+        targetStart = left;
+
+        // left right 不要忘记复位！！！
+        left = 0, right = nums.size();
+        while (left < right) {
+            mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                left = mid + 1;
+            }
+            else if (nums[mid] > target) {
+                right = mid;
+            }
+            else if (nums[mid] < target) {
+                left = mid + 1;
+            } 
         }
-        return ' ';
+        targetEnd = left - 1;
+
+        return targetEnd - targetStart + 1;
     }
 };
+
+
 
 struct TreeNode
 {
@@ -69,7 +97,8 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    int n = sol.firstUniqChar("loveleetcode");
+    vector<int> test({1});
+    int n = sol.search(test, 1);
     cout << n;
 
     return 0;
