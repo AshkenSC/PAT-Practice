@@ -23,12 +23,9 @@ class Solution {
 public:
     vector<int> postorderTraversal(TreeNode* root) {
         vector<int> res;
-        if (root == nullptr) {
-            return res;
-        }
-
         stack<TreeNode*> s;
-        TreeNode *prev = nullptr;
+        TreeNode* prev = nullptr;
+
         while (root != nullptr || s.empty() == false) {
             while (root != nullptr) {
                 s.emplace(root);
@@ -36,8 +33,8 @@ public:
             }
             root = s.top();
             s.pop();
-            if (root->right == prev || root->right == nullptr) {
-                res.emplace_back(root->val);
+            if (prev == root->right || root->right == nullptr) {
+                res.push_back(root->val);
                 prev = root;
                 root = nullptr;
             }
