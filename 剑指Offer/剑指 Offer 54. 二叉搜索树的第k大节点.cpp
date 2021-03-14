@@ -6,6 +6,34 @@
 思路：中序遍历（注意先右后左）
 */
 
+// 迭代法
+class Solution {
+public:
+    int kthLargest(TreeNode* root, int k) {
+        stack<TreeNode*> s;
+        int current = 0;
+
+        while (root != nullptr || s.empty() == false) {
+            while (root != nullptr) {
+                s.emplace(root);
+                root = root->right;
+            }
+            root = s.top();
+            s.pop();
+            current = current + 1;
+            if (current == k) {
+                return root->val;
+            }
+            else {
+                root = root->left;
+            }
+        }
+
+        return 0;
+    }
+};
+
+// 递归法
 class Solution {
 private:
     int current = 0;
