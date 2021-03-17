@@ -14,12 +14,63 @@
 小根堆排序法。维护一个大小为k的小根堆。
 首先在原数组从0到k-1构建一个小根堆。然后从k到数组尾巴，与堆顶比较。一旦比堆顶大，就交换，调整堆。
 最后堆顶就是第k大的数。
+
+思路4：
+快速排序法。参考剑指offer-40。但是没有AC（编译器可以通过，网站无法通过，测试用例[1], 1）
 */
 
 #include <vector>
 #include <iostream>
 using namespace std;
 
+// 快速排序（未通过）
+class Solution {
+private:
+    int res;
+
+    int partition(vector<int>& a, int low, int high) {
+        int i = low, j = high + 1, pivot = a[low];
+
+        while (true) {
+            while (a[++i] > pivot) {
+                // 注意，剑指offer40中，判断条件是==。这里要改为>=
+                if (i >= high) break;
+            }
+            while (a[--j] < pivot) {
+                // 注意，剑指offer40中，判断条件是==。这里要改为<=
+                if (j <= low) break;
+            }
+
+            if (i >= j) break;
+        
+            swap(a[i], a[j]);
+        }
+        swap(a[low], a[j]);
+
+        return j;
+    }
+
+    void partitionArray(vector<int>& a, int low, int high, int k) {
+        int m = partition(a, low, high);
+
+        if (m == k - 1) {
+            res = a[m];
+            return;
+        }
+        else if (k - 1 < m) {
+            partitionArray(a, low, m - 1, k);
+        }
+        else if (k - 1 > m) {
+            partitionArray(a, m + 1, high, k);
+        }
+    }
+
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        partitionArray(nums, 0, nums.size() - 1, k);
+        return res;
+    }
+};
 
 // 小根堆
 class Solution {
