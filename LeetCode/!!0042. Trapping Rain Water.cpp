@@ -13,39 +13,35 @@ https://leetcode-cn.com/problems/trapping-rain-water/solution/xiang-xi-tong-su-d
 class Solution {
 public:
     int trap(vector<int>& height) {
-        // 测试样例中有空列表情况
+        // 考虑空列表情况
         if (height.empty()) {
             return 0;
         }
 
-        int sum = 0;
-
-        // 考察范围排除左右两端，必不可能积水
+        int result = 0;
+        // 遍历数组（排除第一个和最后一个）
         for (int i = 1; i < height.size() - 1; ++i) {
-            // 找到左边最高点
+            // 找左边最大值
             int leftMax = 0;
-            for (int j = i - 1; j >= 0; --j) {
+            for (int j = 0; j < i; ++j) {
                 if (height[j] > leftMax) {
                     leftMax = height[j];
                 }
             }
 
-            // 找到右边最高点
+            // 找右边最大值
             int rightMax = 0;
-            for (int j = i + 1; j < height.size(); ++j) {
+            for (int j = height.size() - 1; j > i; --j) {
                 if (height[j] > rightMax) {
                     rightMax = height[j];
                 }
             }
 
-            // 计算当前位置会有多少积水
-            int minLR = min(leftMax, rightMax);
-            // 如果当前位置的高度大于两边最高点的较小者，则不会积水
-            if (minLR > height[i]) {
-                sum += minLR - height[i];
-            }
+            // 计算当前位置积水
+            // 注意当前位置必须比左右两侧最高位的较小者还要矮才有积水
+            result += max(min(leftMax, rightMax) - height[i], 0);
         }
 
-        return sum;
+        return result;
     }
 };
