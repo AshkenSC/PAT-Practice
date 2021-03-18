@@ -10,9 +10,51 @@
 相比思路1，只需要从左向右，再从右向左遍历两次，再从1到n-2遍历一次，时间复杂度为O(n)。
 而思路1对每个位置，都需要从左向右，再从右向左检查，因此时间复杂度是O(n^2)。
 
+思路3：双指针。相比思路2，进一步将空间复杂度降低到O(1)。
+参考官方解答下的热门评论。
+
+left_max：左边的最大值，它是从左往右遍历找到的
+right_max：右边的最大值，它是从右往左遍历找到的
+left：从左往右处理的当前下标
+right：从右往左处理的当前下标
+
+定理一：在某个位置i处，它能存的水，取决于它左右两边的最大值中较小的一个。
+定理二：当我们从左往右处理到left下标时，左边的最大值left_max对它而言是可信的，但right_max对它而言是不可信的。（见下图，由于中间状况未知，对于left下标而言，right_max未必就是它右边最大的值）
+定理三：当我们从右往左处理到right下标时，右边的最大值right_max对它而言是可信的，但left_max对它而言是不可信的。
+
+对于位置left而言，它左边最大值一定是left_max，右边最大值“大于等于”right_max，
+这时候，如果left_max<right_max成立，那么它就知道自己能存多少水了。
+无论右边将来会不会出现更大的right_max，都不影响这个结果。 
+所以当left_max<right_max时，我们就希望去处理left下标，反之，我们希望去处理right下标。
+
 参考：
 https://leetcode-cn.com/problems/trapping-rain-water/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-8/
 */
+
+// 思路3，双指针
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        int left = 0, right = height.size() - 1;
+        int leftMax = 0, rightMax = 0;
+        int result = 0;
+
+        while (left <= right) {
+            if (leftMax < rightMax) {
+                result += max(0, leftMax - height[left]);
+                leftMax = max(leftMax, height[left]);
+                left++;
+            }
+            else {
+                result += max(0, rightMax - height[right]);
+                rightMax = max(rightMax, height[right]);
+                right--;
+            }
+        }
+
+        return result;
+    }
+};
 
 // 思路2，用两个数组记录每个位置左边和右边的最高位置
 class Solution {
