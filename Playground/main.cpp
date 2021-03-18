@@ -35,51 +35,41 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 */
 
 class Solution {
-private:
-    int res;
-
-    int partition(vector<int>& a, int low, int high) {
-        int i = low, j = high + 1, pivot = a[low];
-
-        while (true) {
-            while (a[++i] > pivot) {
-                if (i >= high) break;
-            }
-            while (a[--j] < pivot) {
-                if (j <= low) break;
-            }
-
-            if (i >= j) break;
-        
-            swap(a[i], a[j]);
-        }
-        swap(a[low], a[j]);
-
-        return j;
-    }
-
-    void partitionArray(vector<int>& a, int low, int high, int k) {
-        int m = partition(a, low, high);
-
-        if (m == k - 1) {
-            res = a[m];
-            return;
-        }
-        else if (k - 1 < m) {
-            partitionArray(a, low, m - 1, k);
-        }
-        else if (k - 1 > m) {
-            partitionArray(a, m + 1, high, k);
-        }
-    }
-
-
 public:
-    int findKthLargest(vector<int>& nums, int k) {
-        partitionArray(nums, 0, nums.size() - 1, k);
-        return res;
+    int trap(vector<int>& height) {
+        // 考虑空列表情况
+        if (height.empty()) {
+            return 0;
+        }
+
+        int result = 0;
+        // 用两个数组记录当前位置左边和右边最高值
+        int n = height.size();
+        vector<int> leftMax(n);
+        vector<int> rightMax(n);
+        // 求leftMax数组（第0个位置左边最高值为0）
+        int tempMax = height[0];
+        for (int i = 1; i < n; ++i) {
+            leftMax[i] = tempMax;
+            tempMax = max(tempMax, height[i]);
+        }
+        // 求rightMax（最后一个位置右边最高值为0）
+        tempMax = height[n - 1];
+        for (int i = n - 2; i >= 0; --i) {
+            rightMax[i] = tempMax;
+            tempMax = max(tempMax, height[i]);
+        }
+
+        // 遍历求结果
+        for (int i = 1; i < n - 1; ++i) {
+            int water = height[i] - min(leftMax[i], rightMax[i]);
+            result += max(water, 0);
+        }
+
+        return result;
     }
 };
+
 
 struct TreeNode
 {
@@ -101,8 +91,8 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    vector<int> test({1});
-    int n = sol.findKthLargest(test, 1);
+    vector<int> test({0,1,0,2,1,0,1,3,2,1,2,1});
+    int n = sol.trap(test);
     cout << n;
 
     return 0;
