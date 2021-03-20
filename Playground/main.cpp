@@ -36,37 +36,20 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 
 class Solution {
 public:
-    int trap(vector<int>& height) {
-        // 考虑空列表情况
-        if (height.empty()) {
-            return 0;
+    int maxProduct(vector<int>& nums) {
+        int tempMax = 1, tempMin = 1;
+        int res = nums[0];
+
+        for (auto num : nums) {
+            if (num < 0) {
+                swap(tempMax, tempMin);
+            }
+            tempMax = max(num, tempMax * num);
+            tempMin = min(num, tempMin * num);
+            res = max(res, tempMax);
         }
 
-        int result = 0;
-        // 用两个数组记录当前位置左边和右边最高值
-        int n = height.size();
-        vector<int> leftMax(n);
-        vector<int> rightMax(n);
-        // 求leftMax数组（第0个位置左边最高值为0）
-        int tempMax = height[0];
-        for (int i = 1; i < n; ++i) {
-            leftMax[i] = tempMax;
-            tempMax = max(tempMax, height[i]);
-        }
-        // 求rightMax（最后一个位置右边最高值为0）
-        tempMax = height[n - 1];
-        for (int i = n - 2; i >= 0; --i) {
-            rightMax[i] = tempMax;
-            tempMax = max(tempMax, height[i]);
-        }
-
-        // 遍历求结果
-        for (int i = 1; i < n - 1; ++i) {
-            int water = height[i] - min(leftMax[i], rightMax[i]);
-            result += max(water, 0);
-        }
-
-        return result;
+        return res;
     }
 };
 
@@ -91,8 +74,8 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    vector<int> test({0,1,0,2,1,0,1,3,2,1,2,1});
-    int n = sol.trap(test);
+    vector<int> test({3,4,0,-1,3});
+    int n = sol.maxProduct(test);
     cout << n;
 
     return 0;
