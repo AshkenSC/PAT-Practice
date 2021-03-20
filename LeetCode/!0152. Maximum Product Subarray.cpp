@@ -15,20 +15,20 @@ using namespace std;
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
-        int iMax = 1, iMin = 1;
+        int currentMax = 1, currentMin = 1;
         int res = nums[0];
         for (int num : nums) {
             // 这一句是核心，一旦遇到负数，则大小调换，攻守之势易也
             if (num < 0) {
-                swap(iMax, iMin);
+                swap(currentMax, currentMin);
             }
-            // iMax*num：当前数字继续和之前的连续子数组乘积相乘得到的积
+            // currentMax*num：当前数字继续和之前的连续子数组乘积相乘得到的积
             // num：当前数字本身
-            // 如果num比连乘更大，则iMax更新为num单独一个数，另起炉灶。
-            // iMin*sum同理。
-            iMax = max(num, iMax * num);
-            iMin = min(num, iMin * num);
-            res = max(res, iMax);
+            // 如果num比连乘更大，则currentMax更新为num单独一个数，另起炉灶。
+            // currentMin*sum同理。
+            currentMax = max(num, currentMax * num);
+            currentMin = min(num, currentMin * num);
+            res = max(res, currentMax);
         }
         return res;
     }
