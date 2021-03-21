@@ -35,24 +35,43 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 */
 
 class Solution {
-public:
-    int maxProduct(vector<int>& nums) {
-        int tempMax = 1, tempMin = 1;
-        int res = nums[0];
+private:
+    vector<vector<int>> res;
 
-        for (auto num : nums) {
-            if (num < 0) {
-                swap(tempMax, tempMin);
+    void addSequence(int start, int end) {
+        vector<int> newSeq;
+
+        for (int i = start + 1; i <= end; ++i) {
+            newSeq.push_back(i);
+        }
+
+        res.push_back(newSeq);
+    }
+
+public:
+    vector<vector<int>> findContinuousSequence(int target) {
+        int deductSum = 0, addSum = 1;
+        int i = 0, j = 1;
+
+        while (i < j && j < target) {
+            if (addSum - deductSum == target) {
+                addSequence(i, j);
+                ++j;
+                addSum = addSum + j;
             }
-            tempMax = max(num, tempMax * num);
-            tempMin = min(num, tempMin * num);
-            res = max(res, tempMax);
+            else if (addSum - deductSum > target) {
+                ++i;
+                deductSum = deductSum + i;
+            }
+            else if (addSum - deductSum < target) {
+                ++j;
+                addSum = addSum + j;
+            }
         }
 
         return res;
     }
 };
-
 
 struct TreeNode
 {
@@ -75,8 +94,8 @@ int main() {
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
     vector<int> test({3,4,0,-1,3});
-    int n = sol.maxProduct(test);
-    cout << n;
+    vector<vector<int>> n = sol.findContinuousSequence(9);
+    cout << 'a';
 
     return 0;
 }

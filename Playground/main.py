@@ -51,24 +51,7 @@ print(data)
 '''
 
 
-# 读取整行数据
-data = input()
-n = int(data.split()[0])
-edges = json.loads(data.split()[1])
-result = 0
 
-# 保存已经能正确到达0的城市
-accessible_cities = {0}  
-for (left, right) in edges:
-    # right是已经能到0的城市，那么left -> right后就可到0
-    if right in accessible_cities:  
-        accessible_cities.add(left)
-    # right目前不可到城市0，left可到，那就让right -> left后到0，结果+1
-    elif left in accessible_cities: 
-        result += 1
-        accessible_cities.add(right)
-
-print(str(result))
 
 '''
 class TreeNode:
