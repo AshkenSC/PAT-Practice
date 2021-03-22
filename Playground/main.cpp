@@ -35,41 +35,49 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 */
 
 class Solution {
-private:
-    vector<vector<int>> res;
-
-    void addSequence(int start, int end) {
-        vector<int> newSeq;
-
-        for (int i = start + 1; i <= end; ++i) {
-            newSeq.push_back(i);
-        }
-
-        res.push_back(newSeq);
-    }
-
 public:
-    vector<vector<int>> findContinuousSequence(int target) {
-        int deductSum = 0, addSum = 1;
-        int i = 0, j = 1;
+    string reverseWords(string s) {
+        if (s == "") {
+            return s;
+        }
 
-        while (i < j && j < target) {
-            if (addSum - deductSum == target) {
-                addSequence(i, j);
-                ++j;
-                addSum = addSum + j;
+        bool isRightBlank = true;
+        int count = 0;
+        int insertIndex = 0;
+        int end = s.size() - 1;;
+
+        int n = s.size();
+        for (int i = 0; i < n; ++i) {
+            // 右边是空格
+            if (isRightBlank && s[end] == ' ') {
+                s.erase(end--, 1);
+                isRightBlank = true;
             }
-            else if (addSum - deductSum > target) {
-                ++i;
-                deductSum = deductSum + i;
+            // 应该保留的空格
+            else if (!isRightBlank && s[end] == ' ') {
+                insertIndex = count;
+                s.insert(insertIndex++, 1, s[end++]);
+                s.erase(end--, 1);
+                isRightBlank = true;
+                ++count;
             }
-            else if (addSum - deductSum < target) {
-                ++j;
-                addSum = addSum + j;
+            // 普通字符
+            else {
+                s.insert(insertIndex, 1, s[end++]);
+                s.erase(end--, 1);
+                isRightBlank = false;
+                ++count;
             }
         }
 
-        return res;
+        if (s == "") {
+            return s;
+        }
+        if (s[s.size() - 1] == ' ') {
+            s.erase(s.size() - 1, 1);
+        }
+
+        return s;
     }
 };
 
@@ -94,8 +102,8 @@ int main() {
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
     vector<int> test({3,4,0,-1,3});
-    vector<vector<int>> n = sol.findContinuousSequence(9);
-    cout << 'a';
+    string n = sol.reverseWords("  hello world! ");
+    cout << n;
 
     return 0;
 }

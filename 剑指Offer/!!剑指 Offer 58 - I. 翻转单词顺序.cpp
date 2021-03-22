@@ -31,6 +31,8 @@ public:
             }
             // 遇到单词左边空格
             else if (!rIsBlank && s[end] == ' ') {
+                // 如果不懂为什么在这里insertIndex = count
+                // 自己单步跟踪一下就知道了
                 insertIndex = count;
                 // 一边在头部插入，一边在尾部删除
                 // 同时确保end一直指向整个字符串的尾部
