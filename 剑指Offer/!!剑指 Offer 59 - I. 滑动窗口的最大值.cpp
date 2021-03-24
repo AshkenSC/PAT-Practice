@@ -7,6 +7,11 @@
 用双向队列模拟实现了滑动窗口的过程，同时将这个队列维护成了一个单调队列
 
 参考：
+
+图解参考，更容易理解代码：
+https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/solution/mian-shi-ti-59-i-hua-dong-chuang-kou-de-zui-da-1-6/
+
+代码参考：
 https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/solution/hua-dong-chuang-kou-de-zui-da-zhi-by-gnu-diy6/
 */
 
@@ -21,7 +26,8 @@ public:
         }
 
         for (int i = 0; i < len; ++i) {
-            // 队列最小值比当前值还要小，弹出
+            // 队列最小值比当前遍历到的值还要小，弹出
+            // 因为他们不可能是窗口中的最大值了
             while (!dp.empty() && nums[i] >= nums[dp.back()]) {
                 dp.pop_back();
             }
