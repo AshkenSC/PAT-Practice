@@ -22,6 +22,7 @@ public:
                     tmp[j + k] += dp[j] / 6.0;
                 }
             }
+            // 注意，尽管dp, tmp长度不同，依然可以直接赋值。
             dp = tmp;
         }
         return dp;
