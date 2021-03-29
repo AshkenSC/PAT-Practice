@@ -5,8 +5,30 @@
 2～10为数字本身，A为1，J为11，Q为12，K为13，而大、小王为 0 ，可以看成任意数字。A 不能视为 14。
 
 思路1：首先非有0和无0两种情况。对有0情况，看0能否填补非连续相邻两数之间的空隙。具体参看代码中的注释。
+思路2：对非0数，看是否满足max - min < 5
 '''
 
+# 思路2
+class Solution:
+    def isStraight(self, nums: List[int]) -> bool:
+        repeat = set()
+        max_num = 0
+        min_num = 14
+
+        for num in nums:
+            if num == 0:
+                continue
+            else:
+                if num in repeat:
+                    return False
+                repeat.add(num)
+                max_num = max(max_num, num)
+                min_num = min(min_num, num)
+        
+        return max_num - min_num < 5
+
+
+# 思路1
 class Solution:
     def isStraight(self, nums: List[int]) -> bool:
         # 分为两种大情况，有0和无0
