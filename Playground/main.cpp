@@ -36,48 +36,18 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 
 class Solution {
 public:
-    string reverseWords(string s) {
-        if (s == "") {
-            return s;
-        }
-
-        bool isRightBlank = true;
-        int count = 0;
-        int insertIndex = 0;
-        int end = s.size() - 1;;
-
-        int n = s.size();
-        for (int i = 0; i < n; ++i) {
-            // 右边是空格
-            if (isRightBlank && s[end] == ' ') {
-                s.erase(end--, 1);
-                isRightBlank = true;
+    vector<double> dicesProbability(int n) {
+        vector<double> dp(6, 1.0 / 6.0);
+        for (int i = 2; i <= n; i++) {
+            vector<double> tmp(5 * i + 1, 0);
+            for (int j = 0; j < dp.size(); j++) {
+                for (int k = 0; k < 6; k++) {
+                    tmp[j + k] += dp[j] / 6.0;
+                }
             }
-            // 应该保留的空格
-            else if (!isRightBlank && s[end] == ' ') {
-                insertIndex = count;
-                s.insert(insertIndex++, 1, s[end++]);
-                s.erase(end--, 1);
-                isRightBlank = true;
-                ++count;
-            }
-            // 普通字符
-            else {
-                s.insert(insertIndex, 1, s[end++]);
-                s.erase(end--, 1);
-                isRightBlank = false;
-                ++count;
-            }
+            dp = tmp;
         }
-
-        if (s == "") {
-            return s;
-        }
-        if (s[s.size() - 1] == ' ') {
-            s.erase(s.size() - 1, 1);
-        }
-
-        return s;
+        return dp;
     }
 };
 
@@ -102,8 +72,8 @@ int main() {
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
     vector<int> test({3,4,0,-1,3});
-    string n = sol.reverseWords("  hello world! ");
-    cout << n;
+    vector<double> res = sol.dicesProbability(3);
+    cout << '3';
 
     return 0;
 }
