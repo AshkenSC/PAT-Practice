@@ -8,6 +8,9 @@
 https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/solution/cji-hu-shuang-bai-de-shuang-xiang-bian-l-fuuk/
 */
 
+#include <vector>
+using namespace std;
+
 class Solution {
 public:
     vector<int> constructArr(vector<int>& a) {
@@ -19,7 +22,8 @@ public:
             b[i] = b[i - 1] * a[i - 1];
         }
 
-        int product = 1;  // 记录矩阵上半部分每一行的乘积，从下往上
+        // 记录矩阵上半部分每一行的乘积，从下往上
+        int product = 1;
         // 逐行计算每一行对角线两侧乘积
         for (int i = n - 2; i >= 0; --i) {
             product = product * a[i + 1];
