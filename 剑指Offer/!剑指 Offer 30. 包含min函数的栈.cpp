@@ -13,34 +13,36 @@ https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/solution/mian-s
 */
 
 class MinStack {
+private:
+    stack<int> dataStack;
+    stack<int> minStack;
 public:
-    stack<int> a, b;
-
     /** initialize your data structure here. */
     MinStack() {
+
     }
     
     void push(int x) {
-        a.emplace(x);
-        if (b.empty() || b.top() >= x) {
-            b.emplace(x);
+        dataStack.emplace(x);
+        if (minStack.empty() || x <= minStack.top()) {
+            minStack.emplace(x);
         }
     }
     
     void pop() {
-        int temp = a.top();
-        a.pop();
-        if (temp == b.top()) {
-            b.pop();
+        int currentTop = dataStack.top();
+        dataStack.pop();
+        if (minStack.top() == currentTop) {
+            minStack.pop();
         }
     }
     
     int top() {
-        return a.top();
+        return dataStack.top();
     }
     
     int min() {
-        return b.top();
+        return minStack.top();
     }
 };
 
