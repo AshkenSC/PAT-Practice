@@ -3,10 +3,32 @@
 
 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
 
-思路：先逆置，再输出。
+思路1：先逆置，再输出。
 
+思路2：借助辅助栈，先进后出进行逆置。
 */
 
+// 思路2
+class Solution {
+public:
+    vector<int> reversePrint(ListNode* head) {
+        stack<int> s;
+        vector<int> res;
+
+        while (head != nullptr) {
+            s.emplace(head->val);
+            head = head->next;
+        }
+
+        while (!s.empty()) {
+            res.push_back(s.top());
+            s.pop();
+        }
+        return res;
+    }
+};
+
+// 思路1
 class Solution {
 public:
     vector<int> reversePrint(ListNode* head) {
