@@ -7,36 +7,41 @@
 
 */
 
-class Solution {
-public:
-    unordered_map<int, int> index;
+// 三刷
+/*
+先序的第一个点就是根节点
+在中序中，根节点左右分别是左子树和右子树
+可以考虑先构建一个映射，这样可以方便地在中序遍历中找到每个节点的位置
+*/
 
-    TreeNode* build(vector<int>& preorder, vector<int>& inorder, 
-                    int pre_start, int pre_end, int in_start, int in_end) {
-        // 递归的终点
-        if (pre_start > pre_end) {
+class Solution {
+private:
+    map<int, int> nodeIndex;
+public:
+    TreeNode* build(vector<int>& preorder, vector<int>& inorder, int preorderLeft, int preorderRight,
+                    int inorderLeft, int inorderRight) {
+        // 递归的尽头，返回空节点
+        if (preorderLeft > preorderRight) {
             return nullptr;
         }
-        // 找到当前节点在前序和中序数组的位置
-        int pre_pos = pre_start;
-        int in_pos = index[preorder[pre_pos]];
-        // 建立新节点
-        TreeNode* node = new TreeNode(preorder[pre_pos]);
-        // 递归构建节点的左右子树
-        int leftSize = in_pos - in_start;
-        node->left = build(preorder, inorder, pre_start + 1, pre_start + leftSize, in_start, in_pos - 1);
-        node->right = build(preorder, inorder, pre_start + leftSize + 1, pre_end, in_pos + 1, in_end);
-        return node;
+
+        TreeNode* root = new TreeNode(preorder[preorderLeft]);
+        int inOrderPos = nodeIndex[preorder[preorderLeft]];
+        // 不要错写成inOrderPos - preOrderLeft ！！
+        int leftTreeSize = inOrderPos - inorderLeft;
+        root->left = build(preorder, inorder, preorderLeft + 1, preorderLeft + leftTreeSize, inorderLeft, inOrderPos - 1);
+        root->right = build(preorder, inorder, preorderLeft + leftTreeSize + 1, preorderRight, inOrderPos + 1, inorderRight);
+
+        return root;
     }
 
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        // 构建一个根据前序遍历中节点值，找到其在中序遍历数组位置的字典
-        int n = preorder.size();
-        for (int i = 0; i < n; ++i) {
-            index[inorder[i]] = i; 
+        // 构建映射，便于在中序数组中找到节点位置
+        for (int i = 0; i < inorder.size(); ++i) {
+            nodeIndex[inorder[i]] = i;
         }
 
-        return build(preorder, inorder, 0, n - 1, 0, n - 1);
+        return build(preorder, inorder, 0, preorder.size() - 1, 0, inorder.size() - 1);
     }
 };
 
