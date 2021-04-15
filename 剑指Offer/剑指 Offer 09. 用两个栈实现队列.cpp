@@ -8,13 +8,15 @@
 */
 
 // 解法2：参考官方解答下面的评论。
+// 一个栈只负责进入，一个栈只负责输出。
+// 仅当输出栈为空时，才把输入栈所有内容放入输出栈。
 class CQueue {
 private:
     stack<int> s1;
     stack<int> s2;
-
 public:
     CQueue() {
+
     }
     
     void appendTail(int value) {
@@ -22,25 +24,26 @@ public:
     }
     
     int deleteHead() {
-       if (s2.empty() == false) {
-           int headValue = s2.top();
-           s2.pop();
-           return headValue;
-       }
-       else {
-           while (s1.empty() == false) {
-               s2.emplace(s1.top());
-               s1.pop();
-           }
-           if (s2.empty() == false) {
-                int headValue = s2.top();
+        if (!s2.empty()) {
+            int returnValue = s2.top();
+            s2.pop();
+            return returnValue;
+        }
+        else {
+            while (!s1.empty()) {
+                int temp = s1.top();
+                s1.pop();
+                s2.emplace(temp);
+            }
+            if (!s2.empty()) {
+                int returnValue = s2.top();
                 s2.pop();
-                return headValue;
-           }
-           else {
+                return returnValue;
+            }
+            else {
                 return -1;
-           }
-       }
+            }
+        }
     }
 };
 
