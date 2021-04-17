@@ -8,64 +8,67 @@
 */
 
 class Solution {
-public:
+private:
+    string currentWord;
     bool doExist = false;
 
-    void backtrack(vector<vector<char>>& board, const string& word, string curStr, int row, int col) {
-        // 如果已经存在，或者刚刚判定出已存在
-        if (word == curStr || doExist) {
+public:
+    void search(vector<vector<char>>& board, const string& word, int row, int col) {
+        if (currentWord == word || doExist) {
             doExist = true;
             return;
         }
 
-        // 如果当前新字符不匹配，返回
-        int curLen = curStr.size();
-        if (curLen > 0 && curStr[curLen - 1] != word[curLen - 1]) {
+        // 如果当前字符不匹配，就返回
+        int curLen = currentWord.size();
+        if (currentWord.size() > 0 && currentWord[curLen - 1] != word[curLen - 1]) {
             return;
         }
-        // 如果匹配，则继续
+        // 如果当前字符匹配，就继续深入探索
         else {
-            // 修改当前字符并备份
-            char curChar = board[row][col];
+            // 使用当前字符，就修改为‘0’，避免重复使用
+            char currentChar = board[row][col];
             board[row][col] = '0';
-            curStr += curChar;
+            currentWord += currentChar;
 
-            // 开始上下左右探索
+            // 开始上下左右求索
             if (row > 0) {
-                backtrack(board, word, curStr, row - 1, col);
+                search(board, word, row - 1, col);
             }
-            if (row != board.size() - 1) {
-                backtrack(board, word, curStr, row + 1, col);
+            if (row < board.size() - 1) {
+                search(board, word, row + 1, col);
             }
-            if (col != 0) {
-                backtrack(board, word, curStr, row, col - 1);
+            if (col > 0) {
+                search(board, word, row, col - 1);
             }
-            if (col != board[0].size() - 1) {
-                backtrack(board, word, curStr, row, col + 1);
+            if (col < board[0].size() - 1) {
+                search(board, word, row, col + 1);
             }
 
             // 回溯
-            board[row][col] = curChar;
-            curStr.pop_back();
+            currentWord.pop_back();
+            board[row][col] = currentChar;
         }
     }
 
     bool exist(vector<vector<char>>& board, string word) {
+        // 如果是单字符词
         if (board.size() == 1 && board[0].size() == 1 && word.size() == 1) {
             if (board[0][0] == word[0]) {
                 return true;
             }
         }
-        
+
         for (int i = 0; i < board.size(); ++i) {
             for (int j = 0; j < board[0].size(); ++j) {
                 if (doExist) {
                     break;
                 }
-                backtrack(board, word, "", i, j);
+                search(board, word, i, j);
             }
         }
 
         return doExist;
     }
 };
+
