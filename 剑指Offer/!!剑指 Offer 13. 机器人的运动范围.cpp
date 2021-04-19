@@ -13,46 +13,47 @@
 https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/solution/jian-zhi-offerer-shua-javadfs-bfs-tu-jie-py05/
 */
 
+
 class Solution {
+private:
+    int getDigitSum(const int& num) {
+        int sum = 0;
+        string numStr = to_string(num);
+        for (char c : numStr) {
+            sum += c - '0';
+        }
+        return sum;
+    }
+
 public:
     int movingCount(int m, int n, int k) {
         int res = 0;
-
-        // 记录访问过的路径
-        vector<vector<bool>> visited(m, vector<bool>(n, false));
-
-        // 创建一个队列,用于BFS
+        // 创建visited数组记录是否走过
+        vector<vector<bool>> isVisited(m, vector<bool>(n, false));
+        // 创建队列用于BFS
         queue<pair<int, int>> q;
+        // 将起点入队
         q.emplace(pair<int, int>(0, 0));
-        while (q.empty() == false) {
-            // 队头出列
-            pair<int, int> current = q.front();
-            q.pop();
-            int x = current.first, y = current.second;
 
-            // 检查队头是否合法，若非法则跳过
-            if (x >= m || y >= n || digitSum(x) + digitSum(y) > k || visited[x][y]) {
+        while (!q.empty()) {
+            // 队头出队
+            pair<int, int> head = q.front();
+            int row = head.first, col = head.second;
+            q.pop();
+
+            // 检查队头是否合法，如果非法则跳过
+            if (row >= m || col >= n || getDigitSum(row) + getDigitSum(col) > k || isVisited[row][col]) {
                 continue;
             }
 
-            // 若合法，则增加计数，记录访问，并向右向下做BFS
+            // 如果队头合法，则入队其右边和下边格子，并增加计数
             ++res;
-            visited[x][y] = true;
-            // 向下走
-            q.emplace(pair<int, int>(x + 1, y));
-            // 向右走
-            q.emplace(pair<int, int>(x, y + 1));
+            isVisited[row][col] = true;
+            q.emplace(pair<int, int>(row + 1, col));
+            q.emplace(pair<int, int>(row, col + 1));
         }
 
         return res;
     }
-
-    int digitSum(int num) {
-        int sum = 0;
-        while (num != 0) {
-            sum += num % 10;
-            num = num / 10;
-        }
-        return sum;
-    }
 };
+
