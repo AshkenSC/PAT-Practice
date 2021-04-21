@@ -18,9 +18,7 @@ public:
 
         for (int i = 2; i <= n; ++i) {
             for (int j = 1; j < i; ++j) {
-                // 注意这里是求dp[i], j * (i - j), j * dp[i - j]三者最大值
-                // 别忘了带上dp[i]，因为在内层循环中，要多次计算出当前j值下的dp[i]，要选出其中最大值
-                dp[i] = max(j * (i - j), dp[i]);
+                dp[i] = max(dp[i], j * (i - j));
                 dp[i] = max(dp[i], j * dp[i - j]);
             }
         }
