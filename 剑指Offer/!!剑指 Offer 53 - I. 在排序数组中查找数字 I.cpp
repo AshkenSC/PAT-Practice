@@ -50,3 +50,4 @@ public:
         return targetEnd - targetStart + 1;
     }
 };
+
