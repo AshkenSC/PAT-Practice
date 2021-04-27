@@ -3,10 +3,10 @@
 
 统计一个数字在排序数组中出现的次数。
 
-二分查找经典题！参考
+二分查找经典题！参考：
 https://www.cnblogs.com/kyoner/p/11080078.html
 
-一开始，写的是right = nums.size() - 1, left < right
+一开始，写的是right = nums.size() - 1, left < right，
 这种写法会导致测试例子[1]中，left会缩到-1。这样不对。
 */
 
