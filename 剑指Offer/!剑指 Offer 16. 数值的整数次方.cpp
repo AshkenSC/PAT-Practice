@@ -3,7 +3,7 @@
 
 实现函数double Power(double base, int exponent)，求base的exponent次方。不得使用库函数，同时不需要考虑大数问题。
 
-思路：快速幂。注意处理底数为0，或者指数为负数情况
+思路：快速幂。注意处理底数为0，或者指数为负数情况。
 
 参考：
 https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/solution/mian-shi-ti-16-shu-zhi-de-zheng-shu-ci-fang-kuai-s/
