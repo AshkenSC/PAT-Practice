@@ -10,7 +10,6 @@ dp[0] = 0, dp[1] = a[0]
 dp[i] = dp[i - 1] < 0 ? a[i] : dp[i - 1] + a[i - 1]
 
 做过的还不会！！！
-
 */
 
 class Solution {
