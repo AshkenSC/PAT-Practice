@@ -4,7 +4,8 @@
 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历结果。
 如果是则返回 true，否则返回 false。假设输入的数组的任意两个数字都互不相同。
 
-思路：分治递归，关键点是如何逐层划分子数组。
+思路：
+分治递归，关键点是如何逐层划分子数组。
 
 参考：
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/solution/mian-shi-ti-33-er-cha-sou-suo-shu-de-hou-xu-bian-6/
