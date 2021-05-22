@@ -5,7 +5,8 @@
 搞懂了为什么绳子尽可能取3。搞懂了贪心算法。
 动态规划不能使用了，因为会超出范围。
 
-参考：先参考第一个链接搞懂了为什么取3能得最大值；再参考第二个写的贪心。
+参考：
+先参考第一个链接搞懂了为什么取3能得最大值；再参考第二个写的贪心。
 
 https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/solution/mian-shi-ti-14-ii-jian-sheng-zi-iitan-xin-er-fen-f/
 
