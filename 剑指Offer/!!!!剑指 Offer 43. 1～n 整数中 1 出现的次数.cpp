@@ -6,6 +6,7 @@
 
 思路：
 找规律问题，自己真想不出来。
+
 参考：
 https://leetcode-cn.com/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/solution/javadi-gui-by-xujunyi/
 */
