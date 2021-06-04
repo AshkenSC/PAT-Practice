@@ -7,7 +7,6 @@
 用双向队列模拟实现了滑动窗口的过程，同时将这个队列维护成了一个单调队列
 
 参考：
-
 图解参考，更容易理解代码：
 https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/solution/mian-shi-ti-59-i-hua-dong-chuang-kou-de-zui-da-1-6/
 
