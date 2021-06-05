@@ -5,8 +5,7 @@
 每次从这个圆圈里删除第m个数字（删除后从下一个数字开始计数）。
 求出这个圆圈里剩下的最后一个数字。
 
-思路：
-参考解答：
+思路：参考解答
 https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/solution/javajie-jue-yue-se-fu-huan-wen-ti-gao-su-ni-wei-sh/
 */
 
