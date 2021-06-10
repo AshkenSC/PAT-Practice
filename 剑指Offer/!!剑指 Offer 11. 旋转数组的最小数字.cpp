@@ -5,7 +5,7 @@
 输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。
 
 思路：
-二分法，关键难点是理解，当右端点==中点的值时，为何可以right--来缩小范围。
+二分法，关键难点是理解，当右端点等于中点的值时，为何可以right--来缩小范围。
 
 参考：
 https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/mian-shi-ti-11-xuan-zhuan-shu-zu-de-zui-xiao-shu-3/
