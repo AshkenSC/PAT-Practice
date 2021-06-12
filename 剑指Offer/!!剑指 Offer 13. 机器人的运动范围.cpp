@@ -8,7 +8,7 @@
 但它不能进入方格 [35, 38]，因为3+5+3+8=19。请问该机器人能够到达多少个格子？
 
 思路：
-BFS。关键是要知道，虽然说走四个方向，但实际只需要考虑向右和向下。
+BFS。关键是要知道，虽然是走四个方向，但实际只需要考虑向右和向下。
 
 参考：
 https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/solution/jian-zhi-offerer-shua-javadfs-bfs-tu-jie-py05/
