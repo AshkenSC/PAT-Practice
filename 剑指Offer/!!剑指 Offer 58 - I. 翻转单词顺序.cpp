@@ -5,7 +5,7 @@
 为简单起见，标点符号和普通字母一样处理。例如输入字符串"I am a student. "，则输出"student. a am I"。
 
 思路：
-想到原地翻转比较难。
+要想到原地翻转比较难。
 
 参考
 https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/solution/151-fan-zhuan-zi-fu-chuan-li-de-dan-ci-y-hn6y/
