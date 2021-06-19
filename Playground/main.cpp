@@ -37,28 +37,26 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 
 class Solution {
 public:
-    int search(vector<int>& nums, int target) {
+    int searchInsert(vector<int>& nums, int target) {
         int left = 0, right = nums.size();
         int mid;
+
         while (left < right) {
             mid = left + (right - left) / 2;
             if (nums[mid] == target) {
                 left = mid + 1;
             }
-            else if (nums[mid] < target) {
-                left = mid + 1;
-            }
             else if (nums[mid] > target) {
                 right = mid;
             }
+            else if (nums[mid] < target) {
+                left = mid + 1;
+            }
         }
-        if (left - 1 >= 0 && nums[left - 1] == target)
-            return left - 1;
-        else
-            return -1;
+
+        return left;
     }
 };
-
 
 struct TreeNode
 {
@@ -80,9 +78,9 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    vector<int> test({5});
+    vector<int> test({1, 3, 5, 6});
     
-    int res = sol.search(test, 5);
+    int res = sol.searchInsert(test, 4);
     cout << res;
 
     return 0;
