@@ -36,53 +36,26 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 */
 
 class Solution {
-private:
-    set<char> validChar{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-'};
 public:
-    int strToInt(string str) {
-        long long res = 0;
-        int i = 0;
-        bool isNegative = false;
-
-        // 字符串为空
-        if (str.size() == 0) {
-            return res;
-        }
-        // 丢弃空字符
-        for (; str[i] == ' '; ++i);
-
-        // 第一个非空格字符不是一个有效整数字符
-        // 字符串仅包含空白字符时
-        // 则你的函数不需要进行转换
-        if (!(str[i] == '+' || str[i] == '-' || (str[i] >= '0' && str[i] <= '9'))
-            || i == str.size()) {
-            return res;
-        }
-
-        // 如果第一个有效字符是符号，处理符号
-        if (str[i] == '-') {
-            isNegative = true;
-            ++i;
-        }
-        else if (str[i] == '+') {
-            isNegative = false;
-            ++i;
-        }
-        
-        // 处理数字部分
-        while (i < str.size() && str[i] >= '0' && str[i] <= '9') {
-            res = res * 10 + str[i] - '0';
-            if (!isNegative && res > INT_MAX) {
-                return INT_MAX;
+    int search(vector<int>& nums, int target) {
+        int left = 0, right = nums.size();
+        int mid;
+        while (left < right) {
+            mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                left = mid + 1;
             }
-            else if (isNegative && -res < INT_MIN) {
-                return INT_MIN;
+            else if (nums[mid] < target) {
+                left = mid + 1;
             }
-            ++i;
+            else if (nums[mid] > target) {
+                right = mid;
+            }
         }
-        // 给绝对值加符号
-        res = isNegative ? -res : res;
-        return (int)res;
+        if (left - 1 >= 0 && nums[left - 1] == target)
+            return left - 1;
+        else
+            return -1;
     }
 };
 
@@ -107,9 +80,9 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    vector<int> test({3,4,0,-1,3});
+    vector<int> test({5});
     
-    int res = sol.strToInt("1");
+    int res = sol.search(test, 5);
     cout << res;
 
     return 0;
