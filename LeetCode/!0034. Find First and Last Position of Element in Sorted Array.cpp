@@ -73,3 +73,52 @@ public:
         return {left, right};
     }
 };
+
+// 二刷，不知道怎么测试用例过不去：[2, 2], 3
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int> res({-1, -1});
+        if (nums.size() == 0)
+            return res;
+
+        int left = 0, right = nums.size();
+        int mid;
+        // 找左边界
+        while (left < right) {
+            mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                right = mid;
+            }
+            else if (nums[mid] > target) {
+                right = mid;
+            }
+            else if (nums[mid] < target) {
+                left = mid + 1;
+            }
+        }
+        if (nums[right] == target) {
+            res[0] = right;
+        }
+
+        // 找右边界
+        left = 0; right = nums.size();
+        while (left < right) {
+            mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                left = mid + 1;
+            }
+            else if (nums[mid] > target) {
+                right = mid;
+            }
+            else if (nums[mid] < target) {
+                left = mid + 1;
+            }
+        }
+        if (left - 1 >= 0 && nums[left - 1] == target) {
+            res[1] = left - 1;
+        }
+        
+        return res;
+    }
+};

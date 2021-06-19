@@ -37,10 +37,32 @@ dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + a[i][j]
 
 class Solution {
 public:
-    int searchInsert(vector<int>& nums, int target) {
+    vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int> res({-1, -1});
+        if (nums.size() == 0)
+            return res;
+
         int left = 0, right = nums.size();
         int mid;
+        // 找左边界
+        while (left < right) {
+            mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                right = mid;
+            }
+            else if (nums[mid] > target) {
+                right = mid;
+            }
+            else if (nums[mid] < target) {
+                left = mid + 1;
+            }
+        }
+        if (nums[right] == target) {
+            res[0] = right;
+        }
 
+        // 找右边界
+        left = 0; right = nums.size();
         while (left < right) {
             mid = left + (right - left) / 2;
             if (nums[mid] == target) {
@@ -53,8 +75,11 @@ public:
                 left = mid + 1;
             }
         }
-
-        return left;
+        if (left - 1 >= 0 && nums[left - 1] == target) {
+            res[1] = left - 1;
+        }
+        
+        return res;
     }
 };
 
@@ -78,10 +103,10 @@ int main() {
     // [[1,3,1],[1,5,1],[4,2,1]]
     Solution sol;
     vector<vector<int>> input({{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-    vector<int> test({1, 3, 5, 6});
+    vector<int> test({2, 2});
     
-    int res = sol.searchInsert(test, 4);
-    cout << res;
+    vector<int> res = sol.searchRange(test, 3);
+    //cout << res;
 
     return 0;
 }
