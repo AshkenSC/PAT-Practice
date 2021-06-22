@@ -3,7 +3,10 @@
 
 给定一个 没有重复 数字的序列，返回其所有可能的全排列。
 
-思路：回溯法，参考：
+思路：
+回溯法。
+
+参考：
 https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/
 
 自己写的，有一个地方有问题：就是应该用一个数组used，记录数字是否用过。其他和参考答案思路基本一致。
