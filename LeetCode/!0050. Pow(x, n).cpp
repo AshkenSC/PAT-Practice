@@ -3,7 +3,8 @@
 
 实现 pow(x, n) ，即计算 x 的 n 次幂函数。
 
-思路：采用递归，快速幂。
+思路：
+采用递归，快速幂。
 
 参考：https://leetcode-cn.com/problems/powx-n/solution/cdi-gui-fang-fa-ji-bai-100ti-jiao-by-zhu-ij8e/
 
